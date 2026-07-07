@@ -1,0 +1,294 @@
+:root {
+    --azul-marino: #0f2337;
+    --azul-oscuro: #12324d;
+    --azul: #0369f8;
+    --azul-claro: #63d0ed;
+    --blanco: #ffffff;
+    --gris: #e2e8f0;
+    --texto: #0f172a;
+    --fuente: 'Montserrat', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: var(--fuente);
+    background:
+        linear-gradient(rgba(15,35,55,.86), rgba(15,35,55,.92)),
+        url('../img/PapelTapiz.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--blanco);
+    padding-bottom: 8rem;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+.mobile-hero {
+    min-height: 100svh;
+    padding: 4rem 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background:
+        linear-gradient(rgba(15,35,55,.50), rgba(15,35,55,.95)),
+        url('../img/BannerAxiaHome.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.mobile-hero__logo {
+    width: 11rem;
+    margin-bottom: 2rem;
+    filter: drop-shadow(0 1rem 2rem rgba(0,0,0,.45));
+}
+
+.mobile-hero h1 {
+    font-size: clamp(3.2rem, 10vw, 5rem);
+    line-height: 1.05;
+    margin: 0 0 1.5rem;
+    font-weight: 800;
+}
+
+.mobile-hero__frase {
+    max-width: 34rem;
+    font-size: 1.7rem;
+    line-height: 1.6;
+    margin: 0 0 3rem;
+    color: var(--gris);
+}
+
+.mobile-hero__acciones {
+    display: grid;
+    gap: 1.2rem;
+    width: min(34rem, 100%);
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 5.2rem;
+    padding: 1.4rem 2rem;
+    border-radius: 1.4rem;
+    font-size: 1.6rem;
+    font-weight: 800;
+    text-align: center;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.btn:active {
+    transform: scale(.97);
+}
+
+.btn--principal {
+    color: var(--blanco);
+    background: linear-gradient(135deg, var(--azul), var(--azul-claro));
+    box-shadow: 0 1rem 3rem rgba(3,105,248,.38);
+}
+
+.btn--secundario {
+    color: var(--blanco);
+    border: .2rem solid rgba(255,255,255,.55);
+    background: rgba(255,255,255,.08);
+    backdrop-filter: blur(8px);
+}
+
+.btn--full {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+main {
+    width: min(43rem, 100%);
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+.mobile-card,
+.servicio-mobile,
+.ventajas-mobile article {
+    background: rgba(255,255,255,.96);
+    color: var(--texto);
+    border-radius: 2.4rem;
+    padding: 2.2rem;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.25);
+}
+
+.mobile-card {
+    margin: 2rem 0;
+}
+
+.mobile-card h2,
+.section-title {
+    margin: 0 0 1.6rem;
+    font-size: 2.4rem;
+    color: var(--azul-oscuro);
+    text-align: center;
+}
+
+.mobile-card p,
+.servicio-mobile p,
+.ventajas-mobile p {
+    font-size: 1.55rem;
+    line-height: 1.75;
+    margin: 0;
+}
+
+.mobile-section {
+    margin: 3rem 0;
+}
+
+.servicios-mobile {
+    display: grid;
+    gap: 1.6rem;
+}
+
+.servicio-mobile {
+    overflow: hidden;
+    padding: 1.2rem 1.2rem 2rem;
+}
+
+.servicio-mobile img {
+    border-radius: 1.8rem;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    margin-bottom: 1.4rem;
+}
+
+.servicio-mobile h3,
+.ventajas-mobile h3 {
+    margin: 0 0 .8rem;
+    color: var(--azul);
+    font-size: 1.9rem;
+}
+
+.mobile-card--noc {
+    background: linear-gradient(145deg, rgba(15,35,55,.98), rgba(3,105,248,.72));
+    color: var(--blanco);
+}
+
+.mobile-card--noc h2 {
+    color: var(--azul-claro);
+}
+
+.mobile-card--noc p {
+    color: var(--gris);
+}
+
+.mobile-lista {
+    margin: 2rem 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 1rem;
+}
+
+.mobile-lista li {
+    background: rgba(255,255,255,.10);
+    border: .1rem solid rgba(255,255,255,.12);
+    padding: 1.2rem;
+    border-radius: 1.3rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.mobile-video {
+    width: 100%;
+    border-radius: 1.8rem;
+    margin-top: 2rem;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.35);
+}
+
+.ventajas-mobile {
+    display: grid;
+    gap: 1.6rem;
+}
+
+.ventajas-mobile article {
+    text-align: center;
+}
+
+.ventajas-mobile img {
+    width: 10rem;
+    margin: 0 auto 1.2rem;
+}
+
+.contacto-rapido {
+    text-align: center;
+}
+
+.contacto-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.contacto-grid a {
+    background: var(--azul-oscuro);
+    color: var(--blanco);
+    padding: 1.4rem 1rem;
+    border-radius: 1.2rem;
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+.mobile-bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: rgba(15,35,55,.98);
+    border-top: .1rem solid rgba(255,255,255,.12);
+    box-shadow: 0 -1rem 3rem rgba(0,0,0,.25);
+}
+
+.mobile-bottom-bar a {
+    color: var(--blanco);
+    text-align: center;
+    padding: 1.4rem .6rem;
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+.mobile-bottom-bar a:last-child {
+    background: var(--azul);
+}
+
+@media (min-width: 600px) {
+    body {
+        background-attachment: fixed;
+    }
+
+    main {
+        width: min(72rem, 92%);
+    }
+
+    .servicios-mobile,
+    .ventajas-mobile {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
