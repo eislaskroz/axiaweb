@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axia Comunicaciones S.A. de C.V.</title>
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- ÍCONO AXIA -->
+    <link rel="icon" href="img/SoloAxia.png" type="image/x-icon">        
+
+    <!-- INTRO CORPORATIVO ISO -->
+    <style>
+        .iso-intro {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 50% 35%, rgba(3,105,248,.28) 0%, rgba(3,105,248,.08) 28%, transparent 56%),
+                linear-gradient(135deg, #020814 0%, #071d32 45%, #02101f 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            animation: isoIntroFadeOut .9s ease forwards;
+            animation-delay: 7s;
+        }
+
+        .iso-intro.ocultar {
+            display: none;
+        }
+
+        .iso-intro::before,
+        .iso-intro::after {
+            content: "";
+            position: absolute;
+            width: 70rem;
+            height: 70rem;
+            border-radius: 50%;
+            border: .1rem solid rgba(0, 217, 255, .18);
+            animation: isoOrbita 5s linear infinite;
+        }
+
+        .iso-intro::before {
+            top: -28rem;
+            left: -20rem;
+        }
+
+        .iso-intro::after {
+            right: -25rem;
+            bottom: -28rem;
+            animation-direction: reverse;
+        }
+
+        .iso-intro__particulas {
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(circle, rgba(255,255,255,.35) .1rem, transparent .12rem),
+                radial-gradient(circle, rgba(0,217,255,.28) .1rem, transparent .13rem);
+            background-size: 6rem 6rem, 9rem 9rem;
+            background-position: 0 0, 3rem 2rem;
+            opacity: .26;
+            animation: isoParticulas 8s linear infinite;
+        }
+
+        .iso-intro__card {
+            position: relative;
+            z-index: 2;
+            width: min(96%, 80rem);
+            padding: 5rem 4rem;
+            border-radius: 3rem;
+            background: rgba(2, 12, 24, .82);
+            border: .1rem solid rgba(0, 217, 255, .35);
+            box-shadow: 0 2rem 7rem rgba(0,0,0,.45), inset 0 0 4rem rgba(0,217,255,.08);
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .iso-intro__axia {
+            font-family: 'Montserrat', Arial, sans-serif;
+            color: #ffffff;
+            font-size: clamp(3.2rem, 8vw, 6.4rem);
+            font-weight: 800;
+            letter-spacing: 1.2rem;
+            margin: 0;
+            text-shadow: 0 0 2rem rgba(0,217,255,.7);
+            opacity: 0;
+            animation: isoAparece .8s ease forwards;
+            animation-delay: .3s;
+        }
+
+        .iso-intro__linea {
+            width: 0;
+            height: .35rem;
+            margin: 2rem auto;
+            border-radius: 999px;
+            background: linear-gradient(90deg, transparent, #00d9ff, #ffffff, #00d9ff, transparent);
+            box-shadow: 0 0 1.6rem rgba(0,217,255,.8);
+            animation: isoLinea 1s ease forwards;
+            animation-delay: 1.1s;
+        }
+
+        .iso-intro__logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+            flex-wrap: nowrap;
+            margin: 0 auto 2rem auto;
+            padding: 2rem;
+            border-radius: 2rem;
+            background: linear-gradient(135deg, rgba(6, 9, 15, 0.96), rgba(0, 4, 14, 0.96));
+            border: .1rem solid rgba(0,217,255,.35);
+            box-shadow: 0 1.5rem 4rem rgba(0,0,0,.35), inset 0 0 2.5rem rgba(0,217,255,.10);
+            opacity: 0;
+            transform: translateY(1.8rem) scale(.9);
+            animation: isoSello .9s ease forwards, isoPulse 2.2s ease-in-out infinite;
+            animation-delay: 2s, 3.1s;
+        }
+
+        .iso-intro__logo {
+            width: min(44%, 26rem);
+            max-height: 18rem;
+            height: auto;
+            display: block;
+            object-fit: contain;
+            margin: 0;
+            filter: drop-shadow(0 .6rem 1rem rgba(0,0,0,.18));
+        }
+
+        .iso-intro__titulo {
+            font-family: 'Montserrat', Arial, sans-serif;
+            color: #ffffff;
+            font-size: clamp(2.8rem, 6vw, 4.6rem);
+            font-weight: 800;
+            margin: 0 0 1rem 0;
+            text-transform: uppercase;
+            opacity: 0;
+            animation: isoAparece .8s ease forwards;
+            animation-delay: 3.2s;
+        }
+
+        .iso-intro__texto {
+            font-family: 'Montserrat', Arial, sans-serif;
+            color: #dbeafe;
+            font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+            line-height: 1.5;
+            margin: 0 auto;
+            max-width: 68rem;
+            font-weight: 600;
+            opacity: 0;
+            animation: isoAparece .8s ease forwards;
+            animation-delay: 3.8s;
+        }
+
+        .iso-intro__certificaciones {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            opacity: 0;
+            animation: isoAparece .8s ease forwards;
+            animation-delay: 4.5s;
+        }
+
+        .iso-intro__badge {
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: rgba(0, 217, 255, .12);
+            color: #ffffff;
+            border: .1rem solid rgba(0,217,255,.55);
+            font-size: 1.3rem;
+            font-weight: 800;
+            padding: .9rem 1.4rem;
+            border-radius: 999px;
+            box-shadow: 0 0 1.8rem rgba(0,217,255,.18);
+        }
+
+        @keyframes isoAparece {
+            from {
+                opacity: 0;
+                transform: translateY(1.4rem);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes isoLinea {
+            from {
+                width: 0;
+                opacity: 0;
+            }
+
+            to {
+                width: min(80%, 42rem);
+                opacity: 1;
+            }
+        }
+
+        @keyframes isoSello {
+            from {
+                opacity: 0;
+                transform: translateY(1.8rem) scale(.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @keyframes isoPulse {
+            0%, 100% {
+                filter: drop-shadow(0 0 1rem rgba(255,255,255,.25));
+            }
+
+            50% {
+                filter: drop-shadow(0 0 2.2rem rgba(0,217,255,.5));
+            }
+        }
+
+        @keyframes isoIntroFadeOut {
+            from {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            to {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+
+        @keyframes isoParticulas {
+            from {
+                background-position: 0 0, 3rem 2rem;
+            }
+
+            to {
+                background-position: 12rem 12rem, -8rem 15rem;
+            }
+        }
+
+        @keyframes isoOrbita {
+            from {
+                transform: rotate(0deg) scale(1);
+            }
+
+            to {
+                transform: rotate(360deg) scale(1.05);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .iso-intro__card {
+                padding: 3rem 1.8rem;
+                border-radius: 2rem;
+            }
+
+            .iso-intro__axia {
+                letter-spacing: .7rem;
+            }
+
+            .iso-intro__logos {
+                gap: 1rem;
+                padding: 1.2rem;
+            }
+
+            .iso-intro__logo {
+                width: min(46%, 14rem);
+                max-height: 12rem;
+            }
+
+            .iso-intro__badge {
+                font-size: 1.1rem;
+            }
+        }
+    
+        /* =========================
+           BADGE FIJO CERTIFICACIONES ISO
+        ========================= */
+
+        .iso-badge-fijo {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 9000;
+            width: fit-content;
+            max-width: 16rem;
+            background: linear-gradient(135deg, #ffffffe3 0%, #ffffff 100%);
+            border: .015rem solid #214f43;
+            border-radius: 1.6rem;
+            padding: .8rem;
+            box-shadow: 0 1rem 3rem rgba(0,0,0,.25);
+            cursor: pointer;
+            transition: transform .3s ease, box-shadow .3s ease;            
+        }
+
+        .iso-badge-fijo:hover {
+            transform: scale(1.04);
+            box-shadow: 0 1.5rem 4rem rgba(0,0,0,.35);
+        }
+
+        .iso-badge-fijo__imagenes {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .10rem;
+        }
+
+        .iso-badge-fijo__img {
+            width: 7rem;
+            height: auto;
+            display: block;
+            border-radius: 1rem;
+            object-fit: contain;
+        }
+
+        .iso-badge-fijo__panel {
+            display: none;
+            position: absolute;
+            top: calc(100% + 1rem);
+            right: 0;
+            width: 24rem;
+            background: rgba(255,255,255,.98);
+            border: .2rem solid #214f43;
+            border-radius: 1.4rem;
+            padding: 1.4rem;
+            box-shadow: 0 1rem 3rem rgba(0,0,0,.28);
+        }
+
+        .iso-badge-fijo.activo .iso-badge-fijo__panel {
+            display: block;
+            animation: isoBadgePanel .25s ease;
+        }
+
+        .iso-badge-fijo__titulo {
+            color: #214f43;
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin: 0 0 1rem 0;
+            text-align: center;
+        }
+
+        .iso-badge-fijo__link {
+            display: block;
+            color: #ffffff;
+            background: #214f43;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-align: center;
+            padding: .9rem 1rem;
+            border-radius: .8rem;
+            margin-bottom: .8rem;
+            transition: background .3s ease;
+        }
+
+        .iso-badge-fijo__link:hover {
+            background: #12382e;
+        }
+
+        @keyframes isoBadgePanel {
+            from {
+                opacity: 0;
+                transform: translateY(-.8rem);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .iso-badge-fijo {
+                top: 8rem;
+                right: 1rem;
+                width: 14rem;
+                padding: .5rem;
+                animation: isoBadgetFijoPulse 2.8s ease-in-out infinite;
+            }
+            .iso-badge-fijo:hover{
+                animation-play-state:paused;
+            }
+
+            .iso-badge-fijo__panel {
+                width: 21rem;
+            }
+        }
+
+</style>
+
+</head>
+<body class="fondo">
+
+    <!-- INTRO CORPORATIVO ISO -->
+    <div class="iso-intro" id="isoIntro">
+        <div class="iso-intro__particulas"></div>
+
+        <div class="iso-intro__card">
+            <h5 class="iso-intro__axia"></h5>
+
+            <p class="iso-intro__texto">Certificate No: 92920645</p>
+
+            <div class="iso-intro__linea"></div>
+
+            <div class="iso-intro__logos">
+                <img
+                    src="img/certificaciones/Logo_ISO_9001-2015.png"
+                    alt="Certificación ISO 9001:2015 - Axia Comunicaciones"
+                    class="iso-intro__logo"
+                >
+
+                <img
+                    src="img/certificaciones/Logo_ISOIEC_27001-2022.png"
+                    alt="Certificación ISO 27001:2022 - Axia Comunicaciones"
+                    class="iso-intro__logo"
+                >
+            </div>
+
+            <div class="iso-intro__linea"></div>            
+
+            <h2 class="iso-intro__titulo">
+                
+                Empresa Certificada
+            </h2>
+
+            <p class="iso-intro__texto">
+                Comprometidos con la calidad, la seguridad de la información y la mejora continua.
+            </p>
+
+            <div class="iso-intro__certificaciones">
+                <span class="iso-intro__badge">ISO 9001:2015</span>
+                <span class="iso-intro__badge">ISO 27001:2022</span>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- CERTIFICACIONES ISO -->
+    <div class="iso-badge-fijo" id="isoBadgeFijo" title="Ver certificaciones ISO">
+        <div class="iso-badge-fijo__imagenes">
+            <img
+                src="img/certificaciones/ISO_9001_2015_27001_2022.png"
+                alt="Certificación ISO 9001:2015"
+                class="iso-badge-fijo__img"
+            >
+        </div>
+
+        <div class="iso-badge-fijo__panel">
+            <p class="iso-badge-fijo__titulo">
+                Documentos de Certificación
+            </p>
+
+            <a
+                href="img/certificaciones/F-01_EQA-08_Certificado_9001_EMA_R01.pdf"
+                class="iso-badge-fijo__link"
+                target="_blank"
+            >
+                Ver ISO 9001:2015
+            </a>
+
+            <a
+                href="img/certificaciones/F-13_EQA-08_Certificado_ 27001_EMA_V04.pdf"
+                class="iso-badge-fijo__link"
+                target="_blank"
+            >
+                Ver ISO 27001:2022
+            </a>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navegacion">
+        <a class="navegacion__enlace navegacion__enlace--activo" href="index.html">Inicio</a>
+        <a class="navegacion__enlace" href="nosotros.html">Quiénes Somos</a>
+        <a class="navegacion__enlace" href="noc.html">Network Operations Center</a>
+        <a class="navegacion__enlace" href="servicios.html">Servicios</a>
+        <a class="navegacion__enlace" href="productos.html">Productos</a>  
+        <a class="navegacion__enlace" href="contacto.html">Contacto</a>
+    </nav>
+
+    <!-- Banner principal -->
+    <header class="header">
+        <img src="img/BannerAxiaHome.png" alt="Banner de Axia Comunicaciones">
+    </header>
+
+    <!-- INTRODUCCIÓN -->
+    <main class="contenedor">
+        <section class="presentacion contenedor">
+            <h2>
+                Soluciones en Ingeniería, Comunicaciones y Electricidad
+            </h2>
+            <p class="presentacion__texto">
+                Axia Comunicaciones S.A. de C.V. es una empresa mexicana especializada en soluciones tecnológicas, infraestructura eléctrica, telecomunicaciones y seguridad electrónica, con más de 15 años de experiencia brindando servicios profesionales al sector comercial, industrial y gubernamental.
+            </p>
+        </section>
+        <br>
+
+        <!-- SECCIÓN NOC DESPLEGABLE -->
+        <section class="noc-resumen contenedor">
+            <button class="noc-toggle" onclick="toggleNocInfo()" aria-expanded="false" id="nocBoton">
+                NOC (Network Operations Center)
+                <span id="nocIcono">+</span>
+            </button>
+            <div class="noc-info" id="nocInfo">
+                <h2>Soluciones Especializadas Brindadas</h2>
+                    <p>
+                        El NOC de AXIA opera como el cerebro analítico y operativo de la infraestructura de nuestros clientes, asegurando la máxima disponibilidad, el rendimiento de la conectividad y la estabilidad de los entornos físicos y lógicos a través de las siguientes soluciones:
+                    </p>
+                    <p>
+                        <strong>Monitoreo Continuo 24/7/365 de Enlaces y Conectividad (LAN/WAN):</strong>
+                        Supervisión en tiempo real de la disponibilidad de ancho de banda, estabilidad de enrutadores, switches y puntos de acceso para garantizar cero interrupciones en la operación del negocio.
+                    </p>
+                    <p>
+                        <strong>Gestión y Supervisión Preventiva de Sistemas de Energía Crítica:</strong>
+                        Monitoreo remoto de alertas, fallas de comunicación y parámetros operativos en sistemas UPS (respaldo de baterías) y plantas de emergencia, asegurando la continuidad ante cortes de energía.
+                    </p>
+                    <p>
+                        <strong>Administración del Estado de Salud de Servidores y Centros de Datos:</strong>
+                        Control del uso de recursos críticos (CPU, memoria RAM, almacenamiento y temperatura) en servidores locales e infraestructura de nube para prevenir caídas de sistemas.
+                    </p>
+                    <p>
+                        <strong>Detección, Mitigación y Aislamiento de Incidentes en Tiempo Real:</strong>
+                        Identificación oportuna de anomalías o fallas perimetrales y ejecución inmediata de protocolos de contención remota para minimizar el impacto en las sucursales o dependencias.
+                    </p>
+                    <p>
+                        <strong>Control y Distribución Centralizada de Parches de Seguridad:</strong>
+                        Despliegue masivo y controlado de actualizaciones críticas del sistema operativo para blindar la red contra amenazas de malware o accesos no autorizados.
+                    </p>
+                    <p>
+                        <strong>Auditoría y Mapeo Dinámico de Activos de Red:</strong>
+                        Despliegue masivo y controlado de actualizaciones críticas del sistema operativo para blindar la red contra amenazas de malware o accesos no autorizados.
+                    </p>
+                    <p>
+                        <strong>Soporte de Segundo Nivel e Ingeniería Remota Avanzada:</strong>
+                        Atención especializada para la resolución de problemas de conectividad compleja, configuraciones de enrutamiento y fallas de software base que la primera línea de soporte no pueda resolver en sitio.
+                    </p>
+                    <p>
+                        <strong>Análisis de Tendencias y Dashboards de Disponibilidad:</strong>
+                        Entrega de reportes ejecutivos y técnicos detallados sobre el comportamiento de la red, facilitando la planificación de inversiones futuras, ampliaciones de infraestructura y optimización de recursos tecnológico.
+                    </p>
+
+                <!-- SECCIÓN NOC VIDEOS -->
+                <section class="noc-videos">
+                    <article class="noc-video">
+                        <div class="noc-video__media">
+                            <video autoplay muted loop playsinline>
+                                <source src="vid/NOC-1.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="noc-video__contenido">
+                            <h3>Monitoreo 24/7</h3>
+                            <p>Supervisión continua de redes, enlaces, servidores, CCTV y sistemas críticos.</p>
+                        </div>
+                    </article>
+                    <article class="noc-video noc-video--reverse">
+                        <div class="noc-video__media">
+                            <video autoplay muted loop playsinline>
+                                <source src="vid/NOC-2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="noc-video__contenido">
+                            <h3>Alertamiento Inteligente</h3>
+                            <p>Generación automática de alertas críticas para anticipar fallas y reducir tiempos de respuesta en infraestructura tecnológica empresarial.</p>
+                        </div>
+                    </article>
+                    <article class="noc-video">
+                        <div class="noc-video__media">
+                            <video autoplay muted loop playsinline>
+                                <source src="vid/NOC-3.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="noc-video__contenido">
+                            <h3>Administración Remota</h3>
+                            <p>Gestión remota de dispositivos, cámaras, redes y servicios para ofrecer soporte inmediato y continuidad operativa desde cualquier ubicación.</p>
+                        </div>
+                    </article>
+                </section>
+                <br>
+                <br>
+                <div class="noc-boton">
+                    <a href="noc.html" class="boton boton--primario">
+                        Conocer más sobre AXIA NOC
+                    </a>
+                </div>
+            </div>
+        </section>   
+
+        <!-- NUESTROS SERVICIOS -->
+        <section class="servicios-carousel contenedor">
+            <h2 class="centrar-texto">Nuestros servicios</h2>
+            <div class="servicios-carousel__contenedor">
+                <div class="servicios-carousel__track">
+                    <article class="servicio servicio-slide">
+                        <a class="servicio__enlace" href="cctv.html">
+                            <img class="servicio__imagen" src="img/CCTV-Nuevo.png" alt="Servicio CCTV">
+                            <h3 class="servicio__nombre">CCTV</h3>
+                        </a>
+                    </article>
+                    <article class="servicio servicio-slide">
+                        <a class="servicio__enlace" href="electricas.html">
+                            <img class="servicio__imagen" src="img/InstalacionesElectricas-Nuevo.png" alt="Instalaciones eléctricas">
+                            <h3 class="servicio__nombre">Instalaciones Eléctricas</h3>
+                        </a>
+                    </article>
+                    <article class="servicio servicio-slide">
+                        <a class="servicio__enlace" href="vozydatos.html">
+                            <img class="servicio__imagen" src="img/VozyDatos-Nuevo.png" alt="Red voz y datos">
+                            <h3 class="servicio__nombre">Red, Voz y Datos</h3>
+                        </a>
+                    </article>
+                    <article class="servicio servicio-slide">
+                        <a class="servicio__enlace" href="airesacondicionados.html">
+                            <img class="servicio__imagen" src="img/AireAcondicionado-Nuevo.png" alt="Aires acondicionados">
+                            <h3 class="servicio__nombre">Aires Acondicionados</h3>
+                        </a>
+                    </article>
+                    <article class="servicio servicio-slide">
+                        <a class="servicio__enlace" href="plantas.html">
+                            <img class="servicio__imagen" src="img/PlantasEnergia-Nuevo.png" alt="Plantas de energía">
+                            <h3 class="servicio__nombre">Plantas de Energía</h3>
+                        </a>
+                    </article>
+                    <article class="servicio servicio-slide">
+                        <a class="servicio__enlace" href="enlaces.html">
+                            <img class="servicio__imagen" src="img/EnlacesInalambricos-Nuevo.png" alt="Enlaces inalámbricos">
+                            <h3 class="servicio__nombre">Enlaces Inalámbricos</h3>
+                        </a>
+                    </article>
+                    <article class="servicio servicio-slide">
+                        <a class="servicio__enlace" href="controlaccesos.html">
+                            <img class="servicio__imagen" src="img/ControlAccesos-Nuevo.png" alt="Control de accesos">
+                            <h3 class="servicio__nombre">Control de Accesos</h3>
+                        </a>
+                    </article>
+                    <article class="servicio servicio-slide">
+                        <a class="servicio__enlace" href="panelessolares.html">
+                            <img class="servicio__imagen" src="img/PanelesSolares-Nuevo.png" alt="Paneles Solares">
+                            <h3 class="servicio__nombre">Paneles Solares</h3>
+                        </a>
+                    </article>
+                    <article class="servicio servicio-slide">
+                        <a class="servicio__enlace" href="ventaequipo.html">
+                            <img class="servicio__imagen" src="img/VentaEquipo-Nuevo.png" alt="Venta de Equipo">
+                            <h3 class="servicio__nombre">Venta de Equipo</h3>
+                        </a>
+                    </article>                             
+                </div>
+            </div>
+        </section>
+
+        <!-- POR QUÉ ELEGIRNOS -->
+        <section class="empresa">
+            <h2 class="centrar-texto">
+                ¿Por qué elegir Axia Comunicaciones?
+            </h2>
+            <div class="bloques">
+                <article class="bloque">
+                    <img
+                        class="bloque__imagen"
+                        src="img/Experiencia.png"
+                        alt="Experiencia"
+                    >
+                    <h3 class="bloque__titulo">
+                        Experiencia
+                    </h3>
+                    <p>
+                        Más de 15 años desarrollando proyectos tecnológicos y eléctricos de alta calidad.
+                    </p>
+                </article>
+
+                <article class="bloque">
+                    <img
+                        class="bloque__imagen"
+                        src="img/Calidad.png"
+                        alt="Calidad"
+                    >
+                    <h3 class="bloque__titulo">
+                        Calidad
+                    </h3>
+                    <p>
+                        Utilizamos soluciones profesionales, eficientes y adaptadas a cada necesidad.
+                    </p>
+                </article>
+
+                <article class="bloque">
+                    <img
+                        class="bloque__imagen"
+                        src="img/Soporte.png"
+                        alt="Soporte"
+                    >
+                    <h3 class="bloque__titulo">
+                        Soporte
+                    </h3>
+                    <p>
+                        Acompañamiento técnico y atención personalizada antes, durante y después del proyecto.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- CLIENTES -->
+        <section class="seccion">
+            <h2 class="centrar-texto">
+                Algunos de nuestros clientes
+            </h2>
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide">
+                        <img src="img/clientes/AbarroteraFuentes.png" alt="Fuentes">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/AIFA.png" alt="AIFA">
+                    </div>                                         
+                    <div class="slide">
+                        <img src="img/clientes/CAPUFE.png" alt="CAPUFE">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/Cobama.png" alt="Cobama">
+                    </div>                    
+                    <div class="slide">
+                        <img src="img/clientes/Dismar.png" alt="Dismar">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/DSPCLaHerradura.png" alt="La Herradura">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/DZ.png" alt="DZ">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/GasDeProvincia.png" alt="Gas de Provincia">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/GasTizayuca.jpg" alt="Gas Tizayuca">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/GBN.png" alt="GBN">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/IPN.png" alt="IPN">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/KolaLoka.png" alt="KolaLoka">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/LaRancherita.jpg" alt="La Rancherita">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/Mabe.png" alt="Mabe">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/Maizoro.png" alt="Maizoro">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/Mapartel.png" alt="Mapartel">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/Marber.png" alt="Marber">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/Marnou.png" alt="Marnou">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/PaloTinto.png" alt="Palo Tinto">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/PlastiAbastos.png" alt="Plasti Abastos">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/PROARE.png" alt="PROARE">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/PROESA.png" alt="PROESA">
+                    </div>                                                                                                                                                                                                                                                                                                                                                                          
+                    <div class="slide">
+                        <img src="img/clientes/Scorpion.png" alt="Scorpion">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/SEDENA.png" alt="SEDENA">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/TFJA.png" alt="TFJA">
+                    </div>                    
+                    <div class="slide">
+                        <img src="img/clientes/Trafimar.png" alt="Trafimar">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/JabonesSanJuan.png" alt="Jabones San Juan">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/Pasteko.png" alt="Pasteko">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/CentralAbastosTecamac.png" alt="Central Abastos Tecamac">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/CentralAbastosEcatepec.png" alt="Central Abastos Ecatepec">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/GlobalGas.png" alt="GlobalGas">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/FARMAMIGO5.png" alt="FarmaAmigo">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/Farmapronto.png" alt="Farmapronto">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/SoniGas.png" alt="SoniGas">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/AbarroteraSanAntonio.png" alt="Abarrotera San Antonio">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/Dominion.png" alt="Dominion">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/Microdeco.png" alt="Microdeco">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/VeladorasSanJuan.png" alt="Veladoras San Juan">
+                    </div>                                        
+
+
+                    <!-- DUPLICADOS -->
+                    <div class="slide">
+                        <img src="img/clientes/AbarroteraFuentes.png" alt="Fuentes">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/AIFA.png" alt="AIFA">
+                    </div>                                         
+                    <div class="slide">
+                        <img src="img/clientes/CAPUFE.png" alt="CAPUFE">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/Cobama.png" alt="Cobama">
+                    </div>                    
+                    <div class="slide">
+                        <img src="img/clientes/Dismar.png" alt="Dismar">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/DSPCLaHerradura.png" alt="La Herradura">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/DZ.png" alt="DZ">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/GasDeProvincia.png" alt="Gas de Provincia">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/GasTizayuca.jpg" alt="Gas Tizayuca">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/GBN.png" alt="GBN">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/IPN.png" alt="IPN">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/KolaLoka.png" alt="KolaLoka">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/LaRancherita.jpg" alt="La Rancherita">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/Mabe.png" alt="Mabe">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/Maizoro.png" alt="Maizoro">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/Mapartel.png" alt="Mapartel">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/Marber.png" alt="Marber">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/Marnou.png" alt="Marnou">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/PaloTinto.png" alt="Palo Tinto">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/PlastiAbastos.png" alt="Plasti Abastos">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/PROARE.png" alt="PROARE">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/PROESA.png" alt="PROESA">
+                    </div>                                                                                                                                                                                                                                                                                                                                                                          
+                    <div class="slide">
+                        <img src="img/clientes/Scorpion.png" alt="Scorpion">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/SEDENA.png" alt="SEDENA">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/TFJA.png" alt="TFJA">
+                    </div>                    
+                    <div class="slide">
+                        <img src="img/clientes/Trafimar.png" alt="Trafimar">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/JabonesSanJuan.png" alt="Jabones San Juan">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/Pasteko.png" alt="Pasteko">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/CentralAbastosTecamac.png" alt="Central Abastos Tecamac">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/CentralAbastosEcatepec.png" alt="Central Abastos Ecatepec">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/GlobalGas.png" alt="GlobalGas">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/FARMAMIGO5.png" alt="FarmaAmigo">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/Farmapronto.png" alt="Farmapronto">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/SoniGas.png" alt="SoniGas">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/AbarroteraSanAntonio.png" alt="Abarrotera San Antonio">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/Dominion.png" alt="Dominion">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/Microdeco.png" alt="Microdeco">
+                    </div>
+                    <div class="slide">
+                        <img src="img/clientes/VeladorasSanJuan.png" alt="Veladoras San Juan">
+                    </div>                                        
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta">
+            <h2>
+                ¿Tienes un proyecto en puerta?
+            </h2>
+            <p>
+                Podemos ayudarte a desarrollar soluciones profesionales en seguridad, comunicaciones, electricidad y tecnología.
+            </p>
+            <a
+                href="contacto.html"
+                class="boton boton--primario"
+            >
+                Contáctanos
+            </a>
+        </section>
+
+         <!-- VIDEO -->
+        <section class="video-home">
+            <iframe
+                src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F25385399787800876%2F&show_text=false&width=265&t=0"
+                width="265"
+                height="476"
+                style="border:none;overflow:hidden"
+                scrolling="no"
+                frameborder="0"
+                allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            >
+            </iframe>
+        </section>
+    </main>
+
+    <!-- FOOTER CORPORATIVO -->
+    <footer class="footer">
+        <div class="footer__contenedor">
+        
+            <!-- EMPRESA -->
+            <div class="footer__seccion">
+                <h3 class="footer__titulo">
+                    Axia Comunicaciones S.A de C.V.
+                </h3>
+                <p class="footer__texto">
+                    Ingeniería en cómputo, comunicaciones y electricidad, soluciones profesionales para empresas e industrias.
+                </p>
+            </div>
+
+            <!-- CONTACTO -->
+            <div class="footer__seccion">
+                <h3 class="footer__titulo">
+                    Contacto
+                </h3>
+                <p class="footer__texto">
+                    📍 Álvaro Obregón, Manzana 2, Lote 3, Col. San Juan de Guadalupe, Zumpango, Estado de México, C.P. 55630
+                </p>
+                <p class="footer__texto">
+                    📞 +52 55 4989 3464
+                </p>
+                <p class="footer__texto">
+                    📧
+                    <a class="footer__correo" href="mailto:gte.ventas@axiacomunicaciones.mx?subject=Solicitud%20de%20Información&body=Hola%20Axia%20Comunicaciones,%20me%20gustaría%20solicitar%20información.">
+                        gte.ventas@axiacomunicaciones.mx
+                    </a>
+                </p>
+
+            </div>
+
+            <!-- REDES -->
+            <div class="footer__seccion">
+                <h3 class="footer__titulo">
+                    Redes Sociales
+                </h3>
+                <div class="footer__redes">
+                    <a
+                        href="https://www.facebook.com/Axiacomunicacionessa"
+                        class="footer__social"
+                        target="_blank"
+                    >
+                        Facebook
+                    </a>
+                    <a
+                        href="https://www.instagram.com/axia_comunicaciones/"
+                        class="footer__social"
+                        target="_blank"
+                    >
+                        Instagram
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/"
+                        class="footer__social"
+                        target="_blank"
+                    >
+                        LinkedIn
+                    </a>
+                    <a
+                        href="https://www.youtube.com/"
+                        class="footer__social"
+                        target="_blank"
+                    >
+                        YouTube
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- COPYRIGHT -->
+        <div class="footer__copy">
+            <p>
+                © 2026 Axia Comunicaciones S.A. de C.V. | Todos los derechos reservados
+            </p>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP -->
+    <div class="whatsapp-container">
+
+        <!-- TEXTO -->
+        <div class="whatsapp-texto">
+        ¿WhatsApp?
+        </div>
+
+        <!-- BOTÓN -->
+        <a
+        href="https://wa.me/525518833166?text=Hola%20Axia%20Comunicaciones,%20me%20gustaría%20solicitar%20información."
+        class="whatsapp"
+        target="_blank"
+        >
+        <img
+            src="img/WhatsApp.png"
+            alt="WhatsApp"
+        >
+        </a>
+    </div>
+
+    <!-- CHATBOT AXIA -->
+    <div class="chatbot">
+        <div class="chatbot__texto">
+            Chatbot Axia
+        </div>
+        <button class="chatbot__boton" onclick="toggleChatbot()">
+            💬
+        </button>
+
+        <div class="chatbot__ventana" id="chatbotVentana">
+
+            <div class="chatbot__header">
+                <div>
+                    <h3>Axia Asistente</h3>
+                    <p>Estamos para ayudarte</p>
+                </div>
+
+                <button onclick="toggleChatbot()">×</button>
+            </div>
+
+            <div class="chatbot__mensajes" id="chatbotMensajes">
+                <div class="chatbot__mensaje chatbot__mensaje--bot">
+                    Hola 👋 Soy el asistente de Axia Comunicaciones. ¿Qué necesitas?
+                </div>
+            </div>
+
+            <div class="chatbot__opciones">
+                <button onclick="respuestaChatbot('cctv')">Informes sobre CCTV</button>
+                <button onclick="respuestaChatbot('redes')">Informes sobre Red, Voz y Datos</button>
+                <button onclick="respuestaChatbot('electricas')">Informes sobre Instalaciones Eléctricas</button>
+                <button onclick="respuestaChatbot('aires')">Informes sobre Aires Acondicionados</button>
+                <button onclick="respuestaChatbot('whatsapp')">Quiero comunicarme por WhatsApp</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- SCRIPT CHATBOT AXIA -->
+    <script>
+        function toggleChatbot() {
+            const ventana = document.getElementById("chatbotVentana");
+            ventana.classList.toggle("activo");
+        }
+
+        function agregarMensaje(texto, tipo) {
+            const contenedor = document.getElementById("chatbotMensajes");
+
+            const mensaje = document.createElement("div");
+            mensaje.classList.add("chatbot__mensaje");
+            mensaje.classList.add(tipo === "bot" ? "chatbot__mensaje--bot" : "chatbot__mensaje--user");
+            mensaje.innerHTML = texto;
+
+            contenedor.appendChild(mensaje);
+            contenedor.scrollTop = contenedor.scrollHeight;
+        }
+        
+        function respuestaChatbot(opcion) {
+            const respuestas = {
+                cctv: {
+                    usuario: "Quiero cotizar Cámaras de Circuito Cerrado de TV",
+                    bot: "Perfecto, podemos ayudarte con la instalación y mantenimiento de tus cámaras IP, DVR, NVR, Domos, Bullet, PTZ. <br><br><a href='cctv.html'>Ver servicio CCTV</a>"
+                },
+                redes: {
+                    usuario: "Me interesa cotizar redes de voz y datos",
+                    bot: "Excelente, nosotros instalamos cableado estructurado, fibra óptica, VoIP, Sites y centros de datos. <br><br><a href='vozydatos.html'>Ver servicio Red, Voz y Datos</a>"
+                },
+                electricas: {
+                    usuario: "Necesito ayuda con instalaciones eléctricas",
+                    bot: "Claro, realizamos instalaciones de media y baja tensión, mantenimiento eléctrico, tierra física, paneles solares y trámites ante CFE. <br><br><a href='electricas.html'>Ver instalaciones eléctricas</a>"
+                },
+                aires: {
+                    usuario: "Me interesa cotizar acerca de los aires acondicionados",
+                    bot: "Con gusto, ofrecemos instalación, mantenimiento y reparación de equipos de aire acondicionado para uso residencial, comercial e industrial. <br><br><a href='airesacondicionados.html'>Ver aires acondicionados</a>"
+                },
+                whatsapp: {
+                    usuario: "Quiero hablar con alquien por WhatsApp",
+                    bot: "Perfecto. Da clic aquí para iniciar una conversación: <br><br><a target='_blank' href='https://wa.me/525518833166?text=Hola%20Axia%20Comunicaciones,%20me%20gustaría%20solicitar%20información.'>Abrir WhatsApp</a>"
+                }
+            };
+
+            agregarMensaje(respuestas[opcion].usuario, "user");
+
+            setTimeout(() => {
+                agregarMensaje(respuestas[opcion].bot, "bot");
+            }, 500);
+        }
+    </script>
+
+    <!-- SCRIPT BOTON NOC -->
+    <script>
+    function toggleNocInfo() {
+        const nocInfo = document.getElementById("nocInfo");
+        const nocIcono = document.getElementById("nocIcono");
+        const nocBoton = document.getElementById("nocBoton");
+
+        nocInfo.classList.toggle("activo");
+
+        const estaActivo = nocInfo.classList.contains("activo");
+
+        nocIcono.textContent = estaActivo ? "−" : "+";
+        nocBoton.setAttribute("aria-expanded", estaActivo);
+    }
+</script>
+
+    <!-- SCRIPT INTRO CORPORATIVO ISO -->
+    <script>
+        window.addEventListener("load", () => {
+            const isoIntro = document.getElementById("isoIntro");
+
+            setTimeout(() => {
+                isoIntro.classList.add("ocultar");
+            }, 7900);
+        });
+    </script>
+
+
+    <!-- SCRIPT BADGE FIJO ISO -->
+    <script>
+        const isoBadgeFijo = document.getElementById("isoBadgeFijo");
+
+        if (isoBadgeFijo) {
+            isoBadgeFijo.addEventListener("click", (e) => {
+                e.stopPropagation();
+                isoBadgeFijo.classList.toggle("activo");
+            });
+
+            document.addEventListener("click", () => {
+                isoBadgeFijo.classList.remove("activo");
+            });
+        }
+    </script>
+
+</body>
+</html>
