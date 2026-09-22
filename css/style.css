@@ -25,14 +25,14 @@ body {
 }
 
 .fondo {
-    background-image: url('../img/PapelTapiz.jpg');
+    background-image: url('../img/PapelTapiz.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
-img {    
+img {
     max-width: 100%;
     height: auto;
     display: block;
@@ -42,7 +42,7 @@ a {
     text-decoration: none;
 }
 
-.contenedor {    
+.contenedor {
     width: min(120rem, 90%);
     margin: 0 auto;
     padding: 2rem 0 2rem 0;
@@ -334,7 +334,7 @@ p {
     }
 }
 
-.bloque {        
+.bloque {
     background-color: rgba(255, 255, 255, 0.92);
     border-radius: 2rem;
     padding: 2rem;
@@ -352,7 +352,7 @@ p {
     width: auto;
     height: auto;
     object-fit: cover;
-    align-content: center;    
+    align-content: center;
 }
 
 .bloque p,
@@ -601,7 +601,6 @@ p {
         transform:translateY(0px);
     }
 }
-
 
 /* =========================
    ISO FLOAT
@@ -1528,4 +1527,755 @@ p {
     display:flex;
     justify-content:center;
     margin-top:4rem;
+}
+
+/* =========================
+   AVISOS DE PRIVACIDAD EN FORMULARIOS
+========================= */
+.formulario .aviso-simplificado,
+.bolsa-formulario .aviso-simplificado {
+    background: rgba(255,255,255,.08);
+    border: .1rem solid rgba(255,255,255,.22);
+    border-radius: 1.4rem;
+    padding: 1.7rem;
+    margin: 2rem 0;
+    color: #ffffff !important;
+}
+
+.formulario .aviso-simplificado h3,
+.bolsa-formulario .aviso-simplificado h3 {
+    color: #ffffff !important;
+    font-size: 1.55rem;
+    line-height: 1.4;
+    margin: 0 0 1rem;
+}
+
+.formulario .aviso-simplificado p,
+.formulario .aviso-simplificado span,
+.formulario .aviso-simplificado label,
+.bolsa-formulario .aviso-simplificado p,
+.bolsa-formulario .aviso-simplificado span,
+.bolsa-formulario .aviso-simplificado label {
+    color: #ffffff !important;
+    font-size: 1.3rem;
+    line-height: 1.6;
+}
+
+.formulario .aviso-simplificado p,
+.bolsa-formulario .aviso-simplificado p {
+    text-align: justify;
+    margin: .7rem 0;
+}
+
+.formulario .aviso-simplificado a,
+.bolsa-formulario .aviso-simplificado a {
+    color: #7dd3fc !important;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.aviso-simplificado__check {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: 1.2rem;
+}
+
+.aviso-simplificado__check input {
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-top: .2rem;
+    flex: 0 0 auto;
+    accent-color: #0369f8;
+}
+
+/* Campo antispam invisible para formularios públicos */
+.campo-antispam {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    clip: rect(0 0 0 0) !important;
+    clip-path: inset(50%) !important;
+    white-space: nowrap !important;
+}
+
+/* =========================
+   CARRUSEL BOLSA DE TRABAJO
+========================= */
+.vacantes {
+    margin: 4rem 0 6rem;
+    padding: 4rem 3rem;
+    border-radius: 3rem;
+    background: rgba(15, 35, 55, .94);
+    box-shadow: 0 1.5rem 4rem rgba(0,0,0,.28);
+    overflow: hidden;
+}
+
+.vacantes__encabezado {
+    max-width: 90rem;
+    margin: 0 auto 3rem;
+    text-align: center;
+}
+
+.vacantes__eyebrow {
+    margin: 0 0 .6rem;
+    color: #7dd3fc;
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: .12rem;
+    text-transform: uppercase;
+}
+
+.vacantes__encabezado h2 {
+    margin: 0 0 1rem;
+    color: #ffffff;
+}
+
+.vacantes__encabezado p:not(.vacantes__eyebrow) {
+    color: #dbeafe;
+    text-align: center;
+}
+
+.vacantes-carousel {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 1.4rem;
+    align-items: center;
+}
+
+.vacantes-carousel__ventana {
+    overflow: hidden;
+    padding: .5rem;
+}
+
+.vacantes-carousel__track {
+    display: flex;
+    gap: 2rem;
+    transition: transform .55s ease;
+    will-change: transform;
+}
+
+.vacante-card {
+    flex: 0 0 calc((100% - 4rem) / 3);
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 2rem;
+    background: #ffffff;
+    box-shadow: 0 1rem 2.5rem rgba(0,0,0,.24);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.vacante-card:hover {
+    transform: translateY(-.6rem);
+    box-shadow: 0 1.6rem 3.5rem rgba(3,105,248,.3);
+}
+
+.vacante-card > img {
+    width: 100%;
+    height: 19rem;
+    object-fit: cover;
+}
+
+.vacante-card__contenido {
+    padding: 2rem;
+}
+
+.vacante-card__area {
+    display: inline-block;
+    margin-bottom: .8rem;
+    padding: .55rem 1rem;
+    border-radius: 999px;
+    background: rgba(3,105,248,.12);
+    color: #0358c8;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.vacante-card h3 {
+    margin: 0 0 1.4rem;
+    color: #0f2337;
+    font-size: 2rem;
+    line-height: 1.25;
+}
+
+.vacante-card h4 {
+    margin: 1.2rem 0 .6rem;
+    color: #0369f8;
+    font-size: 1.45rem;
+}
+
+.vacante-card ul {
+    margin: 0;
+    padding-left: 1.8rem;
+    color: #26384b;
+}
+
+.vacante-card li {
+    margin-bottom: .45rem;
+    font-size: 1.32rem;
+    line-height: 1.5;
+}
+
+.vacantes-carousel__boton {
+    width: 4.6rem;
+    height: 4.6rem;
+    border: 0;
+    border-radius: 50%;
+    background: #0369f8;
+    color: #ffffff;
+    font-size: 2.3rem;
+    cursor: pointer;
+    box-shadow: 0 .8rem 2rem rgba(0,0,0,.25);
+    transition: transform .25s ease, opacity .25s ease;
+}
+
+.vacantes-carousel__boton:hover:not(:disabled) {
+    transform: scale(1.08);
+}
+
+.vacantes-carousel__boton:disabled {
+    opacity: .35;
+    cursor: default;
+}
+
+.vacantes-carousel__indicadores {
+    display: flex;
+    justify-content: center;
+    gap: .7rem;
+    margin-top: 2rem;
+}
+
+.vacantes-carousel__indicadores button {
+    width: 1rem;
+    height: 1rem;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255,255,255,.35);
+    cursor: pointer;
+}
+
+.vacantes-carousel__indicadores button.activo {
+    width: 2.6rem;
+    border-radius: 999px;
+    background: #38bdf8;
+}
+
+@media (max-width: 1099px) {
+    .vacante-card {
+        flex-basis: calc((100% - 2rem) / 2);
+    }
+}
+
+@media (max-width: 699px) {
+    .vacantes {
+        padding: 3rem 1.4rem;
+        margin-top: 2rem;
+    }
+
+    .vacantes-carousel {
+        grid-template-columns: 1fr;
+    }
+
+    .vacante-card {
+        flex-basis: 100%;
+    }
+
+    .vacantes-carousel__boton {
+        position: absolute;
+        z-index: 2;
+        top: 16rem;
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .vacantes-carousel__boton--anterior {
+        left: .8rem;
+    }
+
+    .vacantes-carousel__boton--siguiente {
+        right: .8rem;
+    }
+}
+
+/* ===== Ajustes formulario Bolsa de Trabajo ===== */
+.form-check-label,
+.formulario label,
+.formulario small,
+.formulario p,
+.checkbox label,
+label[for]{
+    color:#ffffff !important;
+}
+
+input[type="file"]{
+    color:#ffffff !important;
+}
+
+input[type="file"]::file-selector-button{
+    background:#2f6bff;
+    color:#fff;
+    border:none;
+    border-radius:.6rem;
+    padding:.8rem 1.4rem;
+    cursor:pointer;
+}
+
+input[type="checkbox"]{
+    width:18px;
+    height:18px;
+    accent-color:#2f6bff;
+}
+
+to{left:130%;}
+}
+
+/* ===== MENÚ AXIA FIJO + DESTELLO AMARILLO ===== */
+.navegacion,
+.navbar,
+.header .navegacion {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 10000 !important;
+    overflow: hidden !important;
+    box-shadow: 0 .3rem 1.8rem rgba(255, 214, 10, .16) !important;
+}
+
+/* Destello amarillo que pasa por detrás sin mover el menú */
+.navegacion::before,
+.navbar::before,
+.header .navegacion::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -45%;
+    width: 34%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,.05) 25%, rgba(255,255,255,.30) 50%, rgba(255,255,255,.05) 75%, transparent 100%);
+    transform: skewX(-24deg);
+    animation: axiaDestelloAmarillo 9s linear infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.navegacion::after,
+.navbar::after,
+.header .navegacion::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: .2rem;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 224, 46, .95),
+        transparent
+    );
+    opacity: .9;
+    pointer-events: none;
+}
+
+.navegacion a,
+.navbar a,
+.header .navegacion a {
+    position: relative;
+    z-index: 2;
+    transition: color .25s ease, text-shadow .25s ease !important;
+}
+
+/* El enlace cambia de brillo, pero no se desplaza */
+.navegacion a:hover,
+.navbar a:hover,
+.header .navegacion a:hover {
+    transform: none !important;
+    text-shadow: 0 0 1rem rgba(255, 224, 46, .9) !important;
+}
+
+@keyframes axiaDestelloAmarillo {
+    from { left: -45%; }
+    to   { left: 130%; }
+}
+
+/* Respeta accesibilidad y evita animación si el usuario la desactiva */
+@media (prefers-reduced-motion: reduce) {
+    .navegacion::before,
+    .navbar::before,
+    .header .navegacion::before {
+        animation: none !important;
+        display: none;
+    }
+}
+
+/* ENLACE AVISO DE PRIVACIDAD EN FOOTER */
+.footer__privacidad {
+    display: inline-block;
+    margin-top: .8rem;
+    color: #ffd84d;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color .25s ease, text-shadow .25s ease;
+}
+
+.footer__privacidad:hover,
+.footer__privacidad:focus-visible {
+    color: #fff3a3;
+    text-decoration: underline;
+    text-shadow: 0 0 .9rem rgba(255, 216, 77, .75);
+}
+
+/* =========================================================
+   BOLSA DE TRABAJO — VACANTES CON DETALLE COMPLETO
+   ========================================================= */
+.vacantes-carousel--dos .vacantes-carousel__track {
+    gap: 2.6rem;
+}
+
+.vacantes-carousel--dos .vacante-card {
+    flex: 0 0 calc((100% - 2.6rem) / 2);
+    min-width: calc((100% - 2.6rem) / 2);
+}
+
+.vacante-card--resumen {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.vacante-card__imagen-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.vacante-card__imagen-wrap img {
+    width: 100%;
+    height: 23rem;
+    object-fit: cover;
+}
+
+.vacante-card__nivel {
+    position: absolute;
+    top: 1.4rem;
+    right: 1.4rem;
+    background: rgba(15, 35, 55, .95);
+    color: #fff;
+    padding: .7rem 1.2rem;
+    border-radius: 999px;
+    font-size: 1.25rem;
+    font-weight: 800;
+    border: .1rem solid rgba(255,255,255,.25);
+}
+
+.vacante-card__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .8rem 1.4rem;
+    margin: 0 0 1.5rem;
+    color: #dbeafe;
+    font-size: 1.35rem;
+}
+
+.vacante-card__resumen-texto {
+    color: #e2e8f0;
+    font-size: 1.45rem;
+    line-height: 1.6;
+    text-align: justify;
+    margin: 0 0 1.5rem;
+}
+
+.vacante-card__detalle {
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+}
+
+.vacantes-carousel--sin-flechas .vacantes-carousel__boton {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* MODAL DETALLE */
+body.vacante-modal-abierto {
+    overflow: hidden;
+}
+
+.vacante-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 100000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.vacante-modal.activo {
+    display: flex;
+}
+
+.vacante-modal__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 6, 18, .86);
+    backdrop-filter: blur(7px);
+}
+
+.vacante-modal__dialog {
+    position: relative;
+    z-index: 2;
+    width: min(105rem, 96vw);
+    max-height: 92vh;
+    overflow-y: auto;
+    background: #f8fbff;
+    border-radius: 2.4rem;
+    box-shadow: 0 2rem 7rem rgba(0,0,0,.5);
+    border: .15rem solid rgba(3,105,248,.35);
+}
+
+.vacante-modal__cerrar {
+    position: sticky;
+    float: right;
+    top: 1.5rem;
+    right: 1.5rem;
+    z-index: 5;
+    width: 4.6rem;
+    height: 4.6rem;
+    margin: 1.5rem 1.5rem -6rem 0;
+    border: none;
+    border-radius: 50%;
+    background: #0f2337;
+    color: #fff;
+    font-size: 3rem;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.25);
+}
+
+.vacante-modal__cerrar:hover {
+    background: #0369f8;
+}
+
+.vacante-modal__cabecera {
+    padding: 3.5rem 7rem 2.8rem 3.5rem;
+    background:
+        linear-gradient(135deg, rgba(3,105,248,.16), transparent 55%),
+        #0f2337;
+    color: #fff;
+}
+
+.vacante-modal__cabecera h3 {
+    margin: 1rem 0 1.8rem;
+    color: #fff;
+    font-size: clamp(2.6rem, 4vw, 4rem);
+}
+
+.vacante-modal__etiqueta {
+    display: inline-block;
+    padding: .7rem 1.2rem;
+    border-radius: 999px;
+    background: #0369f8;
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.vacante-modal__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+    color: #dbeafe;
+    font-size: 1.45rem;
+}
+
+.vacante-modal__contenido {
+    padding: 3rem 3.5rem 1rem;
+}
+
+.vacante-detalle__seccion {
+    margin-bottom: 2.8rem;
+    padding-bottom: 2.4rem;
+    border-bottom: .1rem solid #dbe5ef;
+}
+
+.vacante-detalle__seccion:last-child {
+    border-bottom: none;
+}
+
+.vacante-detalle__seccion h4 {
+    margin: 0 0 1.3rem;
+    color: #0369f8;
+    font-size: 2.2rem;
+}
+
+.vacante-detalle__seccion p,
+.vacante-detalle__seccion li {
+    color: #1f2937;
+    font-size: 1.5rem;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.vacante-detalle__seccion ul {
+    margin: 0;
+    padding-left: 2.2rem;
+}
+
+.vacante-detalle__seccion li {
+    margin-bottom: .7rem;
+}
+
+.vacante-detalle__subseccion {
+    margin: 1.8rem 0 2.2rem;
+    padding: 1.7rem 2rem;
+    background: #eef5fb;
+    border-left: .4rem solid #0369f8;
+    border-radius: 1rem;
+}
+
+.vacante-detalle__subseccion h5 {
+    margin: 0 0 1rem;
+    color: #0f2337;
+    font-size: 1.7rem;
+}
+
+.vacante-modal__acciones {
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    padding: 1.8rem 3rem;
+    background: rgba(255,255,255,.97);
+    border-top: .1rem solid #dbe5ef;
+    box-shadow: 0 -1rem 2rem rgba(0,0,0,.06);
+}
+
+.vacante-modal__secundario {
+    background: #64748b;
+    color: #fff;
+}
+
+@media (max-width: 899px) {
+    .vacantes-carousel--dos .vacante-card {
+        flex: 0 0 100%;
+        min-width: 100%;
+    }
+
+    .vacante-card__imagen-wrap img {
+        height: 20rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .vacante-modal {
+        padding: .8rem;
+    }
+
+    .vacante-modal__dialog {
+        max-height: 96vh;
+        border-radius: 1.6rem;
+    }
+
+    .vacante-modal__cabecera {
+        padding: 2.8rem 5.5rem 2rem 2rem;
+    }
+
+    .vacante-modal__contenido {
+        padding: 2rem 1.8rem .5rem;
+    }
+
+    .vacante-modal__acciones {
+        flex-direction: column;
+        padding: 1.3rem 1.8rem;
+    }
+
+    .vacante-modal__acciones .boton {
+        width: 100%;
+        text-align: center;
+    }
+
+    .vacante-detalle__seccion p,
+    .vacante-detalle__seccion li {
+        font-size: 1.42rem;
+        text-align: left;
+    }
+}
+
+/* =========================================================
+   BOLSA DE TRABAJO — AJUSTES 13-08-2026
+   Mayor contraste + detalle compacto
+   ========================================================= */
+.vacante-card--resumen { background:#f8fbff; }
+.vacante-card--resumen .vacante-card__contenido { color:#17263a; }
+.vacante-card--resumen h3 { color:#17263a; }
+.vacante-card--resumen h4 { color:#3157e8; }
+.vacante-card--resumen .vacante-card__meta { color:#52657d; }
+.vacante-card--resumen .vacante-card__resumen-texto { color:#334155; line-height:1.42; }
+.vacante-card--resumen .vacante-card__area { color:#3157e8; background:#e8edff; }
+.vacante-modal__contenido { padding-top:2rem; padding-bottom:.5rem; }
+.vacante-detalle__seccion { margin-bottom:1.35rem; padding-bottom:1.2rem; }
+.vacante-detalle__seccion h4 { margin-bottom:.65rem; line-height:1.2; }
+.vacante-detalle__seccion p, .vacante-detalle__seccion li { line-height:1.42; }
+.vacante-detalle__seccion li { margin-bottom:.32rem; }
+.vacante-detalle__subseccion { margin:.9rem 0 1.1rem; padding:1rem 1.4rem; }
+
+/* =========================================================
+   BOLSA DE TRABAJO — CARRUSEL COMPACTO RESPONSIVE
+   4 tarjetas: pantallas muy anchas | 3: escritorio | 2: tablet | 1: móvil
+   ========================================================= */
+@media (min-width: 1700px) {
+    .vacantes-carousel--dos .vacantes-carousel__track { gap: 1.5rem; }
+    .vacantes-carousel--dos .vacante-card {
+        flex: 0 0 calc((100% - 4.5rem) / 4);
+        min-width: calc((100% - 4.5rem) / 4);
+    }
+    .vacante-card__imagen-wrap img { height: 13rem; }
+    .vacante-card__contenido { padding: 1.6rem; }
+    .vacante-card__contenido h3 { font-size: 2.1rem; line-height: 1.15; }
+    .vacante-card__resumen-texto { font-size: 1.45rem; line-height: 1.4; }
+}
+
+@media (min-width: 1100px) and (max-width: 1699px) {
+    .vacantes-carousel--dos .vacantes-carousel__track { gap: 1.8rem; }
+    .vacantes-carousel--dos .vacante-card {
+        flex: 0 0 calc((100% - 3.6rem) / 3);
+        min-width: calc((100% - 3.6rem) / 3);
+    }
+    .vacante-card__imagen-wrap img { height: 15rem; }
+    .vacante-card__contenido { padding: 1.8rem; }
+    .vacante-card__contenido h3 { font-size: 2.25rem; line-height: 1.18; }
+    .vacante-card__resumen-texto { font-size: 1.5rem; line-height: 1.42; }
+}
+
+@media (min-width: 760px) and (max-width: 1099px) {
+    .vacantes-carousel--dos .vacantes-carousel__track { gap: 1.8rem; }
+    .vacantes-carousel--dos .vacante-card {
+        flex: 0 0 calc((100% - 1.8rem) / 2);
+        min-width: calc((100% - 1.8rem) / 2);
+    }
+    .vacante-card__imagen-wrap img { height: 17rem; }
+}
+
+@media (max-width: 759px) {
+    .vacantes-carousel--dos .vacante-card { flex: 0 0 100%; min-width: 100%; }
+    .vacante-card__imagen-wrap img { height: 18rem; }
+}
+
+/* AJUSTE VISUAL TARJETAS DE VACANTES: +10% ALTURA DE IMAGEN */
+.vacante-card__imagen-wrap img {
+    height: 25.3rem !important;
+    object-fit: cover;
+}
+@media (max-width: 899px) {
+    .vacante-card__imagen-wrap img {
+        height: 22rem !important;
+    }
 }

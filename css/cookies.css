@@ -1,0 +1,205 @@
+/* =========================
+   CONSENTIMIENTO DE COOKIES
+========================= */
+.cookie-banner{
+    position:fixed; left:50%; bottom:2rem; transform:translateX(-50%);
+    z-index:100000; width:min(110rem,calc(100% - 3rem));
+    background:rgba(15,35,55,.98); color:#fff; border:.1rem solid rgba(255,255,255,.18);
+    border-radius:2rem; padding:2.2rem; box-shadow:0 1.5rem 5rem rgba(0,0,0,.45);
+    display:none; font-family:var(--fuentePrincipal,'Montserrat',sans-serif);
+}
+.cookie-banner.activo{display:block; animation:cookieEntrada .35s ease;}
+.cookie-banner p{font-size:1.45rem; line-height:1.65; margin:0 0 1.2rem; color:#eef6ff; text-align:justify;}
+.cookie-banner a{color:#62c7ff; text-decoration:underline; font-weight:700;}
+.cookie-banner__acciones{display:flex; justify-content:center; flex-wrap:wrap; gap:1rem; margin-top:1.8rem;}
+.cookie-btn{border:none; border-radius:1rem; padding:1.1rem 1.6rem; font:700 1.35rem var(--fuentePrincipal,'Montserrat',sans-serif); cursor:pointer; transition:.25s ease;}
+.cookie-btn:hover{transform:translateY(-.2rem); box-shadow:0 .8rem 2rem rgba(0,0,0,.25);}
+.cookie-btn--aceptar{background:#0369f8;color:#fff;}
+.cookie-btn--rechazar{background:#fff;color:#102337;}
+.cookie-btn--configurar{background:transparent;color:#fff;border:.1rem solid #62c7ff;}
+.cookie-modal{position:fixed;inset:0;z-index:100001;background:rgba(0,0,0,.72);display:none;align-items:center;justify-content:center;padding:2rem;}
+.cookie-modal.activo{display:flex;}
+.cookie-modal__contenido{width:min(62rem,100%);max-height:90vh;overflow:auto;background:#fff;color:#162b3e;border-radius:2rem;padding:2.5rem;box-shadow:0 2rem 6rem rgba(0,0,0,.45);}
+.cookie-modal__contenido h2{margin:0 0 1rem;color:#0369f8;font-size:2.5rem;}
+.cookie-modal__contenido>p{font-size:1.45rem;line-height:1.6;}
+.cookie-opcion{display:flex;justify-content:space-between;gap:2rem;align-items:flex-start;padding:1.4rem 0;border-bottom:.1rem solid #dbe4eb;}
+.cookie-opcion h3{margin:0 0 .5rem;color:#102337;font-size:1.65rem;}
+.cookie-opcion p{margin:0;color:#42566a;font-size:1.3rem;line-height:1.5;}
+.cookie-opcion input{width:2rem;height:2rem;flex:0 0 auto;accent-color:#0369f8;}
+.cookie-modal__acciones{display:flex;justify-content:flex-end;gap:1rem;flex-wrap:wrap;margin-top:2rem;}
+@keyframes cookieEntrada{from{opacity:0;transform:translate(-50%,2rem)}to{opacity:1;transform:translate(-50%,0)}}
+@media(max-width:768px){
+ .cookie-banner{bottom:1rem;padding:1.7rem;}
+ .cookie-banner p{font-size:1.3rem;text-align:left;}
+ .cookie-banner__acciones{flex-direction:column;}
+ .cookie-btn{width:100%;}
+}
+
+/* =========================
+   AVISOS SIMPLIFICADOS
+========================= */
+.aviso-simplificado{background:rgba(255,255,255,.08);border:.1rem solid rgba(255,255,255,.18);border-radius:1.4rem;padding:1.7rem;margin:2rem 0;color:#eef6ff;}
+.aviso-simplificado h3{color:#62c7ff;font-size:1.55rem;margin:0 0 1rem;}
+.aviso-simplificado p{font-size:1.3rem;line-height:1.65;margin:.7rem 0;text-align:justify;color:#eef6ff;}
+.aviso-simplificado a{color:#62c7ff;text-decoration:underline;font-weight:700;}
+.aviso-simplificado__check{display:flex;align-items:flex-start;gap:1rem;margin-top:1.2rem;font-size:1.3rem;line-height:1.5;}
+.aviso-simplificado__check input{width:1.8rem;height:1.8rem;margin-top:.2rem;accent-color:#0369f8;flex:0 0 auto;}
+
+/* =========================
+   BOLSA DE TRABAJO
+========================= */
+.bolsa-intro,.bolsa-beneficios{background:rgba(15,35,55,.92);border-radius:2rem;padding:3rem;margin-bottom:3rem;color:#eef6ff;box-shadow:0 1rem 3rem rgba(0,0,0,.25);}
+.bolsa-intro h1,.bolsa-beneficios h2{color:#fff;margin:0 0 1.5rem;}
+.bolsa-intro p,.bolsa-beneficios p,.bolsa-beneficios li{color:#eef6ff;text-align:justify;}
+.bolsa-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2rem;}
+.bolsa-card{background:rgba(255,255,255,.07);border-radius:1.3rem;padding:1.5rem;text-align:center;}
+.bolsa-card h3{margin:.5rem;color:#62c7ff;font-size:1.7rem;}
+@media(max-width:768px){.bolsa-grid{grid-template-columns:1fr}.bolsa-intro,.bolsa-beneficios{padding:2rem}}
+
+/* ===== Ajustes formulario Bolsa de Trabajo ===== */
+.form-check-label,
+.formulario label,
+.formulario small,
+.formulario p,
+.checkbox label,
+label[for]{
+    color:#ffffff !important;
+}
+
+input[type="file"]{
+    color:#ffffff !important;
+}
+
+input[type="file"]::file-selector-button{
+    background:#2f6bff;
+    color:#fff;
+    border:none;
+    border-radius:.6rem;
+    padding:.8rem 1.4rem;
+    cursor:pointer;
+}
+
+input[type="checkbox"]{
+    width:18px;
+    height:18px;
+    accent-color:#2f6bff;
+}
+
+to{left:130%;}
+}
+
+/* ===== MENÚ AXIA FIJO + DESTELLO AMARILLO ===== */
+.navegacion,
+.navbar,
+.header .navegacion {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 10000 !important;
+    overflow: hidden !important;
+    box-shadow: 0 .3rem 1.8rem rgba(255, 214, 10, .16) !important;
+}
+
+/* Destello amarillo que pasa por detrás sin mover el menú */
+.navegacion::before,
+.navbar::before,
+.header .navegacion::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -45%;
+    width: 34%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 220, 40, .08) 25%,
+        rgba(255, 235, 90, .32) 50%,
+        rgba(255, 220, 40, .08) 75%,
+        transparent 100%
+    );
+    transform: skewX(-24deg);
+    animation: axiaDestelloAmarillo 9s linear infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.navegacion::after,
+.navbar::after,
+.header .navegacion::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: .2rem;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 224, 46, .95),
+        transparent
+    );
+    opacity: .9;
+    pointer-events: none;
+}
+
+.navegacion a,
+.navbar a,
+.header .navegacion a {
+    position: relative;
+    z-index: 2;
+    transition: color .25s ease, text-shadow .25s ease !important;
+}
+
+/* El enlace cambia de brillo, pero no se desplaza */
+.navegacion a:hover,
+.navbar a:hover,
+.header .navegacion a:hover {
+    transform: none !important;
+    text-shadow: 0 0 1rem rgba(255, 224, 46, .9) !important;
+}
+
+@keyframes axiaDestelloAmarillo {
+    from { left: -45%; }
+    to   { left: 130%; }
+}
+
+/* Respeta accesibilidad y evita animación si el usuario la desactiva */
+@media (prefers-reduced-motion: reduce) {
+    .navegacion::before,
+    .navbar::before,
+    .header .navegacion::before {
+        animation: none !important;
+        display: none;
+    }
+}
+
+/* ENLACE AVISO DE PRIVACIDAD EN FOOTER */
+.footer__privacidad {
+    display: inline-block;
+    margin-top: .8rem;
+    color: #ffd84d;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color .25s ease, text-shadow .25s ease;
+}
+
+.footer__privacidad:hover,
+.footer__privacidad:focus-visible {
+    color: #fff3a3;
+    text-decoration: underline;
+    text-shadow: 0 0 .9rem rgba(255, 216, 77, .75);
+}
+
+/* AJUSTE VISUAL TARJETAS DE VACANTES: +10% ALTURA DE IMAGEN */
+.vacante-card__imagen-wrap img {
+    height: 25.3rem !important;
+    object-fit: cover;
+}
+@media (max-width: 899px) {
+    .vacante-card__imagen-wrap img {
+        height: 22rem !important;
+    }
+}
