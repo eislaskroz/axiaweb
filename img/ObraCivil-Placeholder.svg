@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f2337"/>
+      <stop offset="1" stop-color="#0369f8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <g fill="none" stroke="#ffffff" stroke-width="18" opacity=".9">
+    <path d="M430 610V380l180-120 180 120v230"/>
+    <path d="M520 610V455h180v155"/>
+    <path d="M860 610V310h260v300"/>
+    <path d="M820 310h340"/>
+    <path d="M925 310V190h130v120"/>
+  </g>
+  <text x="800" y="710" text-anchor="middle" fill="#ffffff" font-family="Montserrat, Arial, sans-serif" font-size="76" font-weight="800">OBRA CIVIL</text>
+  <text x="800" y="785" text-anchor="middle" fill="#dbeafe" font-family="Montserrat, Arial, sans-serif" font-size="34">ESPACIO RESERVADO PARA IMAGEN O VIDEO</text>
+</svg>
