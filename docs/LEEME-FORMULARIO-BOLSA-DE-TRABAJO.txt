@@ -1,0 +1,9 @@
+CONFIGURACIÓN DEL FORMULARIO DE BOLSA DE TRABAJO
+
+1. bolsa-trabajo.html envía los datos a procesar-candidatura.php.
+2. Destinatario actual: gte.ventas@axiacomunicaciones.mx
+3. Para cambiarlo, edite la constante DESTINATARIO_CV en procesar-candidatura.php.
+4. Requiere PHP 8.0+ y la función mail() habilitada.
+5. Acepta PDF, DOC y DOCX de máximo 5 MB.
+6. El CV se adjunta al correo y no se guarda en el servidor.
+7. Para máxima entregabilidad se recomienda migrar posteriormente a SMTP con PHPMailer.

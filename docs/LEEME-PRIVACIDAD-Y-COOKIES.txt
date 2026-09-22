@@ -1,0 +1,11 @@
+ARCHIVOS PENDIENTES PARA ACTIVAR LOS ENLACES LEGALES
+
+Coloque dentro de esta carpeta los documentos definitivos con estos nombres:
+
+1. Aviso-de-Privacidad-Integral-Web.pdf
+2. Politica-de-Cookies.pdf
+
+El banner de cookies, el formulario de contacto y la Bolsa de Trabajo ya apuntan a estas rutas.
+
+NOTA TÉCNICA BOLSA DE TRABAJO:
+El formulario bolsa-trabajo.html está diseñado y validado en el navegador, pero requiere conectarse a un backend o servicio seguro de formularios para recibir y almacenar archivos de Curriculum Vitae.
