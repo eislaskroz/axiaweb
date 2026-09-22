@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>
-   Instalaciones El&eacute;ctricas | Axia Comunicaciones
+   Obra Civil | Axia Comunicaciones
   </title>
   <link href="css/normalize.css" rel="stylesheet"/>
   <!-- Google Fonts -->
@@ -15,6 +15,41 @@
   <link href="css/style.css" rel="stylesheet"/>
   <!-- ÍCONO AXIA -->
   <link href="img/SoloAxia.webp" rel="icon" type="image/x-icon"/>
+  <style>
+   .obra-civil-grid{
+display:grid;
+grid-template-columns:1.15fr .85fr;
+gap:2rem;
+align-items:center;
+margin:2rem 0;
+}
+.obra-civil-grid.reverse{
+grid-template-columns:.85fr 1.15fr;
+}
+.obra-civil-grid.reverse .texto{order:2;}
+.obra-civil-grid.reverse .video{order:1;}
+.obra-civil-grid video{
+width:100%;
+border-radius:1.5rem;
+}
+.obra-civil-grid .texto p,
+.obra-civil-grid .texto li{
+font-size:1.55rem;
+line-height:1.75;
+text-align:justify;
+}
+.obra-civil-grid .texto h1{font-size:3.8rem;}
+.obra-civil-grid .texto h2{font-size:2.4rem;}
+.obra-civil-grid .texto h3{font-size:2rem;}
+@media(max-width:768px){
+.obra-civil-grid,
+.obra-civil-grid.reverse{
+grid-template-columns:1fr;
+}
+.obra-civil-grid.reverse .texto,
+.obra-civil-grid.reverse .video{order:initial;}
+}
+  </style>
  </head>
  <body class="fondo">
   <!-- NAVBAR -->
@@ -46,66 +81,126 @@
   </nav>
   <!-- Banner principal -->
   <header class="header">
-   <img alt="Banner de Instalaciones El&eacute;ctricas" decoding="async" loading="lazy" src="img/InstalacionesElectricas-Nuevo.webp"/>
+   <img alt="Banner Obra Civil" decoding="async" loading="lazy" src="img/Banner-ObraCivil.webp"/>
   </header>
   <!-- CONTENIDO -->
   <main class="contenedor">
-   <section class="servicio-detalle">
-    <!-- VIDEO -->
-    <div class="servicio-detalle__media">
-     <video autoplay="" class="servicio-detalle__video" controls="" loop="" muted="">
-      <source src="vid/InstalacionesElectricas.mp4" type="video/mp4"/>
-      Tu navegador no soporta videos HTML5.
-     </video>
-    </div>
-    <!-- INFORMACIÓN -->
-    <div class="servicio-detalle__contenido">
+   <section class="obra-civil-grid">
+    <div class="texto">
      <h1>
-      Instalaciones El&eacute;ctricas
+      Obra Civil
      </h1>
      <h2>
-      Montaje, Instalaci&oacute;n y Mantenimiento
+      Construcci&oacute;n, adecuaci&oacute;n y mantenimiento de espacios
      </h2>
      <p class="p-servicios">
-      Estamos especializados en montajes, instalaciones y mantenimientos el&eacute;ctricos en media y baja tensi&oacute;n.
+      En Axia Comunicaciones desarrollamos soluciones de obra civil para proyectos comerciales, industriales, corporativos y de infraestructura tecnol&oacute;gica. Integramos la planeaci&oacute;n, ejecuci&oacute;n y supervisi&oacute;n de los trabajos necesarios para crear, ampliar, remodelar o rehabilitar espacios funcionales, seguros y preparados para la operaci&oacute;n de cada cliente.
      </p>
      <p class="p-servicios">
-      Contamos con personal t&eacute;cnico e ingenier&iacute;a con experiencia, preparados para ofrecer soluciones seguras, eficientes y alineadas a las necesidades de cada cliente.
+      Nuestro servicio se adapta tanto a proyectos nuevos como a adecuaciones dentro de instalaciones existentes. Trabajamos de forma coordinada con las &aacute;reas de electricidad, voz y datos, CCTV, control de accesos, climatizaci&oacute;n y energ&iacute;a.
      </p>
      <p class="p-servicios">
-      Trabajamos con medios, herramientas y t&eacute;cnicas actuales para garantizar instalaciones confiables y de alto desempe&ntilde;o.
+      Antes de iniciar realizamos un levantamiento t&eacute;cnico para identificar condiciones del sitio, necesidades operativas, materiales, tiempos de ejecuci&oacute;n y posibles riesgos.
      </p>
+    </div>
+    <div class="video">
+     <video autoplay="" controls="" loop="" muted="" playsinline="">
+      <source src="vid/ObraCivil.mp4" type="video/mp4"/>
+     </video>
+    </div>
+   </section>
+   <section class="obra-civil-grid reverse">
+    <div class="texto">
      <h3>
-      Servicios Integrales
+      Servicios de Obra Civil
      </h3>
      <ul class="servicio-detalle__lista">
       <li>
-       Instalaci&oacute;n de transformadores de media y baja tensi&oacute;n
+       Construcci&oacute;n y adecuaci&oacute;n de oficinas.
       </li>
       <li>
-       Tr&aacute;mites, aprobaci&oacute;n y contrataci&oacute;n ante CFE
+       Remodelaci&oacute;n y mantenimiento de inmuebles.
       </li>
       <li>
-       Instalaci&oacute;n de paneles solares
+       Muros y plafones de tablaroca.
       </li>
       <li>
-       Gesti&oacute;n de convenios y ajustes
+       Pisos, acabados e impermeabilizaci&oacute;n.
       </li>
       <li>
-       Mantenimiento el&eacute;ctrico preventivo y correctivo
+       Canalizaciones y registros.
       </li>
       <li>
-       Sistemas de tierra f&iacute;sica
-      </li>
-      <li>
-       Automatizaci&oacute;n para ahorro energ&eacute;tico
+       Adecuaci&oacute;n de sites.
       </li>
      </ul>
-     <a class="boton boton--primario" href="contacto.html">
-      Solicita tu cotizaci&oacute;n
-     </a>
+     <h3>
+      Integraci&oacute;n con infraestructura tecnol&oacute;gica
+     </h3>
+     <p class="p-servicios">
+      Coordinamos la obra civil con instalaciones tecnol&oacute;gicas y el&eacute;ctricas para evitar retrabajos y optimizar tiempos.
+     </p>
+    </div>
+    <div class="video">
+     <video autoplay="" controls="" loop="" muted="" playsinline="">
+      <source src="vid/ObraCivil-2.mp4" type="video/mp4"/>
+     </video>
     </div>
    </section>
+   <section class="obra-civil-grid">
+    <div class="texto">
+     <h3>
+      Proceso de trabajo
+     </h3>
+     <ul class="servicio-detalle__lista">
+      <li>
+       Levantamiento t&eacute;cnico.
+      </li>
+      <li>
+       Planeaci&oacute;n.
+      </li>
+      <li>
+       Ejecuci&oacute;n.
+      </li>
+      <li>
+       Control de calidad.
+      </li>
+      <li>
+       Entrega.
+      </li>
+     </ul>
+     <h3>
+      Beneficios
+     </h3>
+     <ul class="servicio-detalle__lista">
+      <li>
+       Un solo proveedor.
+      </li>
+      <li>
+       Menos retrabajos.
+      </li>
+      <li>
+       Mayor calidad.
+      </li>
+      <li>
+       Seguimiento t&eacute;cnico.
+      </li>
+     </ul>
+     <p class="p-servicios">
+      Cada proyecto requiere una soluci&oacute;n espec&iacute;fica y personalizada.
+     </p>
+    </div>
+    <div class="video">
+     <video autoplay="" controls="" loop="" muted="" playsinline="">
+      <source src="vid/ObraCivil-3.mp4" type="video/mp4"/>
+     </video>
+    </div>
+   </section>
+   <div style="text-align:center;margin:4rem 0;">
+    <a class="boton boton--primario" href="contacto.html">
+     Solicita tu cotizaci&oacute;n
+    </a>
+   </div>
   </main>
   <!-- FOOTER CORPORATIVO -->
   <footer class="footer">

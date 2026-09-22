@@ -1,309 +1,357 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Axia NOC | Monitoreo y Automatización Tecnológica</title>
-
-    <link rel="stylesheet" href="css/normalize.css">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&display=swap" rel="stylesheet">
-
-    <!-- CSS principal -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- ÍCONO AXIA -->
-    <link rel="icon" href="img/SoloAxia.png" type="image/x-icon">    
-</head>
-
-<body class="fondo">
-
-    <!-- NAVBAR -->
-    <nav class="navegacion">
-        <a class="navegacion__enlace" href="index.html">Inicio</a>
-        <a class="navegacion__enlace" href="nosotros.html">Quiénes Somos</a>
-        <a class="navegacion__enlace navegacion__enlace--activo" href="noc.html">Network Operations Center</a>
-        <a class="navegacion__enlace" href="servicios.html">Servicios</a>
-        <a class="navegacion__enlace" href="productos.html">Productos</a>
-        <a class="navegacion__enlace" href="contacto.html">Contacto</a>
-    </nav>
-
-    <!-- Banner principal -->
-    <header class="header">
-        <img src="img/NOC-Nuevo.png" alt="Banner de NOC Axia">
-    </header>
-
-    <!-- INTRODUCCIÓN -->
-    <section class="presentacion contenedor">
-        <p class="presentacion__texto">
-            PROPUESTA DE SERVICIOS: PLATAFORMA INTEGRAL DE GESTIÓN, MONITOREO Y AUTOMATIZACIÓN TECNOLÓGICA (AXIA RMM & PSA)
-        </p>
-        <p class="presentacion__texto">
-            En AXIA, entendemos que la continuidad operativa, la seguridad de la información y la eficiencia técnica son los pilares del crecimiento de cualquier organización. Por ello, presentamos nuestra solución todo-en-uno diseñada para centralizar, automatizar y proteger su infraestructura tecnológica.
-        </p>
-    </section>
-
-    <!-- PILARES -->
-    <section class="noc contenedor">
-        <h2 class="noc__heading">
-            Pilares de la Oferta de Servicios
-        </h2>
-        <section class="noc-detalle contenedor">
-
-            <!-- 1 -->
-            <article class="noc-bloque">
-                <div class="noc-bloque__imagen">
-                    <img src="img/noc/AXIACentralControl.png" alt="AXIA Central Control" onclick="abrirImagen(this)">
-                </div>
-                <div class="noc-bloque__texto">
-                    <h3>AXIA Central Control</h3>
-                    <p>
-                        Ecosistema Centralizado de Operaciones:<br>Solución todo-en-uno para RMM y PSA Una plataforma unificada que fusiona el monitoreo remoto con la gestión de servicios. Permite correlacionar de manera automática el estado de la infraestructura con el ciclo de vida de los requerimientos técnicos, eliminando la dispersión de herramientas y consolidando el control operativo en una sola pantalla.
-                    </p>
-                </div>
-            </article>
-
-            <!-- 2 -->
-            <article class="noc-bloque">
-                <div class="noc-bloque__texto">
-                    <h3>AXIA Core-Copilot IA</h3>
-                    <p>
-                        Motor de Automatización Inteligente Copilot:<br>Soluciones y scripts sugeridos por IA Optimización del tiempo de respuesta mediante inteligencia artificial que analiza comportamientos anómalos y sugiere o ejecuta scripts de remediación inmediata. Esta tecnología minimiza los errores humanos y acelera la solución de fallas complejas en servidores, estaciones de trabajo y dispositivos de red.
-                    </p>
-                </div>                
-                <div class="noc-bloque__imagen">
-                    <img src="img/noc/AXIACore-CopilotIA.png" alt="AXIA Core-Copilot IA" onclick="abrirImagen(this)">
-                </div>
-            </article>
-            
-            <!-- 3 -->
-            <article class="noc-bloque">
-                <div class="noc-bloque__imagen">
-                    <img src="img/noc/AXIABender-SmartTicket.png" alt="AXIA Bender-Smart Ticket" onclick="abrirImagen(this)">
-                </div>
-                <div class="noc-bloque__texto">
-                    <h3>AXIA Bender-Smart Ticket</h3>
-                    <p>
-                        Mesa de Servicio Autónoma y Resolución Predictiva Bender:<br>Soluciones de tickets impulsadas por IA, auto-resolución Un sistema de gestión de incidencias avanzado que utiliza IA para clasificar, priorizar y resolver tickets comunes de forma totalmente automatizada (auto-resolución). Los problemas recurrentes se mitigan antes de que impacten al usuario final, liberando carga de trabajo al personal técnico.
-                    </p>
-                </div>
-            </article>
-            
-            <!-- 4 -->
-            <article class="noc-bloque">
-                <div class="noc-bloque__texto">
-                    <h3>AXIA Remote Monitor</h3>
-                    <p>
-                        Gestión y Supervisión Proactiva de Infraestructura:<br>Monitorización y gestión remota (RMM) Supervisión continua y en tiempo real del rendimiento de hardware, sistemas operativos, almacenamiento y conectividad. Permite intervenir de forma remota y transparente en cualquier nodo de la red sin interrumpir las actividades diarias de los usuarios.
-                    </p>
-                </div>
-                <div class="noc-bloque__imagen">
-                    <img src="img/noc/AXIARemoteMonitor.png" alt="AXIA Remote Monitor" onclick="abrirImagen(this)">
-                </div>                
-            </article>
-            
-            <!-- 5 -->
-            <article class="noc-bloque">
-                <div class="noc-bloque__imagen">
-                    <img src="img/noc/LicenciamientoporConsultor.png" alt="Licenciamiento por Consultor" onclick="abrirImagen(this)">
-                </div>
-                <div class="noc-bloque__texto">
-                    <h3>Licenciamiento por Consultor</h3>
-                    <p>
-                        Modelo de Escalabilidad Flexible:<br>Dispositivos ilimitados - paga por técnico Una estructura comercial transparente y rentable diseñada para acompañar el crecimiento de su negocio. La inversión se calcula estrictamente con base en el número de técnicos administradores, otorgando la libertad de desplegar agentes y monitorear dispositivos de forma ilimitada sin costos ocultos por nodo adicional.
-                    </p>
-                </div>
-            </article>
-            
-            <!-- 6 -->
-            <article class="noc-bloque">
-                <div class="noc-bloque__texto">
-                    <h3>AXIA Intuitive Interface</h3>
-                    <p>
-                        Consola Operativa Unificada de Alta Usabilidad:<br>Interfaz fácil e intuitiva Un entorno visual diseñado bajo estándares de experiencia de usuario óptimos, permitiendo una navegación fluida, rápida adopción por parte del equipo técnico y acceso inmediato a las métricas e indicadores más críticos de la infraestructura.
-                    </p>
-                </div>    
-                <div class="noc-bloque__imagen">
-                    <img src="img/noc/AXIAIntuitiveInterface.png" alt="AXIA Intuitive Interface" onclick="abrirImagen(this)">                                    
-                </div>
-            </article>
-            
-            <!-- 7 -->
-            <article class="noc-bloque">
-                <div class="noc-bloque__imagen">
-                    <img src="img/noc/AXIALiveSupport.png" alt="AXIA Live Support" onclick="abrirImagen(this)">
-                </div>
-                <div class="noc-bloque__texto">
-                    <h3>AXIA Live Support</h3>
-                    <p>
-                        Centro de Respuesta Inmediata 24/7:<br>Soporte por chat en vivo 24/7 Garantía de continuidad operativa a través de un canal directo de comunicación en tiempo real. Nuestro equipo de ingenieros está disponible las 24 horas del día, los 7 días de la semana, para atender y resolver emergencias técnicas sin demoras.
-                    </p>
-                </div>
-            </article>
-            
-            <!-- 8 -->
-            <article class="noc-bloque">
-                <div class="noc-bloque__texto">
-                    <h3>AXIA Analytics & Reporting</h3>
-                    <p>
-                        Inteligencia de Negocios y Reportes a la Medida:<br>Informes y análisis completamente personalizables Generación de análisis detallados y tableros de control (dashboards) adaptables a las necesidades operativas o directivas de la organización. Facilita la toma de decisiones informadas mediante métricas de disponibilidad, cumplimiento de SLA y salud general de los activos.
-                    </p>
-                </div>                    
-                <div class="noc-bloque__imagen">
-                    <img src="img/noc/AXIAAnalytics&Reporting.png" alt="AXIA Analytics & Reporting" onclick="abrirImagen(this)">                    
-                </div>
-            </article>
-            
-            <!-- 9 -->
-            <article class="noc-bloque">
-                <div class="noc-bloque__imagen">
-                    <img src="img/noc/AXIASmartPatching.png" alt="AXIA Smart Patching" onclick="abrirImagen(this)">
-                </div>
-                <div class="noc-bloque__texto">
-                    <h3>AXIA Smart Patching</h3>
-                    <p>
-                        Gestión Crítica de Actualizaciones y Despliegues Automáticos:<br>Servicios de parcheo y automatización Mitigación de riesgos operativos y brechas de seguridad mediante la programación, prueba y distribución automatizada de parches de software y actualizaciones de firmware, garantizando que todos los sistemas operen siempre en sus versiones más estables y seguras.
-                    </p>
-                </div>
-            </article>
-
-            <!-- 10 -->
-            <article class="noc-bloque">
-                <div class="noc-bloque__texto">
-                    <h3>AXIA Network Discovery & Security</h3>
-                    <p>
-                        Auditoría de Red y Diagnóstico de Vulnerabilidades:<br>Capacidades completas de descubrimiento de red y vulnerabilidades Visibilidad total sobre los activos conectados a la organización. La plataforma identifica automáticamente nuevos dispositivos en la red, mapea la topología y realiza análisis preventivos para detectar vulnerabilidades y debilidades de configuración que pongan en riesgo la seguridad.
-                    </p>
-                </div>
-                <div class="noc-bloque__imagen">
-                    <img src="img/noc/AXIANetworkDiscovery&Security.png" alt="AXIA Network Discovery & Security" onclick="abrirImagen(this)">
-                </div>                
-            </article>            
-        </section>        
-    </section>
-
-    <!-- CTA -->
-    <section class="cta contenedor">
-        <h2>
-            Transformamos Infraestructura Tecnológica en Operaciones Inteligentes
-        </h2>
-        <p>
-            AXIA NOC integra monitoreo, automatización, soporte remoto, seguridad y administración centralizada para garantizar continuidad operativa y crecimiento tecnológico empresarial.
-        </p>
-        <a
-            href="contacto.html"
-            class="boton boton--primario"
-        >
-            Solicitar Información
-        </a>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="footer__contenedor">
-
-            <div class="footer__seccion">
-                <h3 class="footer__titulo">Axia Comunicaciones S.A. de C.V.</h3>
-                <p class="footer__texto">
-                    Ingeniería en cómputo, comunicaciones y electricidad, soluciones profesionales para empresas e industrias.
-                </p>
-            </div>
-
-            <div class="footer__seccion">
-                <h3 class="footer__titulo">Contacto</h3>
-                <p class="footer__texto">
-                    📍 Álvaro Obregón, Manzana 2, Lote 3, Col. San Juan de Guadalupe, Zumpango, Estado de México, C.P. 55630
-                </p>
-                <p class="footer__texto">📞 +52 55 4989 3464</p>
-                <p class="footer__texto">
-                    📧
-                    <a class="footer__correo" href="mailto:gte.ventas@axiacomunicaciones.mx?subject=Solicitud%20de%20Información&body=Hola%20Axia%20Comunicaciones,%20me%20gustaría%20solicitar%20información.">
-                        gte.ventas@axiacomunicaciones.mx
-                    </a>
-                </p>
-            </div>
-
-            <div class="footer__seccion">
-                <h3 class="footer__titulo">Redes Sociales</h3>
-                <div class="footer__redes">
-                    <a href="https://www.facebook.com/Axiacomunicacionessa" class="footer__social" target="_blank">Facebook</a>
-                    <a href="https://www.instagram.com/axia_comunicaciones/" class="footer__social" target="_blank">Instagram</a>
-                    <a href="https://www.linkedin.com/" class="footer__social" target="_blank">LinkedIn</a>
-                    <a href="https://www.youtube.com/" class="footer__social" target="_blank">YouTube</a>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="footer__copy">
-            <p>© 2026 Axia Comunicaciones S.A. de C.V. | Todos los derechos reservados</p>
-        </div>
-    </footer>
-
-        <!-- WHATSAPP -->
-    <div class="whatsapp-container">
-
-        <!-- TEXTO -->
-        <div class="whatsapp-texto">
-        ¿WhatsApp?
-        </div>
-
-        <!-- BOTÓN -->
-        <a
-        href="https://wa.me/525518833166?text=Hola%20Axia%20Comunicaciones,%20me%20gustaría%20solicitar%20información."
-        class="whatsapp"
-        target="_blank"
-        >
-        <img
-            src="img/WhatsApp.png"
-            alt="WhatsApp"
-        >
-        </a>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Axia NOC | Monitoreo y Automatizaci&oacute;n Tecnol&oacute;gica
+  </title>
+  <link href="css/normalize.css" rel="stylesheet"/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&amp;display=swap" rel="stylesheet"/>
+  <!-- CSS principal -->
+  <link href="css/style.css" rel="stylesheet"/>
+  <!-- ÍCONO AXIA -->
+  <link href="img/SoloAxia.webp" rel="icon" type="image/x-icon"/>
+ </head>
+ <body class="fondo">
+  <!-- NAVBAR -->
+  <nav class="navegacion">
+   <a class="navegacion__enlace" href="index.html">
+    Inicio
+   </a>
+   <a class="navegacion__enlace" href="nosotros.html">
+    Qui&eacute;nes Somos
+   </a>
+   <a class="navegacion__enlace navegacion__enlace--activo" href="noc.html">
+    Network Operations Center
+   </a>
+   <a class="navegacion__enlace" href="servicios.html">
+    Servicios
+   </a>
+   <a class="navegacion__enlace" href="productos.html">
+    Productos
+   </a>
+   <a class="navegacion__enlace" href="docs/Etica-Corporativa.pdf" rel="noopener noreferrer" target="_blank">
+    &Eacute;tica Corporativa
+   </a>
+   <a class="navegacion__enlace" href="bolsa-trabajo.html">
+    Bolsa de Trabajo
+   </a>
+   <a class="navegacion__enlace" href="contacto.html">
+    Contacto
+   </a>
+  </nav>
+  <!-- Banner principal -->
+  <header class="header">
+   <img alt="Banner de NOC Axia" decoding="async" loading="lazy" src="img/NOC-Nuevo.webp"/>
+  </header>
+  <!-- INTRODUCCIÓN -->
+  <section class="presentacion contenedor">
+   <p class="presentacion__texto">
+    PROPUESTA DE SERVICIOS: PLATAFORMA INTEGRAL DE GESTI&Oacute;N, MONITOREO Y AUTOMATIZACI&Oacute;N TECNOL&Oacute;GICA (AXIA RMM &amp; PSA)
+   </p>
+   <p class="presentacion__texto">
+    En AXIA, entendemos que la continuidad operativa, la seguridad de la informaci&oacute;n y la eficiencia t&eacute;cnica son los pilares del crecimiento de cualquier organizaci&oacute;n. Por ello, presentamos nuestra soluci&oacute;n todo-en-uno dise&ntilde;ada para centralizar, automatizar y proteger su infraestructura tecnol&oacute;gica.
+   </p>
+  </section>
+  <!-- PILARES -->
+  <section class="noc contenedor">
+   <h2 class="noc__heading">
+    Pilares de la Oferta de Servicios
+   </h2>
+   <section class="noc-detalle contenedor">
+    <!-- 1 -->
+    <article class="noc-bloque">
+     <div class="noc-bloque__imagen">
+      <img alt="AXIA Central Control" decoding="async" loading="lazy" onclick="abrirImagen(this)" src="img/noc/AXIACentralControl.webp"/>
+     </div>
+     <div class="noc-bloque__texto">
+      <h3>
+       AXIA Central Control
+      </h3>
+      <p>
+       Ecosistema Centralizado de Operaciones:
+       <br/>
+       Soluci&oacute;n todo-en-uno para RMM y PSA Una plataforma unificada que fusiona el monitoreo remoto con la gesti&oacute;n de servicios. Permite correlacionar de manera autom&aacute;tica el estado de la infraestructura con el ciclo de vida de los requerimientos t&eacute;cnicos, eliminando la dispersi&oacute;n de herramientas y consolidando el control operativo en una sola pantalla.
+      </p>
+     </div>
+    </article>
+    <!-- 2 -->
+    <article class="noc-bloque">
+     <div class="noc-bloque__texto">
+      <h3>
+       AXIA Core-Copilot IA
+      </h3>
+      <p>
+       Motor de Automatizaci&oacute;n Inteligente Copilot:
+       <br/>
+       Soluciones y scripts sugeridos por IA Optimizaci&oacute;n del tiempo de respuesta mediante inteligencia artificial que analiza comportamientos an&oacute;malos y sugiere o ejecuta scripts de remediaci&oacute;n inmediata. Esta tecnolog&iacute;a minimiza los errores humanos y acelera la soluci&oacute;n de fallas complejas en servidores, estaciones de trabajo y dispositivos de red.
+      </p>
+     </div>
+     <div class="noc-bloque__imagen">
+      <img alt="AXIA Core-Copilot IA" decoding="async" loading="lazy" onclick="abrirImagen(this)" src="img/noc/AXIACore-CopilotIA.webp"/>
+     </div>
+    </article>
+    <!-- 3 -->
+    <article class="noc-bloque">
+     <div class="noc-bloque__imagen">
+      <img alt="AXIA Bender-Smart Ticket" decoding="async" loading="lazy" onclick="abrirImagen(this)" src="img/noc/AXIABender-SmartTicket.webp"/>
+     </div>
+     <div class="noc-bloque__texto">
+      <h3>
+       AXIA Bender-Smart Ticket
+      </h3>
+      <p>
+       Mesa de Servicio Aut&oacute;noma y Resoluci&oacute;n Predictiva Bender:
+       <br/>
+       Soluciones de tickets impulsadas por IA, auto-resoluci&oacute;n Un sistema de gesti&oacute;n de incidencias avanzado que utiliza IA para clasificar, priorizar y resolver tickets comunes de forma totalmente automatizada (auto-resoluci&oacute;n). Los problemas recurrentes se mitigan antes de que impacten al usuario final, liberando carga de trabajo al personal t&eacute;cnico.
+      </p>
+     </div>
+    </article>
+    <!-- 4 -->
+    <article class="noc-bloque">
+     <div class="noc-bloque__texto">
+      <h3>
+       AXIA Remote Monitor
+      </h3>
+      <p>
+       Gesti&oacute;n y Supervisi&oacute;n Proactiva de Infraestructura:
+       <br/>
+       Monitorizaci&oacute;n y gesti&oacute;n remota (RMM) Supervisi&oacute;n continua y en tiempo real del rendimiento de hardware, sistemas operativos, almacenamiento y conectividad. Permite intervenir de forma remota y transparente en cualquier nodo de la red sin interrumpir las actividades diarias de los usuarios.
+      </p>
+     </div>
+     <div class="noc-bloque__imagen">
+      <img alt="AXIA Remote Monitor" decoding="async" loading="lazy" onclick="abrirImagen(this)" src="img/noc/AXIARemoteMonitor.webp"/>
+     </div>
+    </article>
+    <!-- 5 -->
+    <article class="noc-bloque">
+     <div class="noc-bloque__imagen">
+      <img alt="Licenciamiento por Consultor" decoding="async" loading="lazy" onclick="abrirImagen(this)" src="img/noc/LicenciamientoporConsultor.webp"/>
+     </div>
+     <div class="noc-bloque__texto">
+      <h3>
+       Licenciamiento por Consultor
+      </h3>
+      <p>
+       Modelo de Escalabilidad Flexible:
+       <br/>
+       Dispositivos ilimitados - paga por t&eacute;cnico Una estructura comercial transparente y rentable dise&ntilde;ada para acompa&ntilde;ar el crecimiento de su negocio. La inversi&oacute;n se calcula estrictamente con base en el n&uacute;mero de t&eacute;cnicos administradores, otorgando la libertad de desplegar agentes y monitorear dispositivos de forma ilimitada sin costos ocultos por nodo adicional.
+      </p>
+     </div>
+    </article>
+    <!-- 6 -->
+    <article class="noc-bloque">
+     <div class="noc-bloque__texto">
+      <h3>
+       AXIA Intuitive Interface
+      </h3>
+      <p>
+       Consola Operativa Unificada de Alta Usabilidad:
+       <br/>
+       Interfaz f&aacute;cil e intuitiva Un entorno visual dise&ntilde;ado bajo est&aacute;ndares de experiencia de usuario &oacute;ptimos, permitiendo una navegaci&oacute;n fluida, r&aacute;pida adopci&oacute;n por parte del equipo t&eacute;cnico y acceso inmediato a las m&eacute;tricas e indicadores m&aacute;s cr&iacute;ticos de la infraestructura.
+      </p>
+     </div>
+     <div class="noc-bloque__imagen">
+      <img alt="AXIA Intuitive Interface" decoding="async" loading="lazy" onclick="abrirImagen(this)" src="img/noc/AXIAIntuitiveInterface.webp"/>
+     </div>
+    </article>
+    <!-- 7 -->
+    <article class="noc-bloque">
+     <div class="noc-bloque__imagen">
+      <img alt="AXIA Live Support" decoding="async" loading="lazy" onclick="abrirImagen(this)" src="img/noc/AXIALiveSupport.webp"/>
+     </div>
+     <div class="noc-bloque__texto">
+      <h3>
+       AXIA Live Support
+      </h3>
+      <p>
+       Centro de Respuesta Inmediata 24/7:
+       <br/>
+       Soporte por chat en vivo 24/7 Garant&iacute;a de continuidad operativa a trav&eacute;s de un canal directo de comunicaci&oacute;n en tiempo real. Nuestro equipo de ingenieros est&aacute; disponible las 24 horas del d&iacute;a, los 7 d&iacute;as de la semana, para atender y resolver emergencias t&eacute;cnicas sin demoras.
+      </p>
+     </div>
+    </article>
+    <!-- 8 -->
+    <article class="noc-bloque">
+     <div class="noc-bloque__texto">
+      <h3>
+       AXIA Analytics &amp; Reporting
+      </h3>
+      <p>
+       Inteligencia de Negocios y Reportes a la Medida:
+       <br/>
+       Informes y an&aacute;lisis completamente personalizables Generaci&oacute;n de an&aacute;lisis detallados y tableros de control (dashboards) adaptables a las necesidades operativas o directivas de la organizaci&oacute;n. Facilita la toma de decisiones informadas mediante m&eacute;tricas de disponibilidad, cumplimiento de SLA y salud general de los activos.
+      </p>
+     </div>
+     <div class="noc-bloque__imagen">
+      <img alt="AXIA Analytics &amp; Reporting" decoding="async" loading="lazy" onclick="abrirImagen(this)" src="img/noc/AXIAAnalytics&amp;Reporting.webp"/>
+     </div>
+    </article>
+    <!-- 9 -->
+    <article class="noc-bloque">
+     <div class="noc-bloque__imagen">
+      <img alt="AXIA Smart Patching" decoding="async" loading="lazy" onclick="abrirImagen(this)" src="img/noc/AXIASmartPatching.webp"/>
+     </div>
+     <div class="noc-bloque__texto">
+      <h3>
+       AXIA Smart Patching
+      </h3>
+      <p>
+       Gesti&oacute;n Cr&iacute;tica de Actualizaciones y Despliegues Autom&aacute;ticos:
+       <br/>
+       Servicios de parcheo y automatizaci&oacute;n Mitigaci&oacute;n de riesgos operativos y brechas de seguridad mediante la programaci&oacute;n, prueba y distribuci&oacute;n automatizada de parches de software y actualizaciones de firmware, garantizando que todos los sistemas operen siempre en sus versiones m&aacute;s estables y seguras.
+      </p>
+     </div>
+    </article>
+    <!-- 10 -->
+    <article class="noc-bloque">
+     <div class="noc-bloque__texto">
+      <h3>
+       AXIA Network Discovery &amp; Security
+      </h3>
+      <p>
+       Auditor&iacute;a de Red y Diagn&oacute;stico de Vulnerabilidades:
+       <br/>
+       Capacidades completas de descubrimiento de red y vulnerabilidades Visibilidad total sobre los activos conectados a la organizaci&oacute;n. La plataforma identifica autom&aacute;ticamente nuevos dispositivos en la red, mapea la topolog&iacute;a y realiza an&aacute;lisis preventivos para detectar vulnerabilidades y debilidades de configuraci&oacute;n que pongan en riesgo la seguridad.
+      </p>
+     </div>
+     <div class="noc-bloque__imagen">
+      <img alt="AXIA Network Discovery &amp; Security" decoding="async" loading="lazy" onclick="abrirImagen(this)" src="img/noc/AXIANetworkDiscovery&amp;Security.webp"/>
+     </div>
+    </article>
+   </section>
+  </section>
+  <!-- CTA -->
+  <section class="cta contenedor">
+   <h2>
+    Transformamos Infraestructura Tecnol&oacute;gica en Operaciones Inteligentes
+   </h2>
+   <p>
+    AXIA NOC integra monitoreo, automatizaci&oacute;n, soporte remoto, seguridad y administraci&oacute;n centralizada para garantizar continuidad operativa y crecimiento tecnol&oacute;gico empresarial.
+   </p>
+   <a class="boton boton--primario" href="contacto.html">
+    Solicitar Informaci&oacute;n
+   </a>
+  </section>
+  <!-- FOOTER -->
+  <footer class="footer">
+   <div class="footer__contenedor">
+    <div class="footer__seccion">
+     <h3 class="footer__titulo">
+      Axia Comunicaciones S.A. de C.V.
+     </h3>
+     <p class="footer__texto">
+      Ingenier&iacute;a en c&oacute;mputo, comunicaciones y electricidad, soluciones profesionales para empresas e industrias.
+     </p>
     </div>
-
-    <!-- CHATBOT AXIA -->
-    <div class="chatbot">
-        <div class="chatbot__texto">
-            Chatbot Axia
-        </div>
-        <button class="chatbot__boton" onclick="toggleChatbot()">
-            💬
-        </button>
-
-        <div class="chatbot__ventana" id="chatbotVentana">
-
-            <div class="chatbot__header">
-                <div>
-                    <h3>Axia Asistente</h3>
-                    <p>Estamos para ayudarte</p>
-                </div>
-
-                <button onclick="toggleChatbot()">×</button>
-            </div>
-
-            <div class="chatbot__mensajes" id="chatbotMensajes">
-                <div class="chatbot__mensaje chatbot__mensaje--bot">
-                    Hola 👋 Soy el asistente de Axia Comunicaciones. ¿Qué necesitas?
-                </div>
-            </div>
-
-            <div class="chatbot__opciones">
-                <button onclick="respuestaChatbot('cctv')">Informes sobre CCTV</button>
-                <button onclick="respuestaChatbot('redes')">Informes sobre Red, Voz y Datos</button>
-                <button onclick="respuestaChatbot('electricas')">Informes sobre Instalaciones Eléctricas</button>
-                <button onclick="respuestaChatbot('aires')">Informes sobre Aires Acondicionados</button>
-                <button onclick="respuestaChatbot('whatsapp')">Quiero comunicarme por WhatsApp</button>
-            </div>
-
-        </div>
+    <div class="footer__seccion">
+     <h3 class="footer__titulo">
+      Contacto
+     </h3>
+     <p class="footer__texto">
+      📍 &Aacute;lvaro Obreg&oacute;n, Manzana 2, Lote 3, Col. San Juan de Guadalupe, Zumpango, Estado de M&eacute;xico, C.P. 55630
+     </p>
+     <p class="footer__texto">
+      📞 +52 55 1883 3166
+     </p>
+     <p class="footer__texto">
+      📧
+      <a class="footer__correo" href="mailto:gte.ventas@axiacomunicaciones.mx?subject=Solicitud%20de%20Informaci&oacute;n&amp;body=Hola%20Axia%20Comunicaciones,%20me%20gustar&iacute;a%20solicitar%20informaci&oacute;n.">
+       gte.ventas@axiacomunicaciones.mx
+      </a>
+     </p>
     </div>
-
-    <!-- SCRIPT CHATBOT AXIA -->
-    <script>
-        function toggleChatbot() {
+    <div class="footer__seccion">
+     <h3 class="footer__titulo">
+      Redes Sociales
+     </h3>
+     <div class="footer__redes">
+      <a class="footer__social" href="https://www.facebook.com/Axiacomunicacionessa" target="_blank">
+       Facebook
+      </a>
+      <a class="footer__social" href="https://www.instagram.com/axiacomunicaciones_ventas" target="_blank">
+       Instagram
+      </a>
+      <a class="footer__social" href="https://www.linkedin.com/" target="_blank">
+       LinkedIn
+      </a>
+     </div>
+    </div>
+   </div>
+   <!-- COPYRIGHT -->
+   <div class="footer__copy">
+    <p>
+     &copy; 2026 Axia Comunicaciones S.A. de C.V. | Todos los derechos reservados |
+     <a class="footer__privacidad" href="docs/Aviso-de-Privacidad-Integral-Web.pdf" rel="noopener noreferrer" target="_blank">
+      Aviso de Privacidad
+     </a>
+    </p>
+   </div>
+  </footer>
+  <!-- WHATSAPP -->
+  <div class="whatsapp-container">
+   <!-- TEXTO -->
+   <div class="whatsapp-texto">
+    &iquest;WhatsApp?
+   </div>
+   <!-- BOTÓN -->
+   <a class="whatsapp" href="https://wa.me/525518833166?text=Hola%20Axia%20Comunicaciones,%20me%20gustar&iacute;a%20solicitar%20informaci&oacute;n." target="_blank">
+    <img alt="WhatsApp" decoding="async" loading="lazy" src="img/WhatsApp.webp"/>
+   </a>
+  </div>
+  <!-- CHATBOT AXIA -->
+  <div class="chatbot">
+   <div class="chatbot__texto">
+    Chatbot Axia
+   </div>
+   <button class="chatbot__boton" onclick="toggleChatbot()">
+    💬
+   </button>
+   <div class="chatbot__ventana" id="chatbotVentana">
+    <div class="chatbot__header">
+     <div>
+      <h3>
+       Axia Asistente
+      </h3>
+      <p>
+       Estamos para ayudarte
+      </p>
+     </div>
+     <button onclick="toggleChatbot()">
+      &times;
+     </button>
+    </div>
+    <div class="chatbot__mensajes" id="chatbotMensajes">
+     <div class="chatbot__mensaje chatbot__mensaje--bot">
+      Hola 👋 Soy el asistente de Axia Comunicaciones. &iquest;Qu&eacute; necesitas?
+     </div>
+    </div>
+    <div class="chatbot__opciones">
+     <button onclick="respuestaChatbot('cctv')">
+      Informes sobre CCTV
+     </button>
+     <button onclick="respuestaChatbot('redes')">
+      Informes sobre Red, Voz y Datos
+     </button>
+     <button onclick="respuestaChatbot('electricas')">
+      Informes sobre Instalaciones El&eacute;ctricas
+     </button>
+     <button onclick="respuestaChatbot('aires')">
+      Informes sobre Aires Acondicionados
+     </button>
+     <button onclick="respuestaChatbot('whatsapp')">
+      Quiero comunicarme por WhatsApp
+     </button>
+    </div>
+   </div>
+  </div>
+  <!-- SCRIPT CHATBOT AXIA -->
+  <script>
+   function toggleChatbot() {
             const ventana = document.getElementById("chatbotVentana");
             ventana.classList.toggle("activo");
         }
@@ -350,20 +398,16 @@
                 agregarMensaje(respuestas[opcion].bot, "bot");
             }, 500);
         }
-    </script>
-
-    <!-- MODAL IMAGEN -->
-    <div class="modal-imagen" id="modalImagen">
-        <span class="modal-imagen__cerrar">
-            &times;
-        </span>
-        <img
-            class="modal-imagen__contenido"
-            id="imagenExpandida"
-        >
-    </div>
-    <script>
-        const modal = document.getElementById("modalImagen");
+  </script>
+  <!-- MODAL IMAGEN -->
+  <div class="modal-imagen" id="modalImagen">
+   <span class="modal-imagen__cerrar">
+    &times;
+   </span>
+   <img class="modal-imagen__contenido" id="imagenExpandida"/>
+  </div>
+  <script>
+   const modal = document.getElementById("modalImagen");
         const imagenExpandida = document.getElementById("imagenExpandida");
         function abrirImagen(imagen){
             modal.style.display = "flex";
@@ -382,6 +426,7 @@
                 modal.style.display = "none";
             }
         });
-    </script>
-</body>
+  </script>
+  <!-- AVISO DE COOKIES Y TECNOLOGÍAS DE RASTREO -->
+ </body>
 </html>

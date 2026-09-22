@@ -1,346 +1,534 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos | Axia Comunicaciones</title>
-    <link rel="stylesheet" href="css/normalize.css">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&display=swap" rel="stylesheet"> 
-    
-    <!-- CSS principal -->
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- ÍCONO AXIA -->
-    <link rel="icon" href="img/SoloAxia.png" type="image/x-icon">    
-</head>
-<body class="fondo">
-
-    <!-- NAVBAR -->
-    <nav class="navegacion">
-        <a class="navegacion__enlace" href="index.html">Inicio</a>
-        <a class="navegacion__enlace" href="nosotros.html">Quiénes Somos</a>
-        <a class="navegacion__enlace" href="noc.html">Network Operations Center</a>
-        <a class="navegacion__enlace" href="servicios.html">Servicios</a>
-        <a class="navegacion__enlace navegacion__enlace--activo" href="productos.html">Productos</a>  
-        <a class="navegacion__enlace" href="contacto.html">Contacto</a>
-    </nav>
-
-    <header class="header"><img src="img/Banner-Productos.png" alt="Banner"></header>
-    
-    <br>
-    <div class="slider-container">
-        <div class="slider">
-        <div class="slide"><img src="img/marcas/Dahua.png" alt="Dahua"></div>            
-        <div class="slide"><img src="img/marcas/Cisco_logo.png" alt="Cisco"></div>
-        <div class="slide"><img src="img/marcas/epcom_legend.png" alt="Epcom"></div>
-        <div class="slide"><img src="img/marcas/Hikvision-Logo.png" alt="HikVision"></div>
-        <div class="slide"><img src="img/marcas/hilook.png" alt="HiLook"></div>
-        <div class="slide"><img src="img/marcas/huawei-logo.png" alt="Huawei"></div>
-        <div class="slide"><img src="img/marcas/Ubiquiti_Logo.png" alt="Ubiquiti"></div>
-        <div class="slide"><img src="img/marcas/panduit-logo.png" alt="Panduit"></div>
-        <div class="slide"><img src="img/marcas/Ruijie.png" alt="Ruijie"></div>
-        <div class="slide"><img src="img/marcas/Tp-Link_logo.png" alt="TPLink"></div>
-        <div class="slide"><img src="img/marcas/WD.png" alt="WesternDigital"></div>                    
-        <div class="slide"><img src="img/marcas/Honeywell.png" alt="HoneyWell"></div>        
-        <div class="slide"><img src="img/marcas/Ezviz.png" alt="Ezviz"></div>
-        <div class="slide"><img src="img/marcas/ZKTeco.png" alt="ZKTeco"></div>
-        <div class="slide"><img src="img/marcas/Grandstream.png" alt="Grandstream"></div>
-        <div class="slide"><img src="img/marcas/Belden.png" alt="Belden"></div>
-        <div class="slide"><img src="img/marcas/Fanvil.png" alt="Fanvil"></div>
-        <div class="slide"><img src="img/marcas/Condumex.svg" alt="Condumex"></div>
-        <div class="slide"><img src="img/marcas/Condulac.png" alt="Condulac"></div>
-        <div class="slide"><img src="img/marcas/WaveOptics.png" alt="WaveOptics"></div>
-        <div class="slide"><img src="img/marcas/Systimax.png" alt="Systimax"></div>                                
-        <!-- Duplicar la primera imagen al final para un bucle continuo -->
-        <div class="slide"><img src="img/marcas/Dahua.png" alt="Dahua"></div>            
-        <div class="slide"><img src="img/marcas/Cisco_logo.png" alt="Cisco"></div>                
-        <div class="slide"><img src="img/marcas/epcom_legend.png" alt="Epcom"></div>
-        <div class="slide"><img src="img/marcas/Hikvision-Logo.png" alt="HikVision"></div>
-        <div class="slide"><img src="img/marcas/hilook.png" alt="HiLook"></div>
-        <div class="slide"><img src="img/marcas/huawei-logo.png" alt="Huawei"></div>
-        <div class="slide"><img src="img/marcas/Ubiquiti_Logo.png" alt="Ubiquiti"></div>
-        <div class="slide"><img src="img/marcas/panduit-logo.png" alt="Panduit"></div>
-        <div class="slide"><img src="img/marcas/Ruijie.png" alt="Ruijie"></div>
-        <div class="slide"><img src="img/marcas/Tp-Link_logo.png" alt="TPLink"></div>
-        <div class="slide"><img src="img/marcas/WD.png" alt="WesternDigital"></div>
-        <div class="slide"><img src="img/marcas/Honeywell.png" alt="HoneyWell"></div>
-        <div class="slide"><img src="img/marcas/Ezviz.png" alt="Ezviz"></div>
-        <div class="slide"><img src="img/marcas/ZKTeco.png" alt="ZKTeco"></div>
-        <div class="slide"><img src="img/marcas/Grandstream.png" alt="Grandstream"></div>
-        <div class="slide"><img src="img/marcas/Belden.png" alt="Belden"></div>
-        <div class="slide"><img src="img/marcas/Fanvil.png" alt="Fanvil"></div>
-        <div class="slide"><img src="img/marcas/Condumex.svg" alt="Condumex"></div>
-        <div class="slide"><img src="img/marcas/Condulac.png" alt="Condulac"></div>
-        <div class="slide"><img src="img/marcas/WaveOptics.png" alt="WaveOptics"></div>
-        <div class="slide"><img src="img/marcas/Systimax.png" alt="Systimax"></div>        
-        </div>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Productos | Axia Comunicaciones
+  </title>
+  <link href="css/normalize.css" rel="stylesheet"/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&amp;display=swap" rel="stylesheet"/>
+  <!-- CSS principal -->
+  <link href="css/style.css" rel="stylesheet"/>
+  <!-- ÍCONO AXIA -->
+  <link href="img/SoloAxia.webp" rel="icon" type="image/x-icon"/>
+ </head>
+ <body class="fondo">
+  <!-- NAVBAR -->
+  <nav class="navegacion">
+   <a class="navegacion__enlace" href="index.html">
+    Inicio
+   </a>
+   <a class="navegacion__enlace" href="nosotros.html">
+    Qui&eacute;nes Somos
+   </a>
+   <a class="navegacion__enlace" href="noc.html">
+    Network Operations Center
+   </a>
+   <a class="navegacion__enlace" href="servicios.html">
+    Servicios
+   </a>
+   <a class="navegacion__enlace navegacion__enlace--activo" href="productos.html">
+    Productos
+   </a>
+   <a class="navegacion__enlace" href="docs/Etica-Corporativa.pdf" rel="noopener noreferrer" target="_blank">
+    &Eacute;tica Corporativa
+   </a>
+   <a class="navegacion__enlace" href="bolsa-trabajo.html">
+    Bolsa de Trabajo
+   </a>
+   <a class="navegacion__enlace" href="contacto.html">
+    Contacto
+   </a>
+  </nav>
+  <header class="header">
+   <img alt="Banner" decoding="async" fetchpriority="high" src="img/Banner-Productos.webp"/>
+  </header>
+  <br/>
+  <div class="slider-container">
+   <div class="slider">
+    <div class="slide">
+     <img alt="Dahua" decoding="async" loading="lazy" src="img/marcas/Dahua.webp"/>
     </div>
-
-    <main class="contenedor">
-        <br></br>
-        <br></br>
-        <div class="grid_producto">
-           <div class="producto" onclick="abrirModal('img/productos/P1.png', 'USB 3.2 tipo C macho a HDMI', 'Conecta fácilmente dispositivos USB-C a pantallas HDMI con resolución 4K.')">
-               <img class="imagen-circulo" src="img/productos/P1.png" alt="USB tipo C HDMI">
-               <div class="producto__informacion"> <p class="producto__nombre">USB 3.2 tipo C macho a HDMI</p></div>
-            </div>
-            <div class="producto" onclick="abrirModal('img/productos/P2.png', 'Adaptador de Red GB USB A/C con Hub V3.2', 'Mejora la conectividad de tu dispositivo convirtiendo un puerto USB en un puerto de red Gigabit y tres puertos USB de 5 Gbps. Un puerto Gigabit Ethernet (10/100/1000) para acelerar las descargas, la transmisión multimedia y los juegos. Tres puertos USB-A para conectar mouse, teclados, unidades de memoria flash y más, o para cargar y sincronizar dispositivos móviles')">
-                <img class="imagen-circulo" src="img/productos/P2.png" alt="Adaptador de Red GB USB A/C con Hub V3.2">
-                <div class="producto__informacion"> <p class="producto__nombre">Adaptador de Red GB USB A/C con Hub V3.2</p></div>
-            </div>
-            <div class="producto" onclick="abrirModal('img/productos/P3.png', 'Kit extensor HDMI sobre Ethernet 1080p', 'Extiende la conexión HDMI hasta 50 m entre una fuente HDMI y un monitor o proyector HD mediante un cable Ethernet El transmisor de dos puertos (un HDMI, un Ethernet) permite enviar señales HDMI a través de Ethernet y dividirlas en pantallas locales simultáneamente Soporta 1080p resoluciones y 6.75 Gbps data de rendimiento')">
-                <img class="imagen-circulo" src="img/productos/P3.png" alt="Kit extensor HDMI sobre Ethernet 1080p">
-                <div class="producto__informacion"> <p class="producto__nombre">Kit extensor HDMI sobre Ethernet 1080p</p></div>
-            </div>
-            <div class="producto" onclick="abrirModal('img/productos/HomeRouterInalámbricoWi-Fi4paraSolucionesWISP.png', 'Home Router Inalámbrico Wi-Fi 4 para Soluciones WISP', 'Administración Remota para Control de Usuarios y Anchos de Banda, Wi-Fi 4 (802.11n) con velocidad de 300 Mbps, 4 antenas de 5 dBi para señal más fuerte, Gestión remota vía aplicación móvil y plataforma cloud, Soporta hasta 16 usuarios concurrentes, Modo WISP para soluciones de proveedores de internet, Cobertura efectiva hasta 30 metros')">
-                <img class="imagen-circulo" src="img/productos/HomeRouterInalámbricoWi-Fi4paraSolucionesWISP.png" alt="Home Router Inalámbrico Wi-Fi 4 para Soluciones WISP">
-                <div class="producto__informacion"> <p class="producto__nombre">Home Router Inalámbrico Wi-Fi 4 para Soluciones WISP</p></div>
-            </div>
-            <div class="producto" onclick="abrirModal('img/productos/SwitchGigabit4Puertos.png', 'Switch Gigabit PoE+','Monitoreable, 4 Puertos 1000 Mbps PoE+, 1 Puerto 1000 Mbps Uplink, Configuración Nube Hik-PartnerPro, Modo Extendido hasta 300 Metros / 45 Watts, Switch 4 puertos PoE+ 1000 Mbps, Puerto Uplink 1000 Mbps dedicado, Monitoreo en tiempo real de tráfico, Modo Extendido hasta 300 metros, 45W PoE+ con administración inteligente, Configuración vía Hik-PartnerPro en la nube')">
-                <img class="imagen-circulo" src="img/productos/SwitchGigabit4Puertos.png" alt="Switch Gigabit PoE+">
-                <div class="producto__informacion"> <p class="producto__nombre">Switch Gigabit PoE+</p></div>
-            </div>
-            <div class="producto" onclick="abrirModal('img/productos/SwitchGigabit8Puertos.png', 'Switch Gigabit PoE+','Administrable, 8 Puertos 1000 Mbps PoE+, 2 Puertos 1000 Mbps de Uplink, Configuración Nube Hik-PartnerPro, Modo Extendido hasta 300 Metros / 60 W, Switch 8 puertos PoE+ 10/100/1000 Mbps, 2 puertos Uplink 10/100/1000 Mbps adicionales, Monitoreo en puertos críticos con control de datos, Modo Extendido hasta 300 metros, Optimización de buffer para transmisión de video, Gestión en la nube Hik-Partner Pro')">
-                <img class="imagen-circulo" src="img/productos/SwitchGigabit8Puertos.png" alt="Switch Gigabit PoE+">
-                <div class="producto__informacion"> <p class="producto__nombre">Switch Gigabit PoE+</p></div>
-            </div>
-            <div class="producto" onclick="abrirModal('img/productos/RouterInalámbricoWISPGigabit.png', 'Router Inalámbrico WISP Gigabit','>Hasta 1200 Mbps, Doble Banda AC (2.4 GHz y 5 GHz), 3 Puertos LAN 10/100/1000 Mbps + 1 Puerto WAN 10/100/1000 Mbps, 4 Antenas Externas Omnidireccional de 5 dBi / Interior, Estándar IEEE 802.11ac Wave 2 para alta velocidad, Tecnología 4x4 MU-MIMO y beamforming avanzado, 4 antenas externas omnidireccionales de 5 dBi, Interfaz Gigabit Ethernet con 4 puertos LAN y 1 WAN, Doble banda AC simultánea (2.4 GHz y 5 GHz), Velocidad combinada hasta 1200 Mbps')">
-                <img class="imagen-circulo" src="img/productos/RouterInalámbricoWISPGigabit.png" alt="Router Inalámbrico WISP Gigabit">
-                <div class="producto__informacion"> <p class="producto__nombre">Router Inalámbrico WISP Gigabit</p></div>
-            </div>                                                            
-            <div class="producto" onclick="abrirModal('img/productos/DomoIP4Megapíxel.png', 'Domo IP 4 Megapíxel', 'Lente Mot. 2.7 - 13.5 mm, Dual Light (40 mts IR + 40 mts Luz Blanca), SSD Integrado 256 GB, 2 Micrófonos Integrados, Alarmas I/O / IP67 / IK10 / WDR 130 dB / PoE + / AcuSense / DarkFighter S, Resolución 4 MP (2688x1520) con WDR 130 dB, Lente motorizado 2.7-13.5 mm (ángulo 116°-30°), Doble iluminación IR y luz blanca (40 mts alcance), Almacenamiento SSD integrado de 256 GB, Detección avanzada con AcuSense: rostros y objetos, Diseño antivandálico IK10 y protección IP67')">
-                <img class="imagen-circulo" src="img/productos/DomoIP4Megapíxel.png" alt="Domo IP 4 Megapíxel">
-                <div class="producto__informacion"> <p class="producto__nombre">Domo IP 4 Megapíxel</p></div>
-            </div>
-            <div class="producto" onclick="abrirModal('img/productos/DomoIP6Megapíxel.png', 'Domo IP 6 Megapíxel', 'Lente 2.8 mm / 30 mts Luz Blanca + 30 mts IR / ACUSENSE / Exterior IP67 / IK10 / WDR 120 dB / PoE / ONVIF / Micro SD / Metal / ACUSEEK, Resolución de 6 MP (3200 x 1800), Iluminación mínima de 0.0005 lux @ f1.6, Lente fijo de 2.8 mm, ángulo 105°, Visión nocturna IR EXIR hasta 30 m, Detección dual luz blanca y visión IR, Detección inteligente AcuSense para humanos y vehículos')">
-                <img class="imagen-circulo" src="img/productos/DomoIP6Megapíxel.png" alt="Domo IP 6 Megapíxel">
-                <div class="producto__informacion"> <p class="producto__nombre">Domo IP 6 Megapíxel</p></div>
-            </div>
-            <div class="producto" onclick="abrirModal('img/productos/MiniDomoIP6Megapíxel.png', 'Mini Domo IP 6 Megapíxel', 'Lente 2.8 mm / 30 mts Luz Blanca + 30 mts IR / ACUSENSE / Exterior IP67 / IK8 / WDR 120 dB / PoE / ONVIF / Micro SD / ACUSEEK, Resolución 6 MP (3200 x 1800), Iluminación mínima 0.0005 lux @ F1.6, Lente fijo 2.8 mm, ángulo 105°, Alcance IR y luz blanca 30 m, Tecnología AcuSense con filtro humano/vehículo, Detección de movimiento y cambio de escena')">
-                <img class="imagen-circulo" src="img/productos/MiniDomoIP6Megapíxel.png" alt="Mini Domo IP 6 Megapíxel">
-                <div class="producto__informacion"> <p class="producto__nombre">Mini Domo IP 6 Megapíxel</p></div>
-            </div>
-            <div class="producto" onclick="abrirModal('img/productos/BulletIP4Megapíxel.png', 'Bullet IP 4 Megapíxel', 'Imagen a Color 24/7 / Lente 3.6 - 9 mm / Luz Blanca 60 mts / WDR 130 dB / Exterior IP67 / Captura Facial / Videoanaliticos (Filtro de Falsas Alarmas) / MicroSD / ACUSEARCH,  Resolución 4 MP (2688x1520) con WDR 130 dB, Lente varifocal 3.6-9 mm con ángulo 92.3° a 48°, Luz blanca 60 mts para imagen a color 24/7, Tecnología AcuSense para detección precisa de humanos y vehículos, Soporte microSD hasta 512 GB y PoE 802.3af, Protección IP67 y carcasa de aluminio para exterior')">
-                <img class="imagen-circulo" src="img/productos/BulletIP4Megapíxel.png" alt="Bullet IP 4 Megapíxel">
-                <div class="producto__informacion"> <p class="producto__nombre">Bullet IP 4 Megapíxel</p></div>
-            </div>
-            <div class="producto" onclick="abrirModal('img/productos/BulletIP6Megapíxel.png', 'Bala IP 6 Megapíxel', 'Lente 2.8 mm / 40 mts IR / Exterior IP67 / PoE / ACUSENSE / DARKFIGHTER / Alarmas y Audio I/O / ONVIF / Micro SD / 4 Analíticos: AcuSense, Deteccion Facial, Conteo de Personas por Cruce y Zona, 4 analíticos IA integrados simultáneamente, Resolución 6 megapíxeles (3200x1800), Iluminación mínima 0.003 lux @ F1.6, Plataforma HEOP para aplicaciones personalizadas, Autoaprendizaje para detección precisa objetos, Lente 2.8 mm con ángulo 105°')">
-                <img class="imagen-circulo" src="img/productos/BulletIP6Megapíxel.png" alt="Bala IP 6 Megapíxel">
-                <div class="producto__informacion"> <p class="producto__nombre">Bala IP 6 Megapíxel</p></div>
-            </div>
-            <div class="producto" onclick="abrirModal('img/productos/BalaIPTripleLente4MP2MP2MP.png', 'Bala IP Triple Lente 4 MP + 2 MP +2 MP', 'Lente Fijo 4 MM +12 MM + 25 MM / Analíticos de 120 Metros de Distancia con Protección Perimetral / 2 Micrófonos y 1 Bocina / IP67 / IK10 / DARKFIGHTER 2.0 / 120 Mts IR,  Triple lente 4 MP + 2 MP + 2 MP, Lentes fijos 4 mm + 12 mm + 25 mm, Protección perimetral hasta 120 metros con IA, DARKFIGHTER 2.0 para visión nocturna avanzada, IR EXIR 120 metros con reducción de falsas alarmas, Detección inteligente con algoritmos de aprendizaje profundo')">
-                <img class="imagen-circulo" src="img/productos/BalaIPTripleLente4MP2MP2MP.png" alt="Bala IP Triple Lente 4 MP + 2 MP +2 MP">
-                <div class="producto__informacion"> <p class="producto__nombre">Bala IP Triple Lente 4 MP + 2 MP +2 MP</p></div>
-            </div>
-            <div class="producto" onclick="abrirModal('img/productos/PTZIP8Megapixel(4K).png', 'PTZ IP 8 Megapixel (4K)', '42X Zoom / AutoSeguimiento 3.0 / 500 mts IR / WDR 140 dB / EIS / Deep Learning / Exterior IP67 / IK10 / Rapid Focus / Hi-PoE / Wiper / Micro SD, Sensor CMOS 1/1.2 8MP con resolución 4K, Zoom óptico 42X + digital 16X con alcance IR 500 mts, WDR 140 dB para contraluces intensos, Auto seguimiento 3.0 con detección facial y vehicular, Protección IP67 e IK10 para exteriores extremos, Tecnología DarkFighter 2.0 para visión nocturna 0.0002 lux')">
-                <img class="imagen-circulo" src="img/productos/PTZIP8Megapixel(4K).png" alt="PTZ IP 8 Megapixel (4K)">
-                <div class="producto__informacion"> <p class="producto__nombre">PTZ IP 8 Megapixel (4K)</p></div>
-            </div>
-            <div class="producto" onclick="abrirModal('img/productos/PTZIP4Megapixel+CámaraFija4Megapíxel.png', 'PTZ IP 4 Megapixel + Cámara Fija 4 Megapíxel', '25X Zoom / 100 mts IR + 30 mts Luz Blanca / IP67 / ACUSENSE / PoE+ / 2 Micrófonos Integrados y Bocina / Alerta Audible y Luz Estroboscopica / Alarmas I/O / DARKFIGHTER / Micro SD, Cámara PTZ 4MP con resolución 2560 x 1440 píxeles, Iluminación mínima color: 0.005 lux (F1.6, AGC on), Zoom óptico 25x, digital 16x; distancia IR 100m, Soporta H.265+ para compresión eficiente, Operación a -30°C a 65°C, POE+ compatible, Detección inteligente: rostro, intrusión, cruce de línea')">
-                <img class="imagen-circulo" src="img/productos/PTZIP4Megapixel+CámaraFija4Megapíxel.png" alt="PTZ IP 4 Megapixel + Cámara Fija 4 Megapíxel">
-                <div class="producto__informacion"> <p class="producto__nombre">PTZ IP 4 Megapixel + Cámara Fija 4 Megapíxel</p></div>
-            </div>
-            <div class="producto" onclick="abrirModal('img/productos/UPS-600VA.png', 'UPS 600VA', '360W, Protección Contra Sobrecarga y Descarga, Entrada y Salida 120 VCA, 6 Tomas NEMA 5-15R (4 con Respaldo y 2 sin Respaldo), Capacidad 600 VA / 360 W para respaldo eficiente, Batería 12 V / 7 Ah de larga duración, 6 salidas totales, 4 con respaldo alimenticio, Voltaje de entrada 85-150 V, salida 102-132 V, Dimensiones compactas de 274 x 95 x 139 mm, Protección contra sobrecarga y descarga automática')">
-                <img class="imagen-circulo" src="img/productos/UPS-600VA.png" alt="UPS 600VA">
-                <div class="producto__informacion"> <p class="producto__nombre">UPS 600VA</p></div>
-            </div>
-            <div class="producto" onclick="abrirModal('img/productos/UPS-1000VA.png', 'UPS 1000 VA', '600 W, Protección Contra Sobrecarga y Descarga, Entrada y Salida 120 VCA, 6 Tomas NEMA 5-15R (4 con Respaldo y 2 sin Respaldo), Capacidad de 1000 VA / 600 W, Batería de 12 V / 9 Ah, 6 salidas (4 con respaldo, 2 sin), Voltaje de salida 102 - 132 V, Tiempo de respaldo hasta 280 minutos, Puerto USB para monitoreo local')">
-                <img class="imagen-circulo" src="img/productos/UPS-1000VA.png" alt="UPS 1000 VA">
-                <div class="producto__informacion"> <p class="producto__nombre">UPS 1000 VA</p></div>
-            </div>
-            <div class="producto" onclick="abrirModal('img/productos/UPS-2000VA.png', 'UPS 2000 VA', '1200 W, Pantalla LCD, Protección Contra Sobrecarga y Descarga, Entrada y Salida 120 VCA, 4 Tomas NEMA 5-15R, Capacidad de 2000 VA / 1200 W, Batería integrada de 12 V / 9 Ah, Voltaje de entrada 85-150 V ~ 50/60 Hz, Dimensiones compactas: 274 x 95 x 139 mm, 4 salidas NEMA 5-15R con respaldo, Puerto USB para monitoreo y control')">
-                <img class="imagen-circulo" src="img/productos/UPS-2000VA.png" alt="UPS 2000 VA">
-                <div class="producto__informacion"> <p class="producto__nombre">UPS 2000 VA</p></div>
-            </div>
-            <div class="producto" onclick="abrirModal('img/productos/UPS-3000VA.png', 'UPS 3000 VA', '1800 W, Pantalla LCD, Protección Contra Sobrecarga y Descarga, Entrada y Salida 120 VCA, 6 Tomas NEMA 5-15R (Todos con Respaldo), Capacidad 3000 VA / 1800 W para alto rendimiento, Batería 12 V / 9 Ah de larga duración, 6 tomas NEMA 5-15R con respaldo permanente, Voltaje de entrada adaptable 85-150 VCA, Pantalla LCD para monitoreo en tiempo real, Puerto USB para control y monitoreo remoto')">
-                <img class="imagen-circulo" src="img/productos/UPS-3000VA.png" alt="UPS 3000 VA">
-                <div class="producto__informacion"> <p class="producto__nombre">UPS 3000 VA</p></div>
-            </div>
-            <div class="producto" onclick="abrirModal('img/productos/DISCODURO3TB.png', 'Disco Duro PURPLE de 3TB', '3 AÑOS DE GARANTÍA, Para Videovigilancia, Capacidad de 3 TB para almacenamiento masivo, Velocidad de transferencia de 6 Gb/s, Optimizado para videovigilancia con hasta 64 cámaras HD, Interfaz SATA III compatible con sistemas actuales, Consumo eficiente de 3.3W en operación, Diseño 3.5 pulgadas con 64 MB de caché')">
-                <img class="imagen-circulo" src="img/productos/DISCODURO3TB.png" alt="Disco Duro PURPLE de 3TB">
-                <div class="producto__informacion"> <p class="producto__nombre">Disco Duro PURPLE de 3TB</p></div>
-            </div>
-            <div class="producto" onclick="abrirModal('img/productos/DISCODURO6TB.png', 'Disco Duro PURPLE de 6TB', '3 AÑOS DE GARANTÍA, Para Videovigilancia, Capacidad de 6 TB para almacenamiento masivo, Interfaz SATA III a 6.0 Gb/s, Optimizado para videovigilancia con soporte hasta 64 cámaras, Velocidad rotación 5640 RPM eficiente, Caché de 128 MB para transferencias rápidas, Diseño 3.5 pulgadas con consumo energético optimizado')">
-                <img class="imagen-circulo" src="img/productos/DISCODURO6TB.png" alt="Disco Duro PURPLE de 6TB">
-                <div class="producto__informacion"> <p class="producto__nombre">Disco Duro PURPLE de 6TB</p></div>
-            </div>
-            <div class="producto" onclick="abrirModal('img/productos/DISCODUROWD8TB.png', 'Disco duro WD de 8TB', '7200RPM, Optimizado para soluciones de video inteligente, Capacidad de almacenamiento de 8 TB, Velocidad de transferencia sostenida de 245 MB/s, Caché de 256 MB para rendimiento mejorado, Compatibilidad con hasta 64 cámaras HD, Consumo eléctrico lectura/escritura de 8.6 W, Diseño optimizado para sistemas de video vigilancia')">
-                <img class="imagen-circulo" src="img/productos/DISCODUROWD8TB.png" alt="Disco duro WD de 8TB">
-                <div class="producto__informacion"> <p class="producto__nombre">Disco duro WD de 8TB</p></div>
-            </div>
-            <div class="producto" onclick="abrirModal('img/productos/DISCODUROPRO10TB.png', 'Disco Duro Purple Pro de 10 TB', '7200 RPM, Optimizado para Soluciones de Videovigilancia con Analiticos (Meta Data), Uso 24-7, 5 Años de Garantia, Capacidad de 10 TB para almacenamiento masivo, Interfaz SATA III con transferencia de 6 Gb/s, Optimizado para videovigilancia con analíticos de metadatos, Soporta hasta 64 cámaras HD en simultáneo, Velocidad de rotación de 7200 RPM, Consumo eficiente de 8.6W en operación activa')">
-                <img class="imagen-circulo" src="img/productos/DISCODUROPRO10TB.png" alt="Disco Duro Purple Pro de 10 TB">
-                <div class="producto__informacion"> <p class="producto__nombre">Disco Duro Purple Pro de 10 TB</p></div>
-            </div>
-            <div class="producto" onclick="abrirModal('img/productos/BiométricoFacial-5.png', 'Biometrico Facial y de Palma SIN CONTACTO con pantalla Touch de 5 pul.', '6000 rostros, Lector de Huella Digital, WIFI, Reconocimiento facial y de palma sin contacto, Pantalla táctil de 5 pul. con interfaz intuitiva, Capacidad para 6,000 rostros y 3,000 palmas, Detección facial en menos de 1 segundo, Tecnología anti-falsificación con luz visible, Conexión Wi-Fi y TCP/IP integrada')">
-                <img class="imagen-circulo" src="img/productos/BiométricoFacial-5.png" alt="Biometrico Facial y de Palma SIN CONTACTO con pantalla Touch de 5 pul.">
-                <div class="producto__informacion"> <p class="producto__nombre">Biometrico Facial y de Palma SIN CONTACTO con pantalla Touch de 5 pul.</p></div>
-            </div>
-            <div class="producto" onclick="abrirModal('img/productos/TerminalBiométricaFacial.png', 'Terminal Biométrica Facial', 'Rostro Huella y Tarjeta, 1,500 Usuarios, Pantalla 2.8 pul. , TCP/IP, USB, ADMS, Control de 1 Puerta, Verificación facial, huella y contraseña en 0.5s, Capacidad para 1500 rostros, huellas y tarjetas, Control de acceso integrado para 1 puerta, Soporta gestión remota con ADMS y BiotimePRO, Registro local o mediante software BiotimePRO, Comunicación TCP/IP, USB y soporte DDNS')">
-                <img class="imagen-circulo" src="img/productos/TerminalBiométricaFacial.png" alt="Terminal Biométrica Facial">
-                <div class="producto__informacion"> <p class="producto__nombre">Terminal Biométrica Facial</p></div>
-            </div>
-            <div class="producto" onclick="abrirModal('img/productos/BobinadeCablede305Metros.png', 'Bobina de Cable de 305 Metros (1000 Pies)', 'Cat6+ Calibre 23 Exterior Blindado Tipo FTP para Climas Extremos, UL, Color Negro, Compatible con plugs LPKJ6A17S de terminación en campo, Frecuencia de operación hasta 250 MHz, Calibre 23 AWG, conductor 100% cobre, Blindaje de poliéster aluminizado para protección EMI/RFI, Certificaciones UL, ANSI/TIA/EIA, ISO/IEC, RoHS, Diseño exterior CMX con aislamiento UV resistente')">
-                <img class="imagen-circulo" src="img/productos/BobinadeCablede305Metros.png" alt="Bobina de Cable de 305 Metros (1000 Pies)">
-                <div class="producto__informacion"> <p class="producto__nombre">Bobina de Cable de 305 Metros (1000 Pies)</p></div>
-            </div>
-            <div class="producto" onclick="abrirModal('img/productos/BobinadeCablede305Metros(1000 Pies)Cat6+.png', 'Bobina de Cable de 305 Metros (1000 Pies)', 'Cat6+ Calibre 23 Exterior Blindado Tipo FTP para Climas Extremos, UL, Color Negro (Carrete Easy Pull), Compatible solo con plugs LPKJ6A17S terminados en campo, Conductor de cobre 100% para alta conductividad, Blindaje aluminizado para protección contra interferencias, Calibre 23 AWG, ideal para Gigabit Ethernet, Frecuencia de operación hasta 250 MHz, Diseñado para exterior con aislamiento UV resistente')">
-                <img class="imagen-circulo" src="img/productos/BobinadeCablede305Metros(1000 Pies)Cat6+.png" alt="Bobina de Cable de 305 Metros (1000 Pies)">
-                <div class="producto__informacion"> <p class="producto__nombre">Bobina de Cable de 305 Metros (1000 Pies)</p></div>
-            </div>
-            <div class="producto" onclick="abrirModal('img/productos/BobinadeCablede305Metros(1000 Pies)Cat6+CMR.png', 'Bobina de Cable de 305 Metros (1000 Pies)', 'Cat6+, CMR, Calibre 23 Alto Rendimiento, ETL, UL, Color Azul, Super Flexible, para Aplicaciones de Video Vigilancia, Video HD, y Redes de Datos. Uso Interior, Cable de cobre 100% para mayor rendimiento, Soporta Gigabit Ethernet y Fast Ethernet, Frecuencia de operación hasta 250 MHz, Calibre 23 con aislamiento PVC CMR, Certificaciones UL, ANSI/TIA, ISO/IEC, RoHS, Diseño azul superflexible para fácil instalación')">
-                <img class="imagen-circulo" src="img/productos/BobinadeCablede305Metros(1000 Pies)Cat6+CMR.png" alt="Bobina de Cable de 305 Metros (1000 Pies)">
-                <div class="producto__informacion"> <p class="producto__nombre">Bobina de Cable de 305 Metros (1000 Pies)</p></div>
-            </div>
-         </div>          
-    </main>
-
-    <!-- FOOTER CORPORATIVO -->
-    <footer class="footer">
-        <div class="footer__contenedor">
-        
-            <!-- EMPRESA -->
-            <div class="footer__seccion">
-                <h3 class="footer__titulo">
-                    Axia Comunicaciones S.A de C.V.
-                </h3>
-                <p class="footer__texto">
-                    Ingeniería en cómputo, comunicaciones y electricidad, soluciones profesionales para empresas e industrias.
-                </p>
-            </div>
-
-            <!-- CONTACTO -->
-            <div class="footer__seccion">
-                <h3 class="footer__titulo">
-                    Contacto
-                </h3>
-                <p class="footer__texto">
-                    📍 Álvaro Obregón, Manzana 2, Lote 3, Col. San Juan de Guadalupe, Zumpango, Estado de México, C.P. 55630
-                </p>
-                <p class="footer__texto">
-                    📞 +52 55 4989 3464
-                </p>
-                <p class="footer__texto">
-                    📧
-                    <a class="footer__correo" href="mailto:gte.ventas@axiacomunicaciones.mx?subject=Solicitud%20de%20Información&body=Hola%20Axia%20Comunicaciones,%20me%20gustaría%20solicitar%20información.">
-                        gte.ventas@axiacomunicaciones.mx
-                    </a>
-                </p>
-
-            </div>
-
-            <!-- REDES -->
-            <div class="footer__seccion">
-                <h3 class="footer__titulo">
-                    Redes Sociales
-                </h3>
-                <div class="footer__redes">
-                    <a
-                        href="https://www.facebook.com/Axiacomunicacionessa"
-                        class="footer__social"
-                        target="_blank"
-                    >
-                        Facebook
-                    </a>
-                    <a
-                        href="https://www.instagram.com/axia_comunicaciones/"
-                        class="footer__social"
-                        target="_blank"
-                    >
-                        Instagram
-                    </a>
-                    <a
-                        href="https://www.linkedin.com/"
-                        class="footer__social"
-                        target="_blank"
-                    >
-                        LinkedIn
-                    </a>
-                    <a
-                        href="https://www.youtube.com/"
-                        class="footer__social"
-                        target="_blank"
-                    >
-                        YouTube
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- COPYRIGHT -->
-        <div class="footer__copy">
-            <p>
-                © 2026 Axia Comunicaciones S.A. de C.V. | Todos los derechos reservados
-            </p>
-        </div>
-    </footer>
-    <script src="script.js"></script>    
-
-    <!-- WHATSAPP -->
-    <div class="whatsapp-container">
-
-        <!-- TEXTO -->
-        <div class="whatsapp-texto">
-        ¿WhatsApp?
-        </div>
-
-        <!-- BOTÓN -->
-        <a
-        href="https://wa.me/525518833166?text=Hola%20Axia%20Comunicaciones,%20me%20gustaría%20solicitar%20información."
-        class="whatsapp"
-        target="_blank"
-        >
-        <img
-            src="img/WhatsApp.png"
-            alt="WhatsApp"
-        >
-        </a>
+    <div class="slide">
+     <img alt="Cisco" decoding="async" fetchpriority="high" src="img/marcas/Cisco_logo.webp"/>
     </div>
-
-    <!-- CHATBOT AXIA -->
-    <div class="chatbot">
-        <div class="chatbot__texto">
-            Chatbot Axia
-        </div>
-        <button class="chatbot__boton" onclick="toggleChatbot()">
-            💬
-        </button>
-
-        <div class="chatbot__ventana" id="chatbotVentana">
-
-            <div class="chatbot__header">
-                <div>
-                    <h3>Axia Asistente</h3>
-                    <p>Estamos para ayudarte</p>
-                </div>
-
-                <button onclick="toggleChatbot()">×</button>
-            </div>
-
-            <div class="chatbot__mensajes" id="chatbotMensajes">
-                <div class="chatbot__mensaje chatbot__mensaje--bot">
-                    Hola 👋 Soy el asistente de Axia Comunicaciones. ¿Qué necesitas?
-                </div>
-            </div>
-
-            <div class="chatbot__opciones">
-                <button onclick="respuestaChatbot('cctv')">Informes sobre CCTV</button>
-                <button onclick="respuestaChatbot('redes')">Informes sobre Red, Voz y Datos</button>
-                <button onclick="respuestaChatbot('electricas')">Informes sobre Instalaciones Eléctricas</button>
-                <button onclick="respuestaChatbot('aires')">Informes sobre Aires Acondicionados</button>
-                <button onclick="respuestaChatbot('whatsapp')">Quiero comunicarme por WhatsApp</button>
-            </div>
-
-        </div>
+    <div class="slide">
+     <img alt="Epcom" decoding="async" loading="lazy" src="img/marcas/epcom_legend.webp"/>
     </div>
-
-    <!-- SCRIPT CHATBOT -->
-    <script>
-        function toggleChatbot() {
+    <div class="slide">
+     <img alt="HikVision" decoding="async" fetchpriority="high" src="img/marcas/Hikvision-Logo.webp"/>
+    </div>
+    <div class="slide">
+     <img alt="HiLook" decoding="async" loading="lazy" src="img/marcas/hilook.webp"/>
+    </div>
+    <div class="slide">
+     <img alt="Huawei" decoding="async" fetchpriority="high" src="img/marcas/huawei-logo.webp"/>
+    </div>
+    <div class="slide">
+     <img alt="Ubiquiti" decoding="async" fetchpriority="high" src="img/marcas/Ubiquiti_Logo.webp"/>
+    </div>
+    <div class="slide">
+     <img alt="Panduit" decoding="async" fetchpriority="high" src="img/marcas/panduit-logo.webp"/>
+    </div>
+    <div class="slide">
+     <img alt="Ruijie" decoding="async" loading="lazy" src="img/marcas/Ruijie.webp"/>
+    </div>
+    <div class="slide">
+     <img alt="TPLink" decoding="async" fetchpriority="high" src="img/marcas/Tp-Link_logo.webp"/>
+    </div>
+    <div class="slide">
+     <img alt="WesternDigital" decoding="async" loading="lazy" src="img/marcas/WD.webp"/>
+    </div>
+    <div class="slide">
+     <img alt="HoneyWell" decoding="async" loading="lazy" src="img/marcas/Honeywell.webp"/>
+    </div>
+    <div class="slide">
+     <img alt="Ezviz" decoding="async" loading="lazy" src="img/marcas/Ezviz.webp"/>
+    </div>
+    <div class="slide">
+     <img alt="ZKTeco" decoding="async" loading="lazy" src="img/marcas/ZKTeco.webp"/>
+    </div>
+    <div class="slide">
+     <img alt="Grandstream" decoding="async" loading="lazy" src="img/marcas/Grandstream.webp"/>
+    </div>
+    <div class="slide">
+     <img alt="Belden" decoding="async" loading="lazy" src="img/marcas/Belden.webp"/>
+    </div>
+    <div class="slide">
+     <img alt="Fanvil" decoding="async" loading="lazy" src="img/marcas/Fanvil.webp"/>
+    </div>
+    <div class="slide">
+     <img alt="Condumex" decoding="async" loading="lazy" src="img/marcas/Condumex.svg"/>
+    </div>
+    <div class="slide">
+     <img alt="Condulac" decoding="async" loading="lazy" src="img/marcas/Condulac.webp"/>
+    </div>
+    <div class="slide">
+     <img alt="WaveOptics" decoding="async" loading="lazy" src="img/marcas/WaveOptics.webp"/>
+    </div>
+    <div class="slide">
+     <img alt="Systimax" decoding="async" loading="lazy" src="img/marcas/Systimax.webp"/>
+    </div>
+    <!-- Duplicar la primera imagen al final para un bucle continuo -->
+    <div class="slide">
+     <img alt="Dahua" decoding="async" loading="lazy" src="img/marcas/Dahua.webp"/>
+    </div>
+    <div class="slide">
+     <img alt="Cisco" decoding="async" fetchpriority="high" src="img/marcas/Cisco_logo.webp"/>
+    </div>
+    <div class="slide">
+     <img alt="Epcom" decoding="async" loading="lazy" src="img/marcas/epcom_legend.webp"/>
+    </div>
+    <div class="slide">
+     <img alt="HikVision" decoding="async" fetchpriority="high" src="img/marcas/Hikvision-Logo.webp"/>
+    </div>
+    <div class="slide">
+     <img alt="HiLook" decoding="async" loading="lazy" src="img/marcas/hilook.webp"/>
+    </div>
+    <div class="slide">
+     <img alt="Huawei" decoding="async" fetchpriority="high" src="img/marcas/huawei-logo.webp"/>
+    </div>
+    <div class="slide">
+     <img alt="Ubiquiti" decoding="async" fetchpriority="high" src="img/marcas/Ubiquiti_Logo.webp"/>
+    </div>
+    <div class="slide">
+     <img alt="Panduit" decoding="async" fetchpriority="high" src="img/marcas/panduit-logo.webp"/>
+    </div>
+    <div class="slide">
+     <img alt="Ruijie" decoding="async" loading="lazy" src="img/marcas/Ruijie.webp"/>
+    </div>
+    <div class="slide">
+     <img alt="TPLink" decoding="async" fetchpriority="high" src="img/marcas/Tp-Link_logo.webp"/>
+    </div>
+    <div class="slide">
+     <img alt="WesternDigital" decoding="async" loading="lazy" src="img/marcas/WD.webp"/>
+    </div>
+    <div class="slide">
+     <img alt="HoneyWell" decoding="async" loading="lazy" src="img/marcas/Honeywell.webp"/>
+    </div>
+    <div class="slide">
+     <img alt="Ezviz" decoding="async" loading="lazy" src="img/marcas/Ezviz.webp"/>
+    </div>
+    <div class="slide">
+     <img alt="ZKTeco" decoding="async" loading="lazy" src="img/marcas/ZKTeco.webp"/>
+    </div>
+    <div class="slide">
+     <img alt="Grandstream" decoding="async" loading="lazy" src="img/marcas/Grandstream.webp"/>
+    </div>
+    <div class="slide">
+     <img alt="Belden" decoding="async" loading="lazy" src="img/marcas/Belden.webp"/>
+    </div>
+    <div class="slide">
+     <img alt="Fanvil" decoding="async" loading="lazy" src="img/marcas/Fanvil.webp"/>
+    </div>
+    <div class="slide">
+     <img alt="Condumex" decoding="async" loading="lazy" src="img/marcas/Condumex.svg"/>
+    </div>
+    <div class="slide">
+     <img alt="Condulac" decoding="async" loading="lazy" src="img/marcas/Condulac.webp"/>
+    </div>
+    <div class="slide">
+     <img alt="WaveOptics" decoding="async" loading="lazy" src="img/marcas/WaveOptics.webp"/>
+    </div>
+    <div class="slide">
+     <img alt="Systimax" decoding="async" loading="lazy" src="img/marcas/Systimax.webp"/>
+    </div>
+   </div>
+  </div>
+  <main class="contenedor">
+   <br/>
+   <br/>
+   <div class="grid_producto">
+    <div class="producto" onclick="abrirModal('img/productos/P1.webp', 'USB 3.2 tipo C macho a HDMI', 'Conecta f&aacute;cilmente dispositivos USB-C a pantallas HDMI con resoluci&oacute;n 4K.')">
+     <img alt="USB tipo C HDMI" class="imagen-circulo" decoding="async" loading="lazy" src="img/productos/P1.webp"/>
+     <div class="producto__informacion">
+      <p class="producto__nombre">
+       USB 3.2 tipo C macho a HDMI
+      </p>
+     </div>
+    </div>
+    <div class="producto" onclick="abrirModal('img/productos/P2.webp', 'Adaptador de Red GB USB A/C con Hub V3.2', 'Mejora la conectividad de tu dispositivo convirtiendo un puerto USB en un puerto de red Gigabit y tres puertos USB de 5 Gbps. Un puerto Gigabit Ethernet (10/100/1000) para acelerar las descargas, la transmisi&oacute;n multimedia y los juegos. Tres puertos USB-A para conectar mouse, teclados, unidades de memoria flash y m&aacute;s, o para cargar y sincronizar dispositivos m&oacute;viles')">
+     <img alt="Adaptador de Red GB USB A/C con Hub V3.2" class="imagen-circulo" decoding="async" loading="lazy" src="img/productos/P2.webp"/>
+     <div class="producto__informacion">
+      <p class="producto__nombre">
+       Adaptador de Red GB USB A/C con Hub V3.2
+      </p>
+     </div>
+    </div>
+    <div class="producto" onclick="abrirModal('img/productos/P3.webp', 'Kit extensor HDMI sobre Ethernet 1080p', 'Extiende la conexi&oacute;n HDMI hasta 50 m entre una fuente HDMI y un monitor o proyector HD mediante un cable Ethernet El transmisor de dos puertos (un HDMI, un Ethernet) permite enviar se&ntilde;ales HDMI a trav&eacute;s de Ethernet y dividirlas en pantallas locales simult&aacute;neamente Soporta 1080p resoluciones y 6.75 Gbps data de rendimiento')">
+     <img alt="Kit extensor HDMI sobre Ethernet 1080p" class="imagen-circulo" decoding="async" loading="lazy" src="img/productos/P3.webp"/>
+     <div class="producto__informacion">
+      <p class="producto__nombre">
+       Kit extensor HDMI sobre Ethernet 1080p
+      </p>
+     </div>
+    </div>
+    <div class="producto" onclick="abrirModal('img/productos/HomeRouterInalambricoWi-Fi4paraSolucionesWISP.webp', 'Home Router Inal&aacute;mbrico Wi-Fi 4 para Soluciones WISP', 'Administraci&oacute;n Remota para Control de Usuarios y Anchos de Banda, Wi-Fi 4 (802.11n) con velocidad de 300 Mbps, 4 antenas de 5 dBi para se&ntilde;al m&aacute;s fuerte, Gesti&oacute;n remota v&iacute;a aplicaci&oacute;n m&oacute;vil y plataforma cloud, Soporta hasta 16 usuarios concurrentes, Modo WISP para soluciones de proveedores de internet, Cobertura efectiva hasta 30 metros')">
+     <img alt="Home Router Inal&aacute;mbrico Wi-Fi 4 para Soluciones WISP" class="imagen-circulo" decoding="async" loading="lazy" src="img/productos/HomeRouterInalambricoWi-Fi4paraSolucionesWISP.webp"/>
+     <div class="producto__informacion">
+      <p class="producto__nombre">
+       Home Router Inal&aacute;mbrico Wi-Fi 4 para Soluciones WISP
+      </p>
+     </div>
+    </div>
+    <div class="producto" onclick="abrirModal('img/productos/SwitchGigabit4Puertos.webp', 'Switch Gigabit PoE+','Monitoreable, 4 Puertos 1000 Mbps PoE+, 1 Puerto 1000 Mbps Uplink, Configuraci&oacute;n Nube Hik-PartnerPro, Modo Extendido hasta 300 Metros / 45 Watts, Switch 4 puertos PoE+ 1000 Mbps, Puerto Uplink 1000 Mbps dedicado, Monitoreo en tiempo real de tr&aacute;fico, Modo Extendido hasta 300 metros, 45W PoE+ con administraci&oacute;n inteligente, Configuraci&oacute;n v&iacute;a Hik-PartnerPro en la nube')">
+     <img alt="Switch Gigabit PoE+" class="imagen-circulo" decoding="async" loading="lazy" src="img/productos/SwitchGigabit4Puertos.webp"/>
+     <div class="producto__informacion">
+      <p class="producto__nombre">
+       Switch Gigabit PoE+
+      </p>
+     </div>
+    </div>
+    <div class="producto" onclick="abrirModal('img/productos/SwitchGigabit8Puertos.webp', 'Switch Gigabit PoE+','Administrable, 8 Puertos 1000 Mbps PoE+, 2 Puertos 1000 Mbps de Uplink, Configuraci&oacute;n Nube Hik-PartnerPro, Modo Extendido hasta 300 Metros / 60 W, Switch 8 puertos PoE+ 10/100/1000 Mbps, 2 puertos Uplink 10/100/1000 Mbps adicionales, Monitoreo en puertos cr&iacute;ticos con control de datos, Modo Extendido hasta 300 metros, Optimizaci&oacute;n de buffer para transmisi&oacute;n de video, Gesti&oacute;n en la nube Hik-Partner Pro')">
+     <img alt="Switch Gigabit PoE+" class="imagen-circulo" decoding="async" loading="lazy" src="img/productos/SwitchGigabit8Puertos.webp"/>
+     <div class="producto__informacion">
+      <p class="producto__nombre">
+       Switch Gigabit PoE+
+      </p>
+     </div>
+    </div>
+    <div class="producto" onclick="abrirModal('img/productos/RouterInalambricoWISPGigabit.webp', 'Router Inal&aacute;mbrico WISP Gigabit','&gt;Hasta 1200 Mbps, Doble Banda AC (2.4 GHz y 5 GHz), 3 Puertos LAN 10/100/1000 Mbps + 1 Puerto WAN 10/100/1000 Mbps, 4 Antenas Externas Omnidireccional de 5 dBi / Interior, Est&aacute;ndar IEEE 802.11ac Wave 2 para alta velocidad, Tecnolog&iacute;a 4x4 MU-MIMO y beamforming avanzado, 4 antenas externas omnidireccionales de 5 dBi, Interfaz Gigabit Ethernet con 4 puertos LAN y 1 WAN, Doble banda AC simult&aacute;nea (2.4 GHz y 5 GHz), Velocidad combinada hasta 1200 Mbps')">
+     <img alt="Router Inal&aacute;mbrico WISP Gigabit" class="imagen-circulo" decoding="async" loading="lazy" src="img/productos/RouterInalambricoWISPGigabit.webp"/>
+     <div class="producto__informacion">
+      <p class="producto__nombre">
+       Router Inal&aacute;mbrico WISP Gigabit
+      </p>
+     </div>
+    </div>
+    <div class="producto" onclick="abrirModal('img/productos/DomoIP4Megapixel.webp', 'Domo IP 4 Megap&iacute;xel', 'Lente Mot. 2.7 - 13.5 mm, Dual Light (40 mts IR + 40 mts Luz Blanca), SSD Integrado 256 GB, 2 Micr&oacute;fonos Integrados, Alarmas I/O / IP67 / IK10 / WDR 130 dB / PoE + / AcuSense / DarkFighter S, Resoluci&oacute;n 4 MP (2688x1520) con WDR 130 dB, Lente motorizado 2.7-13.5 mm (&aacute;ngulo 116&deg;-30&deg;), Doble iluminaci&oacute;n IR y luz blanca (40 mts alcance), Almacenamiento SSD integrado de 256 GB, Detecci&oacute;n avanzada con AcuSense: rostros y objetos, Dise&ntilde;o antivand&aacute;lico IK10 y protecci&oacute;n IP67')">
+     <img alt="Domo IP 4 Megap&iacute;xel" class="imagen-circulo" decoding="async" loading="lazy" src="img/productos/DomoIP4Megapixel.webp"/>
+     <div class="producto__informacion">
+      <p class="producto__nombre">
+       Domo IP 4 Megap&iacute;xel
+      </p>
+     </div>
+    </div>
+    <div class="producto" onclick="abrirModal('img/productos/DomoIP6Megapixel.webp', 'Domo IP 6 Megap&iacute;xel', 'Lente 2.8 mm / 30 mts Luz Blanca + 30 mts IR / ACUSENSE / Exterior IP67 / IK10 / WDR 120 dB / PoE / ONVIF / Micro SD / Metal / ACUSEEK, Resoluci&oacute;n de 6 MP (3200 x 1800), Iluminaci&oacute;n m&iacute;nima de 0.0005 lux @ f1.6, Lente fijo de 2.8 mm, &aacute;ngulo 105&deg;, Visi&oacute;n nocturna IR EXIR hasta 30 m, Detecci&oacute;n dual luz blanca y visi&oacute;n IR, Detecci&oacute;n inteligente AcuSense para humanos y veh&iacute;culos')">
+     <img alt="Domo IP 6 Megap&iacute;xel" class="imagen-circulo" decoding="async" loading="lazy" src="img/productos/DomoIP6Megapixel.webp"/>
+     <div class="producto__informacion">
+      <p class="producto__nombre">
+       Domo IP 6 Megap&iacute;xel
+      </p>
+     </div>
+    </div>
+    <div class="producto" onclick="abrirModal('img/productos/MiniDomoIP6Megapixel.webp', 'Mini Domo IP 6 Megap&iacute;xel', 'Lente 2.8 mm / 30 mts Luz Blanca + 30 mts IR / ACUSENSE / Exterior IP67 / IK8 / WDR 120 dB / PoE / ONVIF / Micro SD / ACUSEEK, Resoluci&oacute;n 6 MP (3200 x 1800), Iluminaci&oacute;n m&iacute;nima 0.0005 lux @ F1.6, Lente fijo 2.8 mm, &aacute;ngulo 105&deg;, Alcance IR y luz blanca 30 m, Tecnolog&iacute;a AcuSense con filtro humano/veh&iacute;culo, Detecci&oacute;n de movimiento y cambio de escena')">
+     <img alt="Mini Domo IP 6 Megap&iacute;xel" class="imagen-circulo" decoding="async" loading="lazy" src="img/productos/MiniDomoIP6Megapixel.webp"/>
+     <div class="producto__informacion">
+      <p class="producto__nombre">
+       Mini Domo IP 6 Megap&iacute;xel
+      </p>
+     </div>
+    </div>
+    <div class="producto" onclick="abrirModal('img/productos/BulletIP4Megapixel.webp', 'Bullet IP 4 Megap&iacute;xel', 'Imagen a Color 24/7 / Lente 3.6 - 9 mm / Luz Blanca 60 mts / WDR 130 dB / Exterior IP67 / Captura Facial / Videoanaliticos (Filtro de Falsas Alarmas) / MicroSD / ACUSEARCH,  Resoluci&oacute;n 4 MP (2688x1520) con WDR 130 dB, Lente varifocal 3.6-9 mm con &aacute;ngulo 92.3&deg; a 48&deg;, Luz blanca 60 mts para imagen a color 24/7, Tecnolog&iacute;a AcuSense para detecci&oacute;n precisa de humanos y veh&iacute;culos, Soporte microSD hasta 512 GB y PoE 802.3af, Protecci&oacute;n IP67 y carcasa de aluminio para exterior')">
+     <img alt="Bullet IP 4 Megap&iacute;xel" class="imagen-circulo" decoding="async" loading="lazy" src="img/productos/BulletIP4Megapixel.webp"/>
+     <div class="producto__informacion">
+      <p class="producto__nombre">
+       Bullet IP 4 Megap&iacute;xel
+      </p>
+     </div>
+    </div>
+    <div class="producto" onclick="abrirModal('img/productos/BulletIP6Megapixel.webp', 'Bala IP 6 Megap&iacute;xel', 'Lente 2.8 mm / 40 mts IR / Exterior IP67 / PoE / ACUSENSE / DARKFIGHTER / Alarmas y Audio I/O / ONVIF / Micro SD / 4 Anal&iacute;ticos: AcuSense, Deteccion Facial, Conteo de Personas por Cruce y Zona, 4 anal&iacute;ticos IA integrados simult&aacute;neamente, Resoluci&oacute;n 6 megap&iacute;xeles (3200x1800), Iluminaci&oacute;n m&iacute;nima 0.003 lux @ F1.6, Plataforma HEOP para aplicaciones personalizadas, Autoaprendizaje para detecci&oacute;n precisa objetos, Lente 2.8 mm con &aacute;ngulo 105&deg;')">
+     <img alt="Bala IP 6 Megap&iacute;xel" class="imagen-circulo" decoding="async" loading="lazy" src="img/productos/BulletIP6Megapixel.webp"/>
+     <div class="producto__informacion">
+      <p class="producto__nombre">
+       Bala IP 6 Megap&iacute;xel
+      </p>
+     </div>
+    </div>
+    <div class="producto" onclick="abrirModal('img/productos/BalaIPTripleLente4MP2MP2MP.webp', 'Bala IP Triple Lente 4 MP + 2 MP +2 MP', 'Lente Fijo 4 MM +12 MM + 25 MM / Anal&iacute;ticos de 120 Metros de Distancia con Protecci&oacute;n Perimetral / 2 Micr&oacute;fonos y 1 Bocina / IP67 / IK10 / DARKFIGHTER 2.0 / 120 Mts IR,  Triple lente 4 MP + 2 MP + 2 MP, Lentes fijos 4 mm + 12 mm + 25 mm, Protecci&oacute;n perimetral hasta 120 metros con IA, DARKFIGHTER 2.0 para visi&oacute;n nocturna avanzada, IR EXIR 120 metros con reducci&oacute;n de falsas alarmas, Detecci&oacute;n inteligente con algoritmos de aprendizaje profundo')">
+     <img alt="Bala IP Triple Lente 4 MP + 2 MP +2 MP" class="imagen-circulo" decoding="async" loading="lazy" src="img/productos/BalaIPTripleLente4MP2MP2MP.webp"/>
+     <div class="producto__informacion">
+      <p class="producto__nombre">
+       Bala IP Triple Lente 4 MP + 2 MP +2 MP
+      </p>
+     </div>
+    </div>
+    <div class="producto" onclick="abrirModal('img/productos/PTZIP8Megapixel(4K).webp', 'PTZ IP 8 Megapixel (4K)', '42X Zoom / AutoSeguimiento 3.0 / 500 mts IR / WDR 140 dB / EIS / Deep Learning / Exterior IP67 / IK10 / Rapid Focus / Hi-PoE / Wiper / Micro SD, Sensor CMOS 1/1.2 8MP con resoluci&oacute;n 4K, Zoom &oacute;ptico 42X + digital 16X con alcance IR 500 mts, WDR 140 dB para contraluces intensos, Auto seguimiento 3.0 con detecci&oacute;n facial y vehicular, Protecci&oacute;n IP67 e IK10 para exteriores extremos, Tecnolog&iacute;a DarkFighter 2.0 para visi&oacute;n nocturna 0.0002 lux')">
+     <img alt="PTZ IP 8 Megapixel (4K)" class="imagen-circulo" decoding="async" loading="lazy" src="img/productos/PTZIP8Megapixel(4K).webp"/>
+     <div class="producto__informacion">
+      <p class="producto__nombre">
+       PTZ IP 8 Megapixel (4K)
+      </p>
+     </div>
+    </div>
+    <div class="producto" onclick="abrirModal('img/productos/PTZIP4MegapixelCamaraFija4Megapixel.webp', 'PTZ IP 4 Megapixel + C&aacute;mara Fija 4 Megap&iacute;xel', '25X Zoom / 100 mts IR + 30 mts Luz Blanca / IP67 / ACUSENSE / PoE+ / 2 Micr&oacute;fonos Integrados y Bocina / Alerta Audible y Luz Estroboscopica / Alarmas I/O / DARKFIGHTER / Micro SD, C&aacute;mara PTZ 4MP con resoluci&oacute;n 2560 x 1440 p&iacute;xeles, Iluminaci&oacute;n m&iacute;nima color: 0.005 lux (F1.6, AGC on), Zoom &oacute;ptico 25x, digital 16x; distancia IR 100m, Soporta H.265+ para compresi&oacute;n eficiente, Operaci&oacute;n a -30&deg;C a 65&deg;C, POE+ compatible, Detecci&oacute;n inteligente: rostro, intrusi&oacute;n, cruce de l&iacute;nea')">
+     <img alt="PTZ IP 4 Megapixel + C&aacute;mara Fija 4 Megap&iacute;xel" class="imagen-circulo" decoding="async" loading="lazy" src="img/productos/PTZIP4MegapixelCamaraFija4Megapixel.webp"/>
+     <div class="producto__informacion">
+      <p class="producto__nombre">
+       PTZ IP 4 Megapixel + C&aacute;mara Fija 4 Megap&iacute;xel
+      </p>
+     </div>
+    </div>
+    <div class="producto" onclick="abrirModal('img/productos/UPS-600VA.webp', 'UPS 600VA', '360W, Protecci&oacute;n Contra Sobrecarga y Descarga, Entrada y Salida 120 VCA, 6 Tomas NEMA 5-15R (4 con Respaldo y 2 sin Respaldo), Capacidad 600 VA / 360 W para respaldo eficiente, Bater&iacute;a 12 V / 7 Ah de larga duraci&oacute;n, 6 salidas totales, 4 con respaldo alimenticio, Voltaje de entrada 85-150 V, salida 102-132 V, Dimensiones compactas de 274 x 95 x 139 mm, Protecci&oacute;n contra sobrecarga y descarga autom&aacute;tica')">
+     <img alt="UPS 600VA" class="imagen-circulo" decoding="async" loading="lazy" src="img/productos/UPS-600VA.webp"/>
+     <div class="producto__informacion">
+      <p class="producto__nombre">
+       UPS 600VA
+      </p>
+     </div>
+    </div>
+    <div class="producto" onclick="abrirModal('img/productos/UPS-1000VA.webp', 'UPS 1000 VA', '600 W, Protecci&oacute;n Contra Sobrecarga y Descarga, Entrada y Salida 120 VCA, 6 Tomas NEMA 5-15R (4 con Respaldo y 2 sin Respaldo), Capacidad de 1000 VA / 600 W, Bater&iacute;a de 12 V / 9 Ah, 6 salidas (4 con respaldo, 2 sin), Voltaje de salida 102 - 132 V, Tiempo de respaldo hasta 280 minutos, Puerto USB para monitoreo local')">
+     <img alt="UPS 1000 VA" class="imagen-circulo" decoding="async" loading="lazy" src="img/productos/UPS-1000VA.webp"/>
+     <div class="producto__informacion">
+      <p class="producto__nombre">
+       UPS 1000 VA
+      </p>
+     </div>
+    </div>
+    <div class="producto" onclick="abrirModal('img/productos/UPS-2000VA.webp', 'UPS 2000 VA', '1200 W, Pantalla LCD, Protecci&oacute;n Contra Sobrecarga y Descarga, Entrada y Salida 120 VCA, 4 Tomas NEMA 5-15R, Capacidad de 2000 VA / 1200 W, Bater&iacute;a integrada de 12 V / 9 Ah, Voltaje de entrada 85-150 V ~ 50/60 Hz, Dimensiones compactas: 274 x 95 x 139 mm, 4 salidas NEMA 5-15R con respaldo, Puerto USB para monitoreo y control')">
+     <img alt="UPS 2000 VA" class="imagen-circulo" decoding="async" loading="lazy" src="img/productos/UPS-2000VA.webp"/>
+     <div class="producto__informacion">
+      <p class="producto__nombre">
+       UPS 2000 VA
+      </p>
+     </div>
+    </div>
+    <div class="producto" onclick="abrirModal('img/productos/UPS-3000VA.webp', 'UPS 3000 VA', '1800 W, Pantalla LCD, Protecci&oacute;n Contra Sobrecarga y Descarga, Entrada y Salida 120 VCA, 6 Tomas NEMA 5-15R (Todos con Respaldo), Capacidad 3000 VA / 1800 W para alto rendimiento, Bater&iacute;a 12 V / 9 Ah de larga duraci&oacute;n, 6 tomas NEMA 5-15R con respaldo permanente, Voltaje de entrada adaptable 85-150 VCA, Pantalla LCD para monitoreo en tiempo real, Puerto USB para control y monitoreo remoto')">
+     <img alt="UPS 3000 VA" class="imagen-circulo" decoding="async" loading="lazy" src="img/productos/UPS-3000VA.webp"/>
+     <div class="producto__informacion">
+      <p class="producto__nombre">
+       UPS 3000 VA
+      </p>
+     </div>
+    </div>
+    <div class="producto" onclick="abrirModal('img/productos/DISCODURO3TB.webp', 'Disco Duro PURPLE de 3TB', '3 A&Ntilde;OS DE GARANT&Iacute;A, Para Videovigilancia, Capacidad de 3 TB para almacenamiento masivo, Velocidad de transferencia de 6 Gb/s, Optimizado para videovigilancia con hasta 64 c&aacute;maras HD, Interfaz SATA III compatible con sistemas actuales, Consumo eficiente de 3.3W en operaci&oacute;n, Dise&ntilde;o 3.5 pulgadas con 64 MB de cach&eacute;')">
+     <img alt="Disco Duro PURPLE de 3TB" class="imagen-circulo" decoding="async" loading="lazy" src="img/productos/DISCODURO3TB.webp"/>
+     <div class="producto__informacion">
+      <p class="producto__nombre">
+       Disco Duro PURPLE de 3TB
+      </p>
+     </div>
+    </div>
+    <div class="producto" onclick="abrirModal('img/productos/DISCODURO6TB.webp', 'Disco Duro PURPLE de 6TB', '3 A&Ntilde;OS DE GARANT&Iacute;A, Para Videovigilancia, Capacidad de 6 TB para almacenamiento masivo, Interfaz SATA III a 6.0 Gb/s, Optimizado para videovigilancia con soporte hasta 64 c&aacute;maras, Velocidad rotaci&oacute;n 5640 RPM eficiente, Cach&eacute; de 128 MB para transferencias r&aacute;pidas, Dise&ntilde;o 3.5 pulgadas con consumo energ&eacute;tico optimizado')">
+     <img alt="Disco Duro PURPLE de 6TB" class="imagen-circulo" decoding="async" loading="lazy" src="img/productos/DISCODURO6TB.webp"/>
+     <div class="producto__informacion">
+      <p class="producto__nombre">
+       Disco Duro PURPLE de 6TB
+      </p>
+     </div>
+    </div>
+    <div class="producto" onclick="abrirModal('img/productos/DISCODUROWD8TB.webp', 'Disco duro WD de 8TB', '7200RPM, Optimizado para soluciones de video inteligente, Capacidad de almacenamiento de 8 TB, Velocidad de transferencia sostenida de 245 MB/s, Cach&eacute; de 256 MB para rendimiento mejorado, Compatibilidad con hasta 64 c&aacute;maras HD, Consumo el&eacute;ctrico lectura/escritura de 8.6 W, Dise&ntilde;o optimizado para sistemas de video vigilancia')">
+     <img alt="Disco duro WD de 8TB" class="imagen-circulo" decoding="async" loading="lazy" src="img/productos/DISCODUROWD8TB.webp"/>
+     <div class="producto__informacion">
+      <p class="producto__nombre">
+       Disco duro WD de 8TB
+      </p>
+     </div>
+    </div>
+    <div class="producto" onclick="abrirModal('img/productos/DISCODUROPRO10TB.webp', 'Disco Duro Purple Pro de 10 TB', '7200 RPM, Optimizado para Soluciones de Videovigilancia con Analiticos (Meta Data), Uso 24-7, 5 A&ntilde;os de Garantia, Capacidad de 10 TB para almacenamiento masivo, Interfaz SATA III con transferencia de 6 Gb/s, Optimizado para videovigilancia con anal&iacute;ticos de metadatos, Soporta hasta 64 c&aacute;maras HD en simult&aacute;neo, Velocidad de rotaci&oacute;n de 7200 RPM, Consumo eficiente de 8.6W en operaci&oacute;n activa')">
+     <img alt="Disco Duro Purple Pro de 10 TB" class="imagen-circulo" decoding="async" loading="lazy" src="img/productos/DISCODUROPRO10TB.webp"/>
+     <div class="producto__informacion">
+      <p class="producto__nombre">
+       Disco Duro Purple Pro de 10 TB
+      </p>
+     </div>
+    </div>
+    <div class="producto" onclick="abrirModal('img/productos/BiometricoFacial-5.webp', 'Biometrico Facial y de Palma SIN CONTACTO con pantalla Touch de 5 pul.', '6000 rostros, Lector de Huella Digital, WIFI, Reconocimiento facial y de palma sin contacto, Pantalla t&aacute;ctil de 5 pul. con interfaz intuitiva, Capacidad para 6,000 rostros y 3,000 palmas, Detecci&oacute;n facial en menos de 1 segundo, Tecnolog&iacute;a anti-falsificaci&oacute;n con luz visible, Conexi&oacute;n Wi-Fi y TCP/IP integrada')">
+     <img alt="Biometrico Facial y de Palma SIN CONTACTO con pantalla Touch de 5 pul." class="imagen-circulo" decoding="async" loading="lazy" src="img/productos/BiometricoFacial-5.webp"/>
+     <div class="producto__informacion">
+      <p class="producto__nombre">
+       Biometrico Facial y de Palma SIN CONTACTO con pantalla Touch de 5 pul.
+      </p>
+     </div>
+    </div>
+    <div class="producto" onclick="abrirModal('img/productos/TerminalBiometricaFacial.webp', 'Terminal Biom&eacute;trica Facial', 'Rostro Huella y Tarjeta, 1,500 Usuarios, Pantalla 2.8 pul. , TCP/IP, USB, ADMS, Control de 1 Puerta, Verificaci&oacute;n facial, huella y contrase&ntilde;a en 0.5s, Capacidad para 1500 rostros, huellas y tarjetas, Control de acceso integrado para 1 puerta, Soporta gesti&oacute;n remota con ADMS y BiotimePRO, Registro local o mediante software BiotimePRO, Comunicaci&oacute;n TCP/IP, USB y soporte DDNS')">
+     <img alt="Terminal Biom&eacute;trica Facial" class="imagen-circulo" decoding="async" loading="lazy" src="img/productos/TerminalBiometricaFacial.webp"/>
+     <div class="producto__informacion">
+      <p class="producto__nombre">
+       Terminal Biom&eacute;trica Facial
+      </p>
+     </div>
+    </div>
+    <div class="producto" onclick="abrirModal('img/productos/BobinadeCablede305Metros.webp', 'Bobina de Cable de 305 Metros (1000 Pies)', 'Cat6+ Calibre 23 Exterior Blindado Tipo FTP para Climas Extremos, UL, Color Negro, Compatible con plugs LPKJ6A17S de terminaci&oacute;n en campo, Frecuencia de operaci&oacute;n hasta 250 MHz, Calibre 23 AWG, conductor 100% cobre, Blindaje de poli&eacute;ster aluminizado para protecci&oacute;n EMI/RFI, Certificaciones UL, ANSI/TIA/EIA, ISO/IEC, RoHS, Dise&ntilde;o exterior CMX con aislamiento UV resistente')">
+     <img alt="Bobina de Cable de 305 Metros (1000 Pies)" class="imagen-circulo" decoding="async" loading="lazy" src="img/productos/BobinadeCablede305Metros.webp"/>
+     <div class="producto__informacion">
+      <p class="producto__nombre">
+       Bobina de Cable de 305 Metros (1000 Pies)
+      </p>
+     </div>
+    </div>
+    <div class="producto" onclick="abrirModal('img/productos/BobinadeCablede305Metros(1000 Pies)Cat6+.webp', 'Bobina de Cable de 305 Metros (1000 Pies)', 'Cat6+ Calibre 23 Exterior Blindado Tipo FTP para Climas Extremos, UL, Color Negro (Carrete Easy Pull), Compatible solo con plugs LPKJ6A17S terminados en campo, Conductor de cobre 100% para alta conductividad, Blindaje aluminizado para protecci&oacute;n contra interferencias, Calibre 23 AWG, ideal para Gigabit Ethernet, Frecuencia de operaci&oacute;n hasta 250 MHz, Dise&ntilde;ado para exterior con aislamiento UV resistente')">
+     <img alt="Bobina de Cable de 305 Metros (1000 Pies)" class="imagen-circulo" decoding="async" loading="lazy" src="img/productos/BobinadeCablede305Metros(1000 Pies)Cat6+.webp"/>
+     <div class="producto__informacion">
+      <p class="producto__nombre">
+       Bobina de Cable de 305 Metros (1000 Pies)
+      </p>
+     </div>
+    </div>
+    <div class="producto" onclick="abrirModal('img/productos/BobinadeCablede305Metros(1000 Pies)Cat6+CMR.webp', 'Bobina de Cable de 305 Metros (1000 Pies)', 'Cat6+, CMR, Calibre 23 Alto Rendimiento, ETL, UL, Color Azul, Super Flexible, para Aplicaciones de Video Vigilancia, Video HD, y Redes de Datos. Uso Interior, Cable de cobre 100% para mayor rendimiento, Soporta Gigabit Ethernet y Fast Ethernet, Frecuencia de operaci&oacute;n hasta 250 MHz, Calibre 23 con aislamiento PVC CMR, Certificaciones UL, ANSI/TIA, ISO/IEC, RoHS, Dise&ntilde;o azul superflexible para f&aacute;cil instalaci&oacute;n')">
+     <img alt="Bobina de Cable de 305 Metros (1000 Pies)" class="imagen-circulo" decoding="async" loading="lazy" src="img/productos/BobinadeCablede305Metros(1000 Pies)Cat6+CMR.webp"/>
+     <div class="producto__informacion">
+      <p class="producto__nombre">
+       Bobina de Cable de 305 Metros (1000 Pies)
+      </p>
+     </div>
+    </div>
+   </div>
+  </main>
+  <!-- FOOTER CORPORATIVO -->
+  <footer class="footer">
+   <div class="footer__contenedor">
+    <!-- EMPRESA -->
+    <div class="footer__seccion">
+     <h3 class="footer__titulo">
+      Axia Comunicaciones S.A de C.V.
+     </h3>
+     <p class="footer__texto">
+      Ingenier&iacute;a en c&oacute;mputo, comunicaciones y electricidad, soluciones profesionales para empresas e industrias.
+     </p>
+    </div>
+    <!-- CONTACTO -->
+    <div class="footer__seccion">
+     <h3 class="footer__titulo">
+      Contacto
+     </h3>
+     <p class="footer__texto">
+      📍 &Aacute;lvaro Obreg&oacute;n, Manzana 2, Lote 3, Col. San Juan de Guadalupe, Zumpango, Estado de M&eacute;xico, C.P. 55630
+     </p>
+     <p class="footer__texto">
+      📞 +52 55 1883 3166
+     </p>
+     <p class="footer__texto">
+      📧
+      <a class="footer__correo" href="mailto:gte.ventas@axiacomunicaciones.mx?subject=Solicitud%20de%20Informaci&oacute;n&amp;body=Hola%20Axia%20Comunicaciones,%20me%20gustar&iacute;a%20solicitar%20informaci&oacute;n.">
+       gte.ventas@axiacomunicaciones.mx
+      </a>
+     </p>
+    </div>
+    <!-- REDES -->
+    <div class="footer__seccion">
+     <h3 class="footer__titulo">
+      Redes Sociales
+     </h3>
+     <div class="footer__redes">
+      <a class="footer__social" href="https://www.facebook.com/Axiacomunicacionessa" target="_blank">
+       Facebook
+      </a>
+      <a class="footer__social" href="https://www.instagram.com/axiacomunicaciones_ventas" target="_blank">
+       Instagram
+      </a>
+      <a class="footer__social" href="https://www.linkedin.com/" target="_blank">
+       LinkedIn
+      </a>
+     </div>
+    </div>
+   </div>
+   <!-- COPYRIGHT -->
+   <div class="footer__copy">
+    <p>
+     &copy; 2026 Axia Comunicaciones S.A. de C.V. | Todos los derechos reservados |
+     <a class="footer__privacidad" href="docs/Aviso-de-Privacidad-Integral-Web.pdf" rel="noopener noreferrer" target="_blank">
+      Aviso de Privacidad
+     </a>
+    </p>
+   </div>
+  </footer>
+  <script defer="" src="script.js">
+  </script>
+  <!-- WHATSAPP -->
+  <div class="whatsapp-container">
+   <!-- TEXTO -->
+   <div class="whatsapp-texto">
+    &iquest;WhatsApp?
+   </div>
+   <!-- BOTÓN -->
+   <a class="whatsapp" href="https://wa.me/525518833166?text=Hola%20Axia%20Comunicaciones,%20me%20gustar&iacute;a%20solicitar%20informaci&oacute;n." target="_blank">
+    <img alt="WhatsApp" decoding="async" loading="lazy" src="img/WhatsApp.webp"/>
+   </a>
+  </div>
+  <!-- CHATBOT AXIA -->
+  <div class="chatbot">
+   <div class="chatbot__texto">
+    Chatbot Axia
+   </div>
+   <button class="chatbot__boton" onclick="toggleChatbot()">
+    💬
+   </button>
+   <div class="chatbot__ventana" id="chatbotVentana">
+    <div class="chatbot__header">
+     <div>
+      <h3>
+       Axia Asistente
+      </h3>
+      <p>
+       Estamos para ayudarte
+      </p>
+     </div>
+     <button onclick="toggleChatbot()">
+      &times;
+     </button>
+    </div>
+    <div class="chatbot__mensajes" id="chatbotMensajes">
+     <div class="chatbot__mensaje chatbot__mensaje--bot">
+      Hola 👋 Soy el asistente de Axia Comunicaciones. &iquest;Qu&eacute; necesitas?
+     </div>
+    </div>
+    <div class="chatbot__opciones">
+     <button onclick="respuestaChatbot('cctv')">
+      Informes sobre CCTV
+     </button>
+     <button onclick="respuestaChatbot('redes')">
+      Informes sobre Red, Voz y Datos
+     </button>
+     <button onclick="respuestaChatbot('electricas')">
+      Informes sobre Instalaciones El&eacute;ctricas
+     </button>
+     <button onclick="respuestaChatbot('aires')">
+      Informes sobre Aires Acondicionados
+     </button>
+     <button onclick="respuestaChatbot('whatsapp')">
+      Quiero comunicarme por WhatsApp
+     </button>
+    </div>
+   </div>
+  </div>
+  <!-- SCRIPT CHATBOT -->
+  <script>
+   function toggleChatbot() {
             const ventana = document.getElementById("chatbotVentana");
             ventana.classList.toggle("activo");
         }
@@ -387,42 +575,27 @@
                 agregarMensaje(respuestas[opcion].bot, "bot");
             }, 500);
         }
-    </script>
-
-    <!-- MODAL PRODUCTOS -->
-    <div
-        class="modal"
-        id="modalProducto"
-    >
-        <div class="modal__contenido">
-
-            <!-- BOTÓN CERRAR -->
-            <span
-                class="modal__cerrar"
-                onclick="cerrarModal()"
-            >
-                &times;
-            </span>
-
-            <!-- IMAGEN -->
-            <img
-                id="modalImagen"
-                class="modal__imagen"
-                src=""
-                alt=""
-            >
-
-            <!-- TÍTULO -->
-            <h2 id="modalTitulo"></h2>
-
-            <!-- DESCRIPCIÓN -->
-            <p id="modalDescripcion"></p>
-        </div>
-    </div>
-
-    <!-- SCRIPT ANIMACION PRODUCTOS-->
-    <script>
-        function abrirModal(imagen, titulo, descripcion){
+  </script>
+  <!-- MODAL PRODUCTOS -->
+  <div class="modal" id="modalProducto">
+   <div class="modal__contenido">
+    <!-- BOTÓN CERRAR -->
+    <span class="modal__cerrar" onclick="cerrarModal()">
+     &times;
+    </span>
+    <!-- IMAGEN -->
+    <img alt="" class="modal__imagen" id="modalImagen" src=""/>
+    <!-- TÍTULO -->
+    <h2 id="modalTitulo">
+    </h2>
+    <!-- DESCRIPCIÓN -->
+    <p id="modalDescripcion">
+    </p>
+   </div>
+  </div>
+  <!-- SCRIPT ANIMACION PRODUCTOS-->
+  <script>
+   function abrirModal(imagen, titulo, descripcion){
             document.getElementById("modalImagen").src = imagen;
             document.getElementById("modalTitulo").innerText = titulo;
             document.getElementById("modalDescripcion").innerText = descripcion;
@@ -440,6 +613,7 @@
                 cerrarModal();
             }
         }
-    </script>
-</body>
+  </script>
+  <!-- AVISO DE COOKIES Y TECNOLOGÍAS DE RASTREO -->
+ </body>
 </html>

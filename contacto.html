@@ -1,265 +1,258 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto | Axia Comunicaciones</title>
-    <link rel="stylesheet" href="css/normalize.css">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&display=swap" rel="stylesheet">
-    
-     <!-- CSS principal -->
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- ÍCONO AXIA -->
-    <link rel="icon" href="img/SoloAxia.png" type="image/x-icon">    
-</head>
-<body class="fondo">
-
-    <!-- NAVBAR -->
-    <nav class="navegacion">
-        <a class="navegacion__enlace" href="index.html">Inicio</a>
-        <a class="navegacion__enlace" href="nosotros.html">Quiénes Somos</a>
-        <a class="navegacion__enlace" href="noc.html">Network Operations Center</a>
-        <a class="navegacion__enlace" href="servicios.html">Servicios</a>
-        <a class="navegacion__enlace" href="productos.html">Productos</a>  
-        <a class="navegacion__enlace navegacion__enlace--activo" href="contacto.html">Contacto</a>
-    </nav>
-
-    <!-- Banner principal -->
-    <header class="header">
-        <img src="img/Banner-Contacto.png" alt="Banner de contacto de Axia Comunicaciones">
-    </header>
-    
-    <!-- Contenido principal -->
-    <main class="contenedor">
-
-        <section class="contacto">
-
-            <div class="contacto__encabezado">
-                <h1>Contáctanos</h1>
-                <p>
-                    Estamos listos para ayudarte con soluciones profesionales en comunicación, seguridad, electricidad y tecnología.
-                </p>
-            </div>
-
-            <form class="formulario" action="#" method="POST">
-
-                <div class="campo">
-                    <label class="campo__label" for="nombre">Nombre</label>
-                    <input
-                        class="campo__field"
-                        type="text"
-                        id="nombre"
-                        name="nombre"
-                        placeholder="Tu nombre"
-                        required
-                    >
-                </div>
-
-                <div class="campo">
-                    <label class="campo__label" for="email">Correo electrónico</label>
-                    <input
-                        class="campo__field"
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="tu.correo@ejemplo.com"
-                        required
-                    >
-                </div>
-
-                <div class="campo">
-                    <label class="campo__label" for="telefono">Teléfono</label>
-                    <input
-                        class="campo__field"
-                        type="tel"
-                        id="telefono"
-                        name="telefono"
-                        placeholder="Tu teléfono"
-                    >
-                </div>
-
-                <div class="campo">
-                    <label class="campo__label" for="servicio">Servicio de interés</label>
-                    <select class="campo__field" id="servicio" name="servicio">
-                        <option value="">Selecciona una opción</option>
-                        <option value="cctv">CCTV</option>
-                        <option value="redes">Red, Voz y Datos</option>
-                        <option value="electricas">Instalaciones Eléctricas</option>
-                        <option value="aires">Aires Acondicionados</option>
-                        <option value="plantas">Plantas de Energía</option>
-                        <option value="enlaces">Enlaces Inalámbricos</option>
-                        <option value="accesos">Controles de Acceso</option>
-                    </select>
-                </div>
-
-                <div class="campo">
-                    <label class="campo__label" for="mensaje">Mensaje</label>
-                    <textarea
-                        class="campo__field campo__field--textarea"
-                        id="mensaje"
-                        name="mensaje"
-                        placeholder="Cuéntanos brevemente qué necesitas"
-                        required
-                    ></textarea>
-                </div>
-
-                <button
-                    type="button"
-                    class="boton boton--primario"
-                    onclick="enviarWhatsApp()"
-                >
-                Enviar mensaje
-                </button>
-
-            </form>
-        </section>
-    </main>          
-    
-    <!-- FOOTER CORPORATIVO -->
-    <footer class="footer">
-        <div class="footer__contenedor">
-        
-            <!-- EMPRESA -->
-            <div class="footer__seccion">
-                <h3 class="footer__titulo">
-                    Axia Comunicaciones S.A de C.V.
-                </h3>
-                <p class="footer__texto">
-                    Ingeniería en cómputo, comunicaciones y electricidad, soluciones profesionales para empresas e industrias.
-                </p>
-            </div>
-
-            <!-- CONTACTO -->
-            <div class="footer__seccion">
-                <h3 class="footer__titulo">
-                    Contacto
-                </h3>
-                <p class="footer__texto">
-                    📍 Álvaro Obregón, Manzana 2, Lote 3, Col. San Juan de Guadalupe, Zumpango, Estado de México, C.P. 55630
-                </p>
-                <p class="footer__texto">
-                    📞 +52 55 4989 3464
-                </p>
-                <p class="footer__texto">
-                    📧
-                    <a class="footer__correo" href="mailto:gte.ventas@axiacomunicaciones.mx?subject=Solicitud%20de%20Información&body=Hola%20Axia%20Comunicaciones,%20me%20gustaría%20solicitar%20información.">
-                        gte.ventas@axiacomunicaciones.mx
-                    </a>
-                </p>
-
-            </div>
-
-            <!-- REDES -->
-            <div class="footer__seccion">
-                <h3 class="footer__titulo">
-                    Redes Sociales
-                </h3>
-                <div class="footer__redes">
-                    <a
-                        href="https://www.facebook.com/Axiacomunicacionessa"
-                        class="footer__social"
-                        target="_blank"
-                    >
-                        Facebook
-                    </a>
-                    <a
-                        href="https://www.instagram.com/axia_comunicaciones/"
-                        class="footer__social"
-                        target="_blank"
-                    >
-                        Instagram
-                    </a>
-                    <a
-                        href="https://www.linkedin.com/"
-                        class="footer__social"
-                        target="_blank"
-                    >
-                        LinkedIn
-                    </a>
-                    <a
-                        href="https://www.youtube.com/"
-                        class="footer__social"
-                        target="_blank"
-                    >
-                        YouTube
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- COPYRIGHT -->
-        <div class="footer__copy">
-            <p>
-                © 2026 Axia Comunicaciones S.A. de C.V. | Todos los derechos reservados
-            </p>
-        </div>
-    </footer>
-
-    <!-- WHATSAPP -->
-    <div class="whatsapp-container">
-
-        <!-- TEXTO -->
-        <div class="whatsapp-texto">
-        ¿WhatsApp?
-        </div>
-
-        <!-- BOTÓN -->
-        <a
-        href="https://wa.me/525518833166?text=Hola%20Axia%20Comunicaciones,%20me%20gustaría%20solicitar%20información."
-        class="whatsapp"
-        target="_blank"
-        >
-        <img
-            src="img/WhatsApp.png"
-            alt="WhatsApp"
-        >
-        </a>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Contacto | Axia Comunicaciones
+  </title>
+  <link href="css/normalize.css" rel="stylesheet"/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&amp;display=swap" rel="stylesheet"/>
+  <!-- CSS principal -->
+  <link href="css/style.css" rel="stylesheet"/>
+  <!-- ÍCONO AXIA -->
+  <link href="img/SoloAxia.webp" rel="icon" type="image/x-icon"/>
+ </head>
+ <body class="fondo">
+  <!-- NAVBAR -->
+  <nav class="navegacion">
+   <a class="navegacion__enlace" href="index.html">
+    Inicio
+   </a>
+   <a class="navegacion__enlace" href="nosotros.html">
+    Qui&eacute;nes Somos
+   </a>
+   <a class="navegacion__enlace" href="noc.html">
+    Network Operations Center
+   </a>
+   <a class="navegacion__enlace" href="servicios.html">
+    Servicios
+   </a>
+   <a class="navegacion__enlace" href="productos.html">
+    Productos
+   </a>
+   <a class="navegacion__enlace" href="docs/Etica-Corporativa.pdf" rel="noopener noreferrer" target="_blank">
+    &Eacute;tica Corporativa
+   </a>
+   <a class="navegacion__enlace" href="bolsa-trabajo.html">
+    Bolsa de Trabajo
+   </a>
+   <a class="navegacion__enlace navegacion__enlace--activo" href="contacto.html">
+    Contacto
+   </a>
+  </nav>
+  <!-- Banner principal -->
+  <header class="header">
+   <img alt="Banner de contacto de Axia Comunicaciones" decoding="async" fetchpriority="high" src="img/Banner-Contacto.webp"/>
+  </header>
+  <!-- Contenido principal -->
+  <main class="contenedor">
+   <section class="contacto">
+    <div class="contacto__encabezado">
+     <h1>
+      Cont&aacute;ctanos
+     </h1>
     </div>
-
-    <!-- CHATBOT AXIA -->
-    <div class="chatbot">
-        <div class="chatbot__texto">
-            Chatbot Axia
-        </div>
-        <button class="chatbot__boton" onclick="toggleChatbot()">
-            💬
-        </button>
-
-        <div class="chatbot__ventana" id="chatbotVentana">
-
-            <div class="chatbot__header">
-                <div>
-                    <h3>Axia Asistente</h3>
-                    <p>Estamos para ayudarte</p>
-                </div>
-
-                <button onclick="toggleChatbot()">×</button>
-            </div>
-
-            <div class="chatbot__mensajes" id="chatbotMensajes">
-                <div class="chatbot__mensaje chatbot__mensaje--bot">
-                    Hola 👋 Soy el asistente de Axia Comunicaciones. ¿Qué necesitas?
-                </div>
-            </div>
-
-            <div class="chatbot__opciones">
-                <button onclick="respuestaChatbot('cctv')">Informes sobre CCTV</button>
-                <button onclick="respuestaChatbot('redes')">Informes sobre Red, Voz y Datos</button>
-                <button onclick="respuestaChatbot('electricas')">Informes sobre Instalaciones Eléctricas</button>
-                <button onclick="respuestaChatbot('aires')">Informes sobre Aires Acondicionados</button>
-                <button onclick="respuestaChatbot('whatsapp')">Quiero comunicarme por WhatsApp</button>
-            </div>
-
-        </div>
+    <form action="#" class="formulario" method="POST">
+     <div class="campo">
+      <label class="campo__label" for="nombre">
+       Nombre
+      </label>
+      <input class="campo__field" id="nombre" name="nombre" placeholder="Tu nombre" required="" type="text"/>
+     </div>
+     <div class="campo">
+      <label class="campo__label" for="email">
+       Correo electr&oacute;nico
+      </label>
+      <input class="campo__field" id="email" name="email" placeholder="tu.correo@ejemplo.com" required="" type="email"/>
+     </div>
+     <div class="campo">
+      <label class="campo__label" for="telefono">
+       Tel&eacute;fono
+      </label>
+      <input class="campo__field" id="telefono" name="telefono" placeholder="Tu tel&eacute;fono" type="tel"/>
+     </div>
+     <div class="campo">
+      <label class="campo__label" for="servicio">
+       Servicio de inter&eacute;s
+      </label>
+      <select class="campo__field" id="servicio" name="servicio">
+       <option value="">
+        Selecciona una opci&oacute;n
+       </option>
+       <option value="cctv">
+        CCTV
+       </option>
+       <option value="redes">
+        Red, Voz y Datos
+       </option>
+       <option value="electricas">
+        Instalaciones El&eacute;ctricas
+       </option>
+       <option value="aires">
+        Aires Acondicionados
+       </option>
+       <option value="plantas">
+        Plantas de Energ&iacute;a
+       </option>
+       <option value="enlaces">
+        Enlaces Inal&aacute;mbricos
+       </option>
+       <option value="accesos">
+        Controles de Acceso
+       </option>
+      </select>
+     </div>
+     <div class="campo">
+      <label class="campo__label" for="mensaje">
+       Mensaje
+      </label>
+      <textarea class="campo__field campo__field--textarea" id="mensaje" name="mensaje" placeholder="Cu&eacute;ntanos brevemente qu&eacute; necesitas" required=""></textarea>
+     </div>
+     <div class="aviso-simplificado">
+      <h3>
+       AVISO SIMPLIFICADO
+      </h3>
+      <p>
+       AXIA Comunicaciones, S.A. de C.V., con domicilio en Calle &Aacute;lvaro Obreg&oacute;n Mz. 2 Lt. 3, Col. San Juan de Guadalupe, Zumpango, Estado de M&eacute;xico, C.P. 55630, utilizar&aacute; sus datos personales recabados en este formulario para identificarlo, atender sus dudas, gestionar solicitudes de cotizaci&oacute;n de servicios de comunicaci&oacute;n y establecer comunicaci&oacute;n comercial. Para conocer m&aacute;s sobre el tratamiento de sus datos, sus derechos ARCO y el texto completo de nuestro Aviso de Privacidad Integral, haga clic en el siguiente enlace:
+       <a href="docs/Aviso-de-Privacidad-Integral-Web.pdf" rel="noopener noreferrer" target="_blank">
+        Consulte el Aviso de Privacidad Integral de AXIA
+       </a>
+       .
+      </p>
+      <label class="aviso-simplificado__check">
+       <input name="finalidades_secundarias" type="checkbox" value="si"/>
+       <span>
+        Consiento que mis datos personales sean utilizados para el env&iacute;o de promociones, boletines informativos y evaluaciones de satisfacci&oacute;n (Finalidades Secundarias).
+       </span>
+      </label>
+     </div>
+     <button class="boton boton--primario" onclick="enviarWhatsApp()" type="button">
+      Enviar mensaje
+     </button>
+    </form>
+   </section>
+  </main>
+  <!-- FOOTER CORPORATIVO -->
+  <footer class="footer">
+   <div class="footer__contenedor">
+    <!-- EMPRESA -->
+    <div class="footer__seccion">
+     <h3 class="footer__titulo">
+      Axia Comunicaciones S.A de C.V.
+     </h3>
+     <p class="footer__texto">
+      Ingenier&iacute;a en c&oacute;mputo, comunicaciones y electricidad, soluciones profesionales para empresas e industrias.
+     </p>
     </div>
-
-    <script>
-        function toggleChatbot() {
+    <!-- CONTACTO -->
+    <div class="footer__seccion">
+     <h3 class="footer__titulo">
+      Contacto
+     </h3>
+     <p class="footer__texto">
+      📍 &Aacute;lvaro Obreg&oacute;n, Manzana 2, Lote 3, Col. San Juan de Guadalupe, Zumpango, Estado de M&eacute;xico, C.P. 55630
+     </p>
+     <p class="footer__texto">
+      📞 +52 55 1883 3166
+     </p>
+     <p class="footer__texto">
+      📧
+      <a class="footer__correo" href="mailto:gte.ventas@axiacomunicaciones.mx?subject=Solicitud%20de%20Informaci&oacute;n&amp;body=Hola%20Axia%20Comunicaciones,%20me%20gustar&iacute;a%20solicitar%20informaci&oacute;n.">
+       gte.ventas@axiacomunicaciones.mx
+      </a>
+     </p>
+    </div>
+    <!-- REDES -->
+    <div class="footer__seccion">
+     <h3 class="footer__titulo">
+      Redes Sociales
+     </h3>
+     <div class="footer__redes">
+      <a class="footer__social" href="https://www.facebook.com/Axiacomunicacionessa" target="_blank">
+       Facebook
+      </a>
+      <a class="footer__social" href="https://www.instagram.com/axiacomunicaciones_ventas" target="_blank">
+       Instagram
+      </a>
+      <a class="footer__social" href="https://www.linkedin.com/" target="_blank">
+       LinkedIn
+      </a>
+     </div>
+    </div>
+   </div>
+   <!-- COPYRIGHT -->
+   <div class="footer__copy">
+    <p>
+     &copy; 2026 Axia Comunicaciones S.A. de C.V. | Todos los derechos reservados |
+     <a class="footer__privacidad" href="docs/Aviso-de-Privacidad-Integral-Web.pdf" rel="noopener noreferrer" target="_blank">
+      Aviso de Privacidad
+     </a>
+    </p>
+   </div>
+  </footer>
+  <!-- WHATSAPP -->
+  <div class="whatsapp-container">
+   <!-- TEXTO -->
+   <div class="whatsapp-texto">
+    &iquest;WhatsApp?
+   </div>
+   <!-- BOTÓN -->
+   <a class="whatsapp" href="https://wa.me/525518833166?text=Hola%20Axia%20Comunicaciones,%20me%20gustar&iacute;a%20solicitar%20informaci&oacute;n." target="_blank">
+    <img alt="WhatsApp" decoding="async" loading="lazy" src="img/WhatsApp.webp"/>
+   </a>
+  </div>
+  <!-- CHATBOT AXIA -->
+  <div class="chatbot">
+   <div class="chatbot__texto">
+    Chatbot Axia
+   </div>
+   <button class="chatbot__boton" onclick="toggleChatbot()">
+    💬
+   </button>
+   <div class="chatbot__ventana" id="chatbotVentana">
+    <div class="chatbot__header">
+     <div>
+      <h3>
+       Axia Asistente
+      </h3>
+      <p>
+       Estamos para ayudarte
+      </p>
+     </div>
+     <button onclick="toggleChatbot()">
+      &times;
+     </button>
+    </div>
+    <div class="chatbot__mensajes" id="chatbotMensajes">
+     <div class="chatbot__mensaje chatbot__mensaje--bot">
+      Hola 👋 Soy el asistente de Axia Comunicaciones. &iquest;Qu&eacute; necesitas?
+     </div>
+    </div>
+    <div class="chatbot__opciones">
+     <button onclick="respuestaChatbot('cctv')">
+      Informes sobre CCTV
+     </button>
+     <button onclick="respuestaChatbot('redes')">
+      Informes sobre Red, Voz y Datos
+     </button>
+     <button onclick="respuestaChatbot('electricas')">
+      Informes sobre Instalaciones El&eacute;ctricas
+     </button>
+     <button onclick="respuestaChatbot('aires')">
+      Informes sobre Aires Acondicionados
+     </button>
+     <button onclick="respuestaChatbot('whatsapp')">
+      Quiero comunicarme por WhatsApp
+     </button>
+    </div>
+   </div>
+  </div>
+  <script>
+   function toggleChatbot() {
             const ventana = document.getElementById("chatbotVentana");
             ventana.classList.toggle("activo");
         }
@@ -306,11 +299,10 @@
                 agregarMensaje(respuestas[opcion].bot, "bot");
             }, 500);
         }
-    </script>
-
-    <!-- SCRIPT BOTON -->
-    <script>
-        function enviarWhatsApp() {
+  </script>
+  <!-- SCRIPT BOTON -->
+  <script>
+   function enviarWhatsApp() {
             // OBTENER FORMULARIO
             const formulario = document.querySelector(".formulario");
             
@@ -345,7 +337,7 @@
             // ABRIR WHATSAPP
             window.open(url, "_blank");
         }
-
-    </script>
-</body>
+  </script>
+  <!-- AVISO DE COOKIES Y TECNOLOGÍAS DE RASTREO -->
+ </body>
 </html>
